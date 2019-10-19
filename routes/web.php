@@ -15,6 +15,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('playstation', function () {
+    return view('playstation');
+});
+
+Route::get('xbox', function () {
+    return view('xbox');
+});
+
+Route::get('nintendo', function () {
+    return view('nintendo');
+});
+
+Route::get('pc', function () {
+    return view('pc');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
