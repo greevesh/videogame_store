@@ -33,14 +33,14 @@
                 <h2>New Customer</h2>
                 <div class="spacer"></div>
                 <p><strong>Save time now.</strong></p>
-                <p>You don't need an account to checkout.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.</p>
                 <div class="spacer"></div>
                 <a href="https://laravelecommerceexample.ca/guestCheckout" class="auth-button-hollow">Continue as Guest</a>
                 <div class="spacer"></div>
                 &nbsp;
                 <div class="spacer"></div>
                 <p><strong>Save time later.</strong></p>
-                <p>Create an account for fast checkout and easy access to order history.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.</p>
                 <div class="spacer"></div>
                 <a href="https://laravelecommerceexample.ca/register" class="auth-button-hollow">Create Account</a>
             </div>
