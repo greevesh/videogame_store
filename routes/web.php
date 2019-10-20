@@ -11,29 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/cart', function () {
-    return view('cart');
-});
-
-Route::get('playstation', function () {
-    return view('playstation');
-});
-
-Route::get('xbox', function () {
-    return view('xbox');
-});
-
-Route::get('nintendo', function () {
-    return view('nintendo');
-});
-
-Route::get('pc', function () {
-    return view('pc');
-});
+Route::view('/', 'welcome');
+Route::view('/cart', 'cart');
+Route::view('/playstation', 'playstation');
+Route::view('/xbox', 'xbox');
+Route::view('/nintendo', 'nintendo');
+Route::view('/pc', 'pc');
 
 Auth::routes();
 
