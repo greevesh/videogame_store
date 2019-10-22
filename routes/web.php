@@ -21,6 +21,7 @@ Route::view('/pc', 'pc');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/playstation', 'GameController@index'); 
 
 
 Route::group(['prefix' => 'admin'], function () {
