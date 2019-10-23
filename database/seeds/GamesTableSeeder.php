@@ -19,7 +19,6 @@ class GamesTableSeeder extends Seeder
             'name' => 'Call of Duty Advanced Warfare', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => 'public/images/callofduty.jpeg'
         ]);
 
         Game::create([
@@ -28,7 +27,6 @@ class GamesTableSeeder extends Seeder
             'name' => 'Dishonored 2', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => 'public/images/dishonored.jpeg'
         ]);
 
         Game::create([
@@ -37,7 +35,6 @@ class GamesTableSeeder extends Seeder
             'name' => 'Dying Light', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => 'public/images/dyinglight.jpeg'
         ]);
 
         Game::create([
@@ -46,7 +43,6 @@ class GamesTableSeeder extends Seeder
             'name' => 'Dynasty Warriors 8', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => 'public/images/dynastywarriors8.jpeg'
         ]);
 
         Game::create([
@@ -55,7 +51,6 @@ class GamesTableSeeder extends Seeder
             'name' => 'Grand Theft Auto 5', 
             'price' => '£34.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => 'public/images/gta5.jpeg'
         ]);
 
         Game::create([
@@ -64,7 +59,6 @@ class GamesTableSeeder extends Seeder
             'name' => 'MXGP 2', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => 'public/images/mxgp2.jpeg'
         ]);
 
         Game::create([
@@ -73,7 +67,6 @@ class GamesTableSeeder extends Seeder
             'name' => 'Prey', 
             'price' => '£24.99',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.', 
-            'image' => 'public/images/prey.jpeg'
         ]);
 
         Game::create([
@@ -82,7 +75,6 @@ class GamesTableSeeder extends Seeder
             'name' => 'Watchdogs 2', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => 'public/images/watchdogs2.jpeg'
         ]);
     }
 }

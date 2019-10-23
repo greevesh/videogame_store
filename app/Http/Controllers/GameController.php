@@ -14,7 +14,7 @@ class GameController extends Controller
      */
     public function index()
     {   
-        $playstationGames = Game::orderBy('name', 'asc')->take(8)->get('name'); 
+        $playstationGames = Game::orderBy('name', 'asc')->value('name'); 
 
         return view('playstation')->with([
             'playstationGames' => $playstationGames
