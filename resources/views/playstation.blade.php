@@ -8,7 +8,13 @@
 
         <div class="products text-center">
             <div class="product">
-                <h2>{{ $playstationGames }}</h2>
+                @foreach($playstationGames as $playstationGame)
+                    <h2>{{ $playstationGame->name }}</h2>
+                    <h4>{{ $playstationGame->price }}</h4>
+                    <h4>{{ $playstationGame->description}}</h4>
+                    <h4>{{ $playstationGame->image }}</h4>
+                @endforeach 
+                
                 <a href=""><img src="" alt="product"></a>
                 <a href=""><div class="product-name"></div></a>
                 <div class="product-price"></div>
