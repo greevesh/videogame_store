@@ -15,7 +15,7 @@
                     <h4>{{ $playstationGame->image }}</h4>
                 @endforeach 
                 
-                <a href=""><img src="" alt="product"></a>
+                <a href=""><img src="{{ asset('storage/images'.$playstationGame->image) }}" alt="product"></a>
                 <a href=""><div class="product-name"></div></a>
                 <div class="product-price"></div>
             </div>
