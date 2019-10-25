@@ -1,46 +1,77 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="auth-pages">
-            <div>
-                <h2>Create Account</h2>
-                <div class="spacer"></div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Register') }}</div>
 
-                <form method="POST" action="https://laravelecommerceexample.ca/register">
-                    <input type="hidden" name="_token" value="47VraBSR0uIv9xgkY4TVf3b6jwzc5Un30qFjHQ5w">
+                <div class="card-body">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
 
-                    <input id="name" type="text" class="form-control" name="name" value="" placeholder="Name" required autofocus>
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
-                    <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email" required>
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" placeholder="Password" required>
-
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password"
-                        required>
-
-                    <div class="login-container">
-                        <button type="submit" class="auth-button">Create Account</button>
-                        <div class="already-have-container">
-                            <p><strong>Already have an account?</strong></p>
-                            <a href="https://laravelecommerceexample.ca/login">Login</a>
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
-                    </div>
 
-                </form>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="auth-right">
-                <h2>New Customer</h2>
-                <div class="spacer"></div>
-                <p><strong>Save time now.</strong></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.</p>
-
-                &nbsp;
-                <div class="spacer"></div>
-                <p><strong>Loyalty Program</strong></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.</p>
-            </div>
-        </div> <!-- end auth-pages -->
+        </div>
     </div>
+</div>
 @endsection

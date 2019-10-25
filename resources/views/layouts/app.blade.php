@@ -22,8 +22,9 @@
             <header class="with-background">
                 <div style="height: 150px;" class="top-nav container">
                     <div class="top-nav-left">
-                        <div style="margin-top: -42px;"><a href="/"><img src="{{ asset('images/gamer_logo2.png') }}" alt="Gamer logo"></a></div>
+                        <div style="margin-top: -42px;"><a href="/"><img src="{{ asset('storage/images/gamer_logo2.png') }}" alt="Gamer logo"></a></div>
                     </div>
+                    @guest 
                         <div class="top-nav-right">
                             <ul>
                                 <li><a href="/playstation">Playstation</a></li>
@@ -36,6 +37,20 @@
                                 <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
+                    @else 
+                        <div class="top-nav-right">
+                            <ul>
+                                <li><a href="/playstation">Playstation</a></li>
+                                <li><a href="/xbox">Xbox</a></li>
+                                <li><a href="/nintendo">Nintendo</a></li>
+                                <li><a href="/pc">PC</a></li>
+                                <li>|</li>
+                                <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="/logout">{{ Auth::user()->name }}</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </div>
+                    @endguest 
                     </div>
                 </div> <!-- end top-nav -->
             </header>
