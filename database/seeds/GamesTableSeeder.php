@@ -19,7 +19,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Call of Duty Advanced Warfare', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/callofduty.jpeg'
+            'image' => '/storage/images/callofduty.jpeg'
         ]);
 
         Game::create([
@@ -28,7 +28,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Dishonored 2', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/dishonored2.jpeg'
+            'image' => '/storage/images/dishonored2.jpeg'
         ]);
 
         Game::create([
@@ -37,7 +37,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Dying Light', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/dyinglight.jpeg'
+            'image' => '/storage/images/dyinglight.jpeg'
         ]);
 
         Game::create([
@@ -46,7 +46,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Dynasty Warriors 8', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/dynastywarriors8.jpeg'
+            'image' => '/storage/images/dynastywarriors8.jpeg'
         ]);
 
         Game::create([
@@ -55,7 +55,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Grand Theft Auto 5', 
             'price' => '£34.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/gta5.jpeg'
+            'image' => '/storage/images/gta5.jpeg'
         ]);
 
         Game::create([
@@ -64,7 +64,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'MXGP 2', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/mxgp2.jpeg'
+            'image' => '/storage/images/mxgp2.jpeg'
         ]);
 
         Game::create([
@@ -73,7 +73,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Prey', 
             'price' => '£24.99',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.', 
-            'image' => '/public/images/prey.jpeg'
+            'image' => '/storage/images/prey.jpeg'
         ]);
 
         Game::create([
@@ -82,7 +82,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Watchdogs 2', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/watchdogs2.jpeg'
+            'image' => '/storage/images/watchdogs2.jpeg'
         ]);
 
         // XBOX GAMES
@@ -92,7 +92,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Deadrising 3', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/deadrising3.jpeg'
+            'image' => '/storage/images/deadrising3.jpeg'
         ]);
 
         Game::create([
@@ -101,7 +101,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Fallout 4', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/fallout4.jpeg'
+            'image' => '/storage/images/fallout4.jpeg'
         ]);
 
         Game::create([
@@ -110,7 +110,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Fortnite', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/fortnite.jpeg'
+            'image' => '/storage/images/fortnite.jpeg'
         ]);
 
         Game::create([
@@ -119,7 +119,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Madmax', 
             'price' => '£14.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/madmax.jpeg'
+            'image' => '/storage/images/madmax.jpeg'
         ]);
 
         Game::create([
@@ -128,7 +128,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Minecraft', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/minecraft.jpeg'
+            'image' => '/storage/images/minecraft.jpeg'
         ]);
 
         Game::create([
@@ -137,7 +137,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Mortal Kombat X', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/mortalkombatx.jpeg'
+            'image' => '/storage/images/mortalkombatx.jpeg'
         ]);
 
         Game::create([
@@ -146,7 +146,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Titanfall 2', 
             'price' => '£14.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/titanfall2.jpeg'
+            'image' => '/storage/images/titanfall2.jpeg'
         ]);
 
         Game::create([
@@ -155,7 +155,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Unravel', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/unravel.jpeg'
+            'image' => '/storage/images/unravel.jpeg'
         ]);
 
         // NINTENDO GAMES
@@ -165,7 +165,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Cave Story', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/cavestory.jpeg'
+            'image' => '/storage/images/cavestory.jpeg'
         ]);
 
         Game::create([
@@ -174,7 +174,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Crayola Scoot', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/crayoloascoot.jpeg'
+            'image' => '/storage/images/crayoloascoot.jpeg'
         ]);
 
         Game::create([
@@ -183,7 +183,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Lumo', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/lumo.jpeg'
+            'image' => '/storage/images/lumo.jpeg'
         ]);
 
         Game::create([
@@ -192,7 +192,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Party Planet', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/partyplanet.jpeg'
+            'image' => '/storage/images/partyplanet.jpeg'
         ]);
 
         Game::create([
@@ -201,7 +201,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Stardew Valley', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/stardewvalley.jpeg'
+            'image' => '/storage/images/stardewvalley.jpeg'
         ]);
 
         Game::create([
@@ -210,7 +210,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Super Bomberman', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/superbomberman.jpeg'
+            'image' => '/storage/images/superbomberman.jpeg'
         ]);
 
         Game::create([
@@ -219,7 +219,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Wild Guns Reloaded', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/wildgunsreloaded.jpeg'
+            'image' => '/storage/images/wildgunsreloaded.jpeg'
         ]);
 
         Game::create([
@@ -228,7 +228,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Mario Kart Deluxe 8', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/mariokartdeluxe8.jpeg'
+            'image' => '/storage/images/mariokartdeluxe8.jpeg'
         ]);
 
         // PC GAMES
@@ -238,7 +238,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Dark Souls', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/darksouls.jpeg'
+            'image' => '/storage/images/darksouls.jpeg'
         ]);
 
         Game::create([
@@ -247,7 +247,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Farming Simulator 17', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/farmingsimulator17.jpeg'
+            'image' => '/storage/images/farmingsimulator17.jpeg'
         ]);
 
         Game::create([
@@ -256,7 +256,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Greedfall', 
             'price' => '£49.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/greedfall.jpeg'
+            'image' => '/storage/images/greedfall.jpeg'
         ]);
 
         Game::create([
@@ -265,7 +265,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Injustice 2', 
             'price' => '£34.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/injustice2.jpeg'
+            'image' => '/storage/images/injustice2.jpeg'
         ]);
 
         Game::create([
@@ -274,7 +274,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Just Cause 4', 
             'price' => '£39.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/justcause4.jpeg'
+            'image' => '/storage/images/justcause4.jpeg'
         ]);
 
         Game::create([
@@ -283,7 +283,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Project Cars', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/projectcars.jpeg'
+            'image' => '/storage/images/projectcars.jpeg'
         ]);
 
         Game::create([
@@ -292,7 +292,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Sekiro', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/sekiro.jpeg'
+            'image' => '/storage/images/sekiro.jpeg'
         ]);
 
         Game::create([
@@ -301,7 +301,7 @@ class GamesTableSeeder extends Seeder
             'name' => 'Tropico 6', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/public/images/tropico6.jpeg'
+            'image' => '/storage/images/tropico6.jpeg'
         ]);
     }
 }

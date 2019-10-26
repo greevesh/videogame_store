@@ -20,6 +20,27 @@ class GameController extends Controller
         return view('playstation')->with([
             'playstationGames' => $playstationGames
         ]);
+
+        // gets xbox games as an array by id
+        $xboxGames = Game::find([9, 10, 11, 12, 13, 14, 15, 16]); 
+
+        return view('xbox')->with([
+            'xboxGames' => $xboxGames
+        ]);
+
+        // gets nintendo games as an array by id
+        $nintendoGames = Game::find([17, 18, 19, 20, 21, 22, 23, 24]); 
+
+        return view('nintendo')->with([
+            'nintendoGames' => $nintendoGames
+        ]);
+
+        // gets pc games as an array by id
+        $pcGames = Game::find([25, 6, 27, 28, 29, 30, 31, 32]); 
+
+        return view('pc')->with([
+            'pcGames' => $pcGames
+        ]);
     }
 
     /**

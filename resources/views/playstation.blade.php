@@ -10,52 +10,9 @@
             <div class="product">
                 @foreach($playstationGames as $playstationGame)
                     <h2>{{ $playstationGame->name }}</h2>
-                    <h4>{{ $playstationGame->image }}</h4>
+                    <a href=""><img src="{{ asset($playstationGame->image) }}" alt="product"></a>
                     <h4>{{ $playstationGame->price }}</h4>
                     <h4>{{ $playstationGame->description}}</h4>
-                @endforeach 
-                
-                <a href=""><img src="{{ asset('storage/images/callofduty.jpeg') }}" alt="product"></a>
-                <a href=""><div class="product-name"></div></a>
-                <div class="product-price"></div>
-            </div>
-            <div class="product">
-                <a href=""><img src="{{ asset('storage/images/dishonored2.jpeg') }}" alt="product"></a>
-                <a href=""><div class="product-name"></div></a>
-                <div class="product-price"></div>
-            </div>
-            <div class="product">
-                <a href=""><img src="" alt="product"></a>
-                <a href=""><div class="product-name"></div></a>
-                <div class="product-price"></div>
-            </div>
-            <div class="product">
-                <a href=""><img src="" alt="product"></a>
-                <a href=""><div class="product-name"></div></a>
-                <div class="product-price"></div>
-            </div>
-            <div class="product">
-                <a href=""><img src="" alt="product"></a>
-                <a href=""><div class="product-name"></div></a>
-                <div class="product-price"></div>
-            </div>
-            <div class="product">
-                <a href=""><img src="" alt="product"></a>
-                <a href=""><div class="product-name"></div></a>
-                <div class="product-price"></div>
-            </div>
-            <div class="product">
-                <a href=""><img src="" alt="product"></a>
-                <a href=""><div class="product-name"></div></a>
-                <div class="product-price"></div>
-            </div>
-            <div class="product">
-                <a href=""><img src="" alt="product"></a>
-                <a href=""><div class="product-name"></div></a>
-                <div class="product-price"></div>
-            </div> 
-        </div> <!-- end products -->
-
-        </div> <!-- end container -->
-    </div> <!-- end deal section -->
+                @endforeach  
+        </div> 
 @endsection
