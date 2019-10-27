@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/playstation', 'GameController@index'); 
-
+Route::get('playstation/{game}', 'GameController@show'); 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
