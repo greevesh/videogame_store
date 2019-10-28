@@ -70,9 +70,9 @@ class GameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($game)
+    public function show($slug)
     {   
-        $game = Game::where('platform', 'playstation')->get();
+        $game = Game::where('slug', '=', $slug)->firstOrFail('name'); 
 
         return $game;
     }
