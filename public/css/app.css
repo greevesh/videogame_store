@@ -75,6 +75,32 @@ body {
   background-color: #f8fafc;
 }
 
+/* shopping cart icon */
+.fas {
+  color: rgb(49, 38, 38);
+  font-size: 28px;
+  margin-top: 9px;
+  padding-left: 6px;
+}
+
+/* social media icons in the footer */
+.fab {
+  color: rgb(49, 38, 38);
+  font-size: 20px;
+}
+
+footer {
+  margin-top: 500px;
+  border: 1px;
+  border-color: gray;
+  box-shadow: black;
+}
+
+footer li {
+  display: inline;
+  padding: 20px;
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
@@ -4468,7 +4494,8 @@ input[type=button].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
+  font-size: 20px;
 }
 
 .nav-link:hover,
@@ -4561,6 +4588,7 @@ input[type=button].btn-block {
   -webkit-box-pack: justify;
           justify-content: space-between;
   padding: 0.5rem 1rem;
+  height: 117px;
 }
 
 .navbar > .container,
