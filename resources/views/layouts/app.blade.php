@@ -95,16 +95,16 @@
             @yield('content')
         </main>
 
-        <footer>
-            <div class="footer-content container">
-                <ul style="margin-left: 420px;">
+        <footer class="container py-5">
+            <div>
+                <ul style="margin-left: 390px;">
                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div> 
-        </footer> 
+        </footer>
     </div>
 </body>
 </html>

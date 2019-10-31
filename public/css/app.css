@@ -86,14 +86,12 @@ body {
 /* social media icons in the footer */
 .fab {
   color: rgb(49, 38, 38);
-  font-size: 20px;
+  font-size: 27px;
 }
 
 footer {
-  margin-top: 500px;
-  border: 1px;
-  border-color: gray;
-  box-shadow: black;
+  margin-top: 150px;
+  height: 105px;
 }
 
 footer li {

@@ -9,61 +9,19 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
-    <body>
-        
-    </body>
+
+    @section('content')
+        <body>
+            <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+                <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 font-weight-normal">Coming Soon</h1>
+                <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
+                </div>
+                <div class="product-device shadow-sm d-none d-md-block"></div>
+                <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+            </div>
+        </body>
+    @endsection
+
 </html>
