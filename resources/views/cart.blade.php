@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', '- Shopping Cart')
+
 @section('content')
 <div style="margin-top: -250px;" class="px-4 px-lg-0">
         <!-- For demo purpose -->
