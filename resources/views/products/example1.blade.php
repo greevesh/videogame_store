@@ -1,7 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.products')
 
 @section('title', '- Example 1')
 
-@section('product')
-
-@endsection 
