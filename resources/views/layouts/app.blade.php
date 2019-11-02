@@ -34,10 +34,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -96,9 +92,9 @@
         </main>
 
         @yield('footer')
-            <footer class="container py-5">
+            <footer>
                 <div>
-                    <ul style="margin-left: 390px;">
+                    <ul class="p-3 p-md-5 m-md-3 text-center">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>

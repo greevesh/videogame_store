@@ -1,3 +1,3 @@
-@extends('layouts.app')
+@extends('layouts.products')
 
 @section('title', '- Example 2')
