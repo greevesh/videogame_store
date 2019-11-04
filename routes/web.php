@@ -13,10 +13,10 @@
 
 Route::view('/', 'landingpage');
 // making use of named helpers in case we want to change the route url and not have to change every instance
-Route::view('/example1', 'products/example1')->name('example1');
-Route::view('/example2', 'products/example2')->name('example2');
-Route::view('/example3', 'products/example3')->name('example3');
-Route::view('/example4', 'products/example4')->name('example4');
+Route::view('/playstation', 'products/playstation')->name('playstation');
+Route::view('/xbox', 'products/xbox')->name('xbox');
+Route::view('/nintendo', 'products/nintendo')->name('nintendo');
+Route::view('/pc', 'products/pc')->name('pc');
 Route::view('/cart', 'cart')->name('cart');
 
 // login and register
