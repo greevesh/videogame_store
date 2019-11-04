@@ -81,17 +81,18 @@ body {
   color: rgb(49, 38, 38);
   font-size: 1.75rem;
   padding-left: 0.375rem;
+  margin-top: 0.65rem;
 }
 
 @media (max-width: 1200px) {
   .fas {
-    margin-top: 0.65rem;
+    margin-top: 0.6rem;
   }
 } 
 
 @media (max-width: 991px) {
   .fas {
-    margin-top: 2.4rem;
+    margin-top: 0.9rem;
   }
 } 
 
@@ -4512,7 +4513,7 @@ input[type=button].btn-block {
 
 @media (max-width: 991px) {
   .nav-link {
-    margin-top: 1.9rem; 
+    margin-top: 0.2rem; 
   }
 }
 
