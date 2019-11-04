@@ -64,6 +64,18 @@
                             @endif
                             <li><a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a></li>
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('example1') }}">{{ ('Example 1') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('example2') }}">{{ ('Example 2') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('example3') }}">{{ ('Example 3') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('example4') }}">{{ ('Example 4') }}</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -79,6 +91,8 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+
+                                    <li><a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a></li>
                                 </div>
                             </li>
                         @endguest
@@ -92,9 +106,9 @@
         </main>
 
         @yield('footer')
-            <footer>
+            <footer class="border shadow-lg">
                 <div>
-                    <ul class="p-3 p-md-5 m-md-3 text-center">
+                    <ul class="p-3 p-5 m-md-3 text-center">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
