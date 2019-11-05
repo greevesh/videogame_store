@@ -90,7 +90,7 @@ body {
   }
 } 
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .fas {
     margin-top: 0.9rem;
   }
@@ -112,6 +112,21 @@ footer {
 footer li {
   display: inline;
   padding: 1.25rem;
+}
+
+#pre-order {
+  background-image: url('../storage/images/pokemon.jpg');
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#pre-order button {
+  font-size: 3.5rem;
+  color: white;
+  margin-top: 8.5rem;
+  background-color: black;
 }
 
 [tabindex="-1"]:focus {
