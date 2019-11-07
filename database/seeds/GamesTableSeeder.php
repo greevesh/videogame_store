@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Game;
 
 class GamesTableSeeder extends Seeder
 {
@@ -230,168 +231,227 @@ class GamesTableSeeder extends Seeder
             'image' => '/storage/images/xbox/zombi.jpeg'
         ]);
 
-        // PC GAMES
+        // NINTENDO
         Game::create([
-            'slug' => 'dark-souls',
-            'platform' => 'pc',
-            'name' => 'Dark Souls', 
-            'price' => '£29.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/darksouls.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'farming-simulator-17',
-            'platform' => 'pc',
-            'name' => 'Farming Simulator 17', 
+            'slug' => 'arms-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Arms', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/farmingsimulator17.jpeg'
+            'image' => '/storage/images/nintendo/arms.jpeg'
         ]);
 
         Game::create([
-            'slug' => 'greedfall',
-            'platform' => 'pc',
-            'name' => 'Greedfall', 
-            'price' => '£49.99', 
+            'slug' => 'lumo-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Lumo', 
+            'price' => '£14.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/greedfall.jpeg'
+            'image' => '/storage/images/nintendo/lumo.jpeg'
         ]);
 
         Game::create([
-            'slug' => 'injustice-2',
-            'platform' => 'pc',
-            'name' => 'Injustice 2', 
-            'price' => '£34.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/injustice2.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'just-cause-4',
-            'platform' => 'pc',
-            'name' => 'Just Cause 4', 
-            'price' => '£39.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/justcause4.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'project-cars',
-            'platform' => 'pc',
-            'name' => 'Project Cars', 
-            'price' => '£29.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/projectcars.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'sekiro',
-            'platform' => 'pc',
-            'name' => 'Sekiro', 
-            'price' => '£29.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/sekiro.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'tropico-6',
-            'platform' => 'pc',
-            'name' => 'Tropico 6', 
-            'price' => '£24.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/tropico6.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'wild-guns-reloaded',
-            'platform' => 'nintendo switch',
-            'name' => 'Wild Guns Reloaded', 
+            'slug' => 'bendy-and-the-ink-machine-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Bendy and the Ink Machine', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/wildgunsreloaded.jpeg'
+            'image' => '/storage/images/nintendo/bendy_and_the_ink_machine.jpeg'
         ]);
 
         Game::create([
-            'slug' => 'mario-kart-deluxe-8',
-            'platform' => 'nintendo switch',
+            'slug' => 'mario-kart-deluxe8-nintendo',
+            'platform' => 'nintendo',
             'name' => 'Mario Kart Deluxe 8', 
+            'price' => '£19.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/mario_kart_deluxe8.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'party-planet-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Party Planet', 
+            'price' => '£14.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/party_planet.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'celeste-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Celeste', 
+            'price' => '£14.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/celeste.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'penny-punching-princess-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Penny Punching Princess', 
+            'price' => '£19.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/penny_punching_princess.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'poi-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Poi', 
+            'price' => '£24.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/poi.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'rico-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Rico', 
+            'price' => '£19.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/rico.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'stardew-valley-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Stardew Valley', 
             'price' => '£29.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/mariokartdeluxe8.jpeg'
+            'image' => '/storage/images/nintendo/stardew_valley.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'urban-trial-playground-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Urban Trial Playground', 
+            'price' => '£19.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/urban_trial_playground.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'wild-guns-reloaded-nintendo',
+            'platform' => 'nintendo',
+            'name' => 'Wild Guns Reloaded', 
+            'price' => '£24.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/wild_guns_reloaded.jpeg'
         ]);
 
         // PC GAMES
         Game::create([
-            'slug' => 'dark-souls',
+            'slug' => 'assassins-creed-brotherhood-pc',
             'platform' => 'pc',
-            'name' => 'Dark Souls', 
-            'price' => '£29.99', 
+            'name' => 'Assassins Creed Brotherhood', 
+            'price' => '£9.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/darksouls.jpeg'
+            'image' => '/storage/images/pc/assassins_creed_brotherhood.jpeg'
         ]);
 
         Game::create([
-            'slug' => 'farming-simulator-17',
+            'slug' => 'breath-of-fire4-pc',
             'platform' => 'pc',
-            'name' => 'Farming Simulator 17', 
-            'price' => '£19.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/farmingsimulator17.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'greedfall',
-            'platform' => 'pc',
-            'name' => 'Greedfall', 
-            'price' => '£49.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/greedfall.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'injustice-2',
-            'platform' => 'pc',
-            'name' => 'Injustice 2', 
-            'price' => '£34.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/injustice2.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'just-cause-4',
-            'platform' => 'pc',
-            'name' => 'Just Cause 4', 
-            'price' => '£39.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/justcause4.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'project-cars',
-            'platform' => 'pc',
-            'name' => 'Project Cars', 
-            'price' => '£29.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/projectcars.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'sekiro',
-            'platform' => 'pc',
-            'name' => 'Sekiro', 
-            'price' => '£29.99', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/sekiro.jpeg'
-        ]);
-
-        Game::create([
-            'slug' => 'tropico-6',
-            'platform' => 'pc',
-            'name' => 'Tropico 6', 
+            'name' => 'Breath of Fire 4', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/tropico6.jpeg'
+            'image' => '/storage/images/pc/breath_of_fire4.jpeg'
         ]);
+
+        Game::create([
+            'slug' => 'bulletstorm-pc',
+            'platform' => 'pc',
+            'name' => 'Bulletstorm', 
+            'price' => '£29.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/bulletstorm.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'cold-fear-pc',
+            'platform' => 'pc',
+            'name' => 'Cold Fear', 
+            'price' => '£29.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/cold_fear.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'dead-space3-pc',
+            'platform' => 'pc',
+            'name' => 'Dead Space 3', 
+            'price' => '£24.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/dead_space3.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'flatout-pc',
+            'platform' => 'pc',
+            'name' => 'Flatout', 
+            'price' => '£24.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/flatout.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'portal2-pc',
+            'platform' => 'pc',
+            'name' => 'Portal 2', 
+            'price' => '£24.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/portal2.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'prince-of-persia-pc',
+            'platform' => 'pc',
+            'name' => 'Prince of Persia', 
+            'price' => '£14.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/prince_of_persia.jpeg'
+        ]);
+
+
+        Game::create([
+            'slug' => 'resident-evil6-pc',
+            'platform' => 'pc',
+            'name' => 'Resident Evil 6', 
+            'price' => '£29.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/resident_evil6.jpeg'
+        ]);
+
+
+        Game::create([
+            'slug' => 'rocket-league-pc',
+            'platform' => 'pc',
+            'name' => 'Rocket League', 
+            'price' => '£24.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/rocket_league.jpeg'
+        ]);
+
+
+        Game::create([
+            'slug' => 'startreck-pc',
+            'platform' => 'pc',
+            'name' => 'Startreck', 
+            'price' => '£24.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/startreck.jpeg'
+        ]);
+
+
+        Game::create([
+            'slug' => 'torchlight2-pc',
+            'platform' => 'pc',
+            'name' => 'Torchlight 2', 
+            'price' => '£19.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/pc/torchlight2.jpeg'
+        ]);
+
     }
 }
