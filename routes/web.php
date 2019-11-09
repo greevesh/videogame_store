@@ -22,4 +22,6 @@ Route::view('/cart', 'cart')->name('cart');
 // login and register
 Auth::routes();
 
+Route::get('/Game', 'GameController@index')->name('game'); 
+
 Route::get('/home', 'HomeController@index')->name('home');

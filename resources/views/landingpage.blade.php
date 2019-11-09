@@ -13,8 +13,7 @@
 
     @section('content')
         <body>
-            <div id="pre-order" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-                <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <div id="pre-order">
                 <button>Pre-order now</button>
             </div>
         </body>

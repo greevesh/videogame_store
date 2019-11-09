@@ -1,10 +1,11 @@
 @include('layouts.app')
 
-<div style="width: 18rem; margin: -12.5rem 0 0 20rem;">
+<h1 id="category-title" class="d-flex justify-content-center">@yield('category') Games</h1>
+
+<div id="product-container">
     <div class="card-body">
         <img src="" alt="product">
-        <h5 class="card-title">Product name</h5>
-        <h6 class="card-subtitle mb-2 text-muted">£24.99</h6>
+        <h5 class="card-title"></h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
     </div>
-</div>
-        
+</div>        

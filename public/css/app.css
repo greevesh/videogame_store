@@ -118,15 +118,19 @@ footer li {
   background-image: url('../storage/images/pokemon_sword.jpeg');
   background-size: cover;
   height: 100vh;
-  margin: 0;
-  padding: 0;
+  margin-top: -2rem;
 }
 
 #pre-order button {
   font-size: 3.5rem;
   color: white;
-  margin-top: 8.5rem;
+  margin-top: 18rem;
+  margin-left: 30rem;
   background-color: black;
+}
+
+#category-title {
+  margin-top: -34rem;
 }
 
 [tabindex="-1"]:focus {
