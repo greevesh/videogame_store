@@ -21,6 +21,8 @@ Route::get('/xbox', 'XboxController@index')->name('xbox');
 Route::get('/nintendo', 'NintendoController@index')->name('nintendo');
 Route::get('/pc', 'PCController@index')->name('pc');
 
+Route::get('/playstation/{slug}', 'PlaystationController@show'); 
+
 Route::view('/', 'landingpage')->name('landingpage');
 Route::view('/cart', 'cart')->name('cart');
 
