@@ -130,7 +130,7 @@ footer li {
 }
 
 #category-title {
-  margin-top: -34rem;
+  display: inline-block;
 }
 
 [tabindex="-1"]:focus {
