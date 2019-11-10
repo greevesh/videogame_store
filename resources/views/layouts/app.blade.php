@@ -63,16 +63,16 @@
                             <li><a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a></li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('example1') }}">{{ ('Example 1') }}</a>
+                                <a class="nav-link" href="{{ route('playstation') }}">{{ ('Playstation') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('example2') }}">{{ ('Example 2') }}</a>
+                                <a class="nav-link" href="{{ route('xbox') }}">{{ ('Xbox') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('example3') }}">{{ ('Example 3') }}</a>
+                                <a class="nav-link" href="{{ route('nintendo') }}">{{ ('Nintendo') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('example4') }}">{{ ('Example 4') }}</a>
+                                <a class="nav-link" href="{{ route('pc') }}">{{ ('PC') }}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

@@ -12,15 +12,11 @@ class GameController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {   
-        // gets the playstation games as an array by their id's
-        $playstationGames = Game::find([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-
-        return view('playstation')->with([
-            'playstationGames' => $playstationGames
-        ]);
-    }
+        //
+    }   
 
     /**
      * Show the form for creating a new resource.
