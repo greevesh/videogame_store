@@ -13,9 +13,9 @@
 
     @section('content')
         <body>
-            <div id="pre-order">
-                <button>Pre-order now</button>
-            </div>
+            <img id ="pre-order-image" src="../storage/images/pokemon_sword.jpeg" alt="Pokemnon Sword coming soon"> 
+            <div id="banner" class="d-flex justify-content-center">Pokemon Sword: Coming Soon!</div>
+            <button id="pre-order-button">Pre-order now</button>
         </body>
     @endsection
 
