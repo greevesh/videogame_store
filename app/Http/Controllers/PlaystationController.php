@@ -51,7 +51,9 @@ class PlaystationController extends Controller
      */
     public function show($slug)
     {   
-        return view('products.game');
+        $game = Game::where('platform', 'playstation')->first();
+        dd($game);
+        return view('products.game', ['game' => $game]);
     }
 
     /**
