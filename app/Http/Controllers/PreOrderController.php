@@ -5,22 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Game;
 
-class PlaystationController extends Controller
+class PreOrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
-    {   
-        $playstationGames = Game::find([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    {
+        $preOrderGame = Game::find(49);
 
-        return view('products.playstation')->with([
-            'playstationGames' => $playstationGames
+        return view('pre-order')->with([
+            'preOrderGame' => $preOrderGame
         ]);
-    }   
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -49,11 +48,9 @@ class PlaystationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
-    {   
-        $game = Game::where('slug', $slug)->first();
-        
-        return view('products.game', ['game' => $game]);
+    public function show($id)
+    {
+        //
     }
 
     /**

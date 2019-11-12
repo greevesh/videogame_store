@@ -25,6 +25,7 @@ Route::get('/pc/{slug}', 'PCController@show');
 
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');
+Route::view('/pre-order', 'products/pre-order')->name('pre-order');
 Route::view('/cart', 'cart')->name('cart');
 
 // login and register

@@ -37,41 +37,41 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
+                            <li class="{{ Request::is('playstation') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('playstation') }}">{{ ('Playstation') }}</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="{{ Request::is('xbox') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('xbox') }}">{{ ('Xbox') }}</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="{{ Request::is('nintendo') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('nintendo') }}">{{ ('Nintendo') }}</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="{{ Request::is('pc') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('pc') }}">{{ ('PC') }}</a>
                             </li>
                             <li>
                                 
                             </li>
-                            <li class="nav-item">
+                            <li class="{{ Request::is('login') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="{{ Request::is('register') ? 'page-item active' : '' }} nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                             <li><a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a></li>
                         @else
-                            <li class="nav-item">
+                            <li class="{{ Request::is('playstation') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('playstation') }}">{{ ('Playstation') }}</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="{{ Request::is('xbox') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('xbox') }}">{{ ('Xbox') }}</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="{{ Request::is('nintendo') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('nintendo') }}">{{ ('Nintendo') }}</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="{{ Request::is('pc') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('pc') }}">{{ ('PC') }}</a>
                             </li>
                             <li class="nav-item dropdown">

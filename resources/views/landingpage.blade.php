@@ -15,7 +15,7 @@
         <body>
             <img id ="pre-order-image" src="../storage/images/pokemon_sword.jpeg" alt="Pokemnon Sword coming soon"> 
             <div id="banner" class="d-flex justify-content-center">Coming Soon: Pokemon Sword and Pokemon Shield</div>
-            <button id="pre-order-button">Pre-order now</button>
+            <a href="{{ route('pre-order') }}"><button id="pre-order-button">Pre-order now</button></a>
         </body>
     @endsection
 
