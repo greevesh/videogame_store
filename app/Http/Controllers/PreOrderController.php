@@ -14,10 +14,10 @@ class PreOrderController extends Controller
      */
     public function index()
     {
-        $preOrderGame = Game::find(49);
+        $preOrderGames = Game::find([49, 50]);
 
-        return view('pre-order')->with([
-            'preOrderGame' => $preOrderGame
+        return view('products.pre-order')->with([
+            'preOrderGames' => $preOrderGames
         ]);
     }
 

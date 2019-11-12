@@ -443,7 +443,6 @@ class GamesTableSeeder extends Seeder
             'image' => '/storage/images/pc/star_treck.jpeg'
         ]);
 
-
         Game::create([
             'slug' => 'pc/torchlight2',
             'platform' => 'pc',
@@ -453,5 +452,22 @@ class GamesTableSeeder extends Seeder
             'image' => '/storage/images/pc/torchlight2.jpeg'
         ]);
 
+        Game::create([
+            'slug' => 'pre-order/sword',
+            'platform' => 'nintendo',
+            'name' => 'Pokemon Sword', 
+            'price' => '£49.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/pokemon_sword.jpeg'
+        ]);
+
+        Game::create([
+            'slug' => 'pre-order/shield',
+            'platform' => 'nintendo',
+            'name' => 'Pokemon Shield', 
+            'price' => '£49.99', 
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
+            'image' => '/storage/images/nintendo/pokemon_shield.jpeg'
+        ]);
     }
 }
