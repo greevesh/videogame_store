@@ -107,12 +107,21 @@
             <footer class="border shadow-lg">
                 <div>
                     <ul class="p-3 p-5 m-md-3 text-center">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li class="d-inline p-2"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="d-inline p-2"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="d-inline p-2"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="d-inline p-2"><a href="#"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div> 
+                <div>
+                    <ul id="footer-corp">
+                        <li class="d-block text-right"><a class="text-dark" href="#">Careers at Gamer</a></li>
+                        <li class="d-block text-right"><a class="text-dark" href="#">Terms and Conditions</a></li>
+                        <li class="d-block text-right"><a class="text-dark" href="#">Privacy Policy</a></li>
+                        <li class="d-block text-right"><a class="text-dark" href="#">Cookies</a></li>
+                        <li class="d-block text-right"><a class="text-dark" href="#">Copyright</a></li>
+                    </ul>
+                </div>
             </footer>
         @show
     </div>

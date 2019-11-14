@@ -52,8 +52,10 @@ class PlaystationController extends Controller
     public function show($slug)
     {   
         $game = Game::where('slug', $slug)->first();
-        
-        return view('products.game', ['game' => $game]);
+    
+        return view('products.game')->with([
+            'game' => $game
+        ]);
     }
 
     /**

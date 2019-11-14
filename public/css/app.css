@@ -109,9 +109,9 @@ footer {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-footer li {
-  display: inline;
-  padding: 1.25rem;
+#footer-corp {
+  margin-top: -8rem;
+  margin-right: 3rem;
 }
 
 #pre-order-image {

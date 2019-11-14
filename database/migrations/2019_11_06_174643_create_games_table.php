@@ -19,7 +19,7 @@ class CreateGamesTable extends Migration
             $table->string('platform');
             $table->string('name');
             $table->string('price');
-            $table->string('description');
+            $table->string('description', 1000);
             $table->string('image');
             $table->timestamps();
         });

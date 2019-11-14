@@ -49,8 +49,12 @@ class XboxController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($slug)
-    {
-        return view('products.game');
+    {   
+        $game = Game::where('slug', $slug)->first();
+    
+        return view('products.game')->with([
+            'game' => $game
+        ]);
     }
 
     /**
