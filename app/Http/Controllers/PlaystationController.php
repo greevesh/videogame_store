@@ -51,11 +51,10 @@ class PlaystationController extends Controller
      */
     public function show($slug)
     {   
+        // gets the game based on the slug of the current page matching the slug in the database
         $game = Game::where('slug', $slug)->first();
-    
-        return view('products.game')->with([
-            'game' => $game
-        ]);
+
+        return view('products.game', compact('game'));
     }
 
     /**
