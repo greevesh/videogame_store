@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
+=======
+@section('title', '- Login')
+
+>>>>>>> 1b6610b198eb303d8d38d9c5b6ce37af0fd7cae3
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

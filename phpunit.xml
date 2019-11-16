@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <phpunit backupGlobals="false"
+=======
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         backupGlobals="false"
+>>>>>>> 1b6610b198eb303d8d38d9c5b6ce37af0fd7cae3
          backupStaticAttributes="false"
          bootstrap="vendor/autoload.php"
          colors="true"
