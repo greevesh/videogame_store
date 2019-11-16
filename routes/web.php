@@ -19,10 +19,10 @@ Route::get('/pc', 'PCController@index')->name('pc');
 Route::get('/pre-order', 'PreOrderController@index')->name('pre-order');
 
 // provides the pages for each individual product
-Route::get('/playstation/{slug}', 'PlaystationController@show'); 
-Route::get('/xbox/{slug}', 'XboxController@show');
-Route::get('/nintendo/{slug}', 'NintendoController@show');
-Route::get('/pc/{slug}', 'PCController@show');
+Route::get('/playstation/{game}', 'PlaystationController@show'); 
+Route::get('/xbox/{game}', 'XboxController@show');
+Route::get('/nintendo/{game}', 'NintendoController@show');
+Route::get('/pc/{game}', 'PCController@show');
 
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');

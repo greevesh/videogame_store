@@ -8,7 +8,7 @@
             <h4>{{ $game->price }}</h4>
             <p>{{ $game->description }}</p>
         @else 
-            <h1>No record</h1>
+            <h1 class="text-center">Whoops! Couldn't find any games.</h1>
         @endif
     </div>
     <button type="button" class="btn btn-secondary btn-lg">Add to Cart</button>

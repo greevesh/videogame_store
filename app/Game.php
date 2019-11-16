@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Game extends Model
 {
     protected $primaryKey = 'game_id';
+
+    public function getRouteKeyName() 
+    {
+        return 'slug'; 
+    }
 }

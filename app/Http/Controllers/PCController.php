@@ -48,11 +48,8 @@ class PCController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show(Game $game)
     {   
-        // gets the game based on the slug of the current page matching the slug in the database
-        $game = Game::where('slug', $slug)->first();
-
         return view('products.game', compact('game'));
     }
 
