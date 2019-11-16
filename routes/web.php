@@ -11,12 +11,14 @@
 |
 */
 
-// connects to the controller to enable the retrieval of the games for each category
+// connects to the controllers for each platform to enable the retrieval of the games for each category
 Route::get('/playstation', 'PlaystationController@index')->name('playstation'); 
 Route::get('/xbox', 'XboxController@index')->name('xbox');
 Route::get('/nintendo', 'NintendoController@index')->name('nintendo');
 Route::get('/pc', 'PCController@index')->name('pc');
 Route::get('/pre-order', 'PreOrderController@index')->name('pre-order');
+
+Route::post('/cart', 'CartController@store')->name('add-to-cart');
 
 // provides the pages for each individual product
 Route::get('/playstation/{slug}', 'PlaystationController@show'); 

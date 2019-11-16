@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b9e73ad57a9bbfb35d3c7cc0d815d97",
+    "content-hash": "be28579e4bff6426e29c8bd99614b640",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2894,6 +2894,66 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2019-10-24T08:53:34+00:00"
+        },
+        {
+            "name": "treestoneit/shopping-cart",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/treeStoneIT/shopping-cart.git",
+                "reference": "58c05d3e1beb0dd2ed627e3e07a91f553a7daa1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/treeStoneIT/shopping-cart/zipball/58c05d3e1beb0dd2ed627e3e07a91f553a7daa1d",
+                "reference": "58c05d3e1beb0dd2ed627e3e07a91f553a7daa1d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^6",
+                "illuminate/database": "^6",
+                "illuminate/support": "^6",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "4.*",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Treestoneit\\ShoppingCart\\CartServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cart": "Treestoneit\\ShoppingCart\\Facades\\Cart"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Treestoneit\\ShoppingCart\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Avraham Appel",
+                    "email": "avraham@bomshteyn.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An easy-to-use shopping cart for Laravel 6.",
+            "homepage": "https://github.com/treestoneit/shopping-cart",
+            "keywords": [
+                "laravel",
+                "shopping-cart",
+                "treestoneit"
+            ],
+            "time": "2019-11-04T19:39:07+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
