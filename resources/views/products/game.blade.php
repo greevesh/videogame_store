@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container product-details">
         @if(isset($game))
             <h2>{{ $game->name }}</h2>
             <img src="{{ asset($game->image) }}" alt="game">
@@ -11,5 +11,10 @@
             <h1 class="text-center">Whoops! Couldn't find any games.</h1>
         @endif
     </div>
-    <button type="button" class="btn btn-secondary btn-lg">Add to Cart</button>
+
+    <form action="{{ route('add-to-cart') }}" method="POST">
+        @csrf
+        <button type="submit" class="btn btn-secondary btn-lg">Add to Cart</button>
+        <input name="game" type="hidden" value="{{ $game->name }}"> 
+    </form>
 @endsection

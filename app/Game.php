@@ -3,13 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Treestoneit\ShoppingCart\Buyable;
+use Treestoneit\ShoppingCart\BuyableTrait;
 
-class Game extends Model
+class Game extends Model implements Buyable
 {
-    protected $primaryKey = 'game_id';
+    protected $primaryKey = 'game_id'; 
+    
+    // enables shopping cart functionality
+    use BuyableTrait; 
 
-    public function getRouteKeyName() 
-    {
-        return 'slug'; 
-    }
+    protected $fillable = ['name'];
 }

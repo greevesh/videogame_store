@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Treestoneit\ShoppingCart\Facades\Cart;
+use App\Cart as ShoppingCart;
+use App\Game;
 
 class CartController extends Controller
 {
@@ -34,7 +37,16 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $game = Game::create(['name' => $request->name, 'price' => $request->price])
+            ->associate('App\Game');
+
+        $quantity = 1;
+
+        Cart::add($game, $quantity);
+
+        $successMessage = 'Game has been added to cart.';
+
+        return view('game')->with($successMessage);
     }
 
     /**
