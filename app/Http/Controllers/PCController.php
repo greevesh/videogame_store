@@ -16,9 +16,7 @@ class PCController extends Controller
     {
         $pcGames = Game::find([37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]);
 
-        return view('products.pc')->with([
-            'pcGames' => $pcGames
-        ]);
+        return view('products.pc', compact('pcGames'));
     }
 
     /**
@@ -50,7 +48,7 @@ class PCController extends Controller
      */
     public function show(Game $game)
     {   
-        return view('products.game', compact('game'));
+        return view('layouts.game', compact('game'));
     }
 
     /**

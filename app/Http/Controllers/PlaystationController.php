@@ -17,9 +17,7 @@ class PlaystationController extends Controller
     {   
         $playstationGames = Game::find([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 
-        return view('products.playstation')->with([
-            'playstationGames' => $playstationGames
-        ]);
+        return view('products.playstation', compact('playstationGames'));
     }   
 
     /**
@@ -51,7 +49,7 @@ class PlaystationController extends Controller
      */
     public function show(Game $game)
     {   
-        return view('products.game', compact('game'));
+        return view('layouts.game', compact('game'));
     }
 
     /**

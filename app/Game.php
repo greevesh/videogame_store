@@ -14,4 +14,8 @@ class Game extends Model implements Buyable
     use BuyableTrait; 
 
     protected $fillable = ['name'];
+
+    public function getRouteKeyName() {
+        return 'slug'; 
+    }
 }
