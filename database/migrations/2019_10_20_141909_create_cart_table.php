@@ -17,7 +17,7 @@ class CreateCartTable extends Migration
             $table->bigIncrements('game_id');
             $table->text('slug');
             $table->text('game');
-            $table->text('price');
+            $table->integer('price');
             $table->text('description');
             $table->timestamps();
         });

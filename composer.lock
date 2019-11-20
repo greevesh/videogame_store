@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "12ede68a5240ed43a51b5939d4992ba3",
+    "content-hash": "3f1c69f6e6e44f3ee5e145bf0428660a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -379,6 +379,66 @@
                 "trusted proxy"
             ],
             "time": "2019-09-03T16:45:42+00:00"
+        },
+        {
+            "name": "hardevine/shoppingcart",
+            "version": "2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hardevine/LaravelShoppingcart.git",
+                "reference": "0ef89eb77a3eb428500bc990b5bbf6f320d9fa93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hardevine/LaravelShoppingcart/zipball/0ef89eb77a3eb428500bc990b5bbf6f320d9fa93",
+                "reference": "0ef89eb77a3eb428500bc990b5bbf6f320d9fa93",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/events": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|~6.0",
+                "illuminate/session": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|~6.0",
+                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|~6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.0",
+                "orchestra/testbench": "~3.1",
+                "phpunit/phpunit": "~5.0|~6.0|~7.0"
+            },
+            "suggest": {
+                "gloudemans/notify": "Simple flash notifications for Laravel"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cart": "Gloudemans\\Shoppingcart\\Facades\\Cart"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gloudemans\\Shoppingcart\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Gloudemans",
+                    "email": "info@robgloudemans.nl"
+                }
+            ],
+            "description": "Laravel Shoppingcart",
+            "keywords": [
+                "laravel",
+                "shoppingcart"
+            ],
+            "time": "2019-09-12T08:02:58+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2894,66 +2954,6 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2019-10-24T08:53:34+00:00"
-        },
-        {
-            "name": "treestoneit/shopping-cart",
-            "version": "v1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/treeStoneIT/shopping-cart.git",
-                "reference": "58c05d3e1beb0dd2ed627e3e07a91f553a7daa1d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/treeStoneIT/shopping-cart/zipball/58c05d3e1beb0dd2ed627e3e07a91f553a7daa1d",
-                "reference": "58c05d3e1beb0dd2ed627e3e07a91f553a7daa1d",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^6",
-                "illuminate/database": "^6",
-                "illuminate/support": "^6",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "4.*",
-                "phpunit/phpunit": "^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Treestoneit\\ShoppingCart\\CartServiceProvider"
-                    ],
-                    "aliases": {
-                        "Cart": "Treestoneit\\ShoppingCart\\Facades\\Cart"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Treestoneit\\ShoppingCart\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Avraham Appel",
-                    "email": "avraham@bomshteyn.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "An easy-to-use shopping cart for Laravel 6.",
-            "homepage": "https://github.com/treestoneit/shopping-cart",
-            "keywords": [
-                "laravel",
-                "shopping-cart",
-                "treestoneit"
-            ],
-            "time": "2019-11-04T19:39:07+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

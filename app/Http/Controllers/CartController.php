@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Treestoneit\ShoppingCart\Facades\Cart;
-use App\Cart as ShoppingCart;
 use App\Game;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartController extends Controller
 {
@@ -35,18 +34,15 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Game $game)
     {
-        $game = Game::create(['name' => $request->name, 'price' => $request->price])
-            ->associate('App\Game');
+        Cart::add($request->game_id, $request->name, 1, $request->price)
+            ->associate('App\Product');
 
-        $quantity = 1;
+        $cartSuccessMessage = 'Item was added to cart successfully.';
+        $cartErrorMessage = 'Oops! The cart does not seem to be working right now. Sorry!';
 
-        Cart::add($game, $quantity);
-
-        $successMessage = 'Game has been added to cart.';
-
-        return view('game')->with($successMessage);
+        return view('addedtocart', compact('cartSuccessMessage', 'cartErrorMessage', 'game')); 
     }
 
     /**
