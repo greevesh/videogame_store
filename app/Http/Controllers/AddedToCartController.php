@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Game;
 
-class GameController extends Controller
+class AddedToCartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,26 +13,8 @@ class GameController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        // gets playstation games as an array by id
-        $playstationGames = Game::find([1, 2, 3, 4, 5, 6, 7, 8]); 
-
-        return view('playstation', compact('playstationGames'));
-
-        // gets xbox games as an array by id
-        $xboxGames = Game::find([9, 10, 11, 12, 13, 14, 15, 16]); 
-
-        return view('xbox', compact('xboxGames'));
-
-        // gets nintendo games as an array by id
-        $nintendoGames = Game::find([17, 18, 19, 20, 21, 22, 23, 24]); 
-
-        return view('nintendo', compact('nintendoGames'));
-
-        // gets pc games as an array by id
-        $pcGames = Game::find([25, 6, 27, 28, 29, 30, 31, 32]); 
-
-        return view('pc', compact('pcGames'));
+    {
+        //
     }
 
     /**
@@ -62,9 +44,9 @@ class GameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Game $game)
     {   
-        //
+        return view('addedtocart', compact('game'));
     }
 
     /**

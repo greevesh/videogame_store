@@ -18,13 +18,13 @@ Route::get('/nintendo', 'NintendoController@index')->name('nintendo');
 Route::get('/pc', 'PCController@index')->name('pc');
 Route::get('/pre-order', 'PreOrderController@index')->name('pre-order');
 
-Route::post('/added-to-cart', 'CartController@store')->name('added-to-cart');
-
 // provides the pages for each individual product
 Route::get('/playstation/{game}', 'PlaystationController@show'); 
 Route::get('/xbox/{game}', 'XboxController@show');
 Route::get('/nintendo/{game}', 'NintendoController@show');
 Route::get('/pc/{game}', 'PCController@show');
+
+Route::post('/added-to-cart', 'CartController@store')->name('added-to-cart');
 
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');
