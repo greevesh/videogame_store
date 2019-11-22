@@ -151,6 +151,77 @@ footer {
   }
 } 
 
+/* GAMES/PRODUCTS BY CATEGORY */
+
+
+/* PLAYSTATION GAMES */
+.products-right-playstation {
+  margin: -37.5rem 0 5rem 60rem;  
+  padding-bottom: 2rem; 
+  width: 18rem; 
+  height: 32.5rem;
+}
+
+.products-right-playstation h3 {
+  margin-left: 5.3rem;
+}
+
+.products-center-playstation {
+  margin: -32.5rem 0 5rem 33.5rem; 
+  padding-bottom: 2rem; 
+  width: 18rem; 
+  height: 32.5rem;
+}
+
+.products-center-playstation h3 {
+  margin-left: 5rem;
+}
+
+.products-left-playstation {
+  margin-left: 7rem; 
+  width: 17.6rem;
+  height: 32.5rem;
+}
+
+.products-left-playstation h3 {
+  margin-left: 4.7rem; 
+  margin-bottom: -2.5rem;
+}
+
+/* XBOX GAMES */
+.products-right-xbox {
+  margin: -40rem 0 5rem 60rem;  
+  padding-bottom: 2rem; 
+  width: 18rem; 
+  height: 35rem;
+}
+
+.products-right-xbox h3 {
+  margin-left: 5.3rem;
+}
+
+.products-center-xbox {
+  margin: -35rem 0 5rem 33.5rem; 
+  padding-bottom: 2rem; 
+  width: 18rem; 
+  height: 35rem;
+}
+
+.products-center-xbox h3 {
+  margin-left: 5rem;
+}
+
+.products-left-xbox {
+  margin-left: 7rem; 
+  width: 17.6rem;
+  height: 35rem;
+}
+
+.products-left-xbox h3 {
+  margin-left: 4.7rem; 
+  margin-bottom: -2.5rem;
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }

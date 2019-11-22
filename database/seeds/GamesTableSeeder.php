@@ -16,7 +16,7 @@ class GamesTableSeeder extends Seeder
         Game::create([
             'slug' => Str::slug('Grand Theft Auto 5', '-'),
             'platform' => 'playstation',
-            'name' => 'Grand Theft Auto 5', 
+            'name' => 'GTA 5', 
             'price' => '£34.99',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.', 
             'image' => '/storage/images/playstation/grand_theft_auto5.jpeg'
@@ -34,7 +34,7 @@ class GamesTableSeeder extends Seeder
         Game::create([
             'slug' => Str::slug('Call of Duty Advanced Warfare', '-'),
             'platform' => 'playstation',
-            'name' => 'Call of Duty Advanced Warfare', 
+            'name' => 'Call of Duty: AV', 
             'price' => '£19.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
             'image' => '/storage/images/playstation/call_of_duty_advanced_warfare.jpeg'
@@ -95,7 +95,7 @@ class GamesTableSeeder extends Seeder
         ]);
 
         Game::create([
-            'slug' => Str::slug('Dynasty Warriors 8', '-'),
+            'slug' => Str::slug('DW8: Empires', '-'),
             'platform' => 'playstation',
             'name' => 'Dynasty Warriors 8', 
             'price' => '£29.99', 
@@ -113,12 +113,12 @@ class GamesTableSeeder extends Seeder
         ]);
 
         Game::create([
-            'slug' => Str::slug('Ravens Cry', '-'),
+            'slug' => Str::slug('Ratchet & Clank', '-'),
             'platform' => 'playstation',
-            'name' => 'Ravens Cry', 
+            'name' => 'Ratchet & Clank', 
             'price' => '£24.99', 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/playstation/ravens_cry.jpeg'
+            'image' => '/storage/images/playstation/ratchet&clank.jpeg'
         ]);
 
         // XBOX GAMES
