@@ -153,7 +153,6 @@ footer {
 
 /* GAMES/PRODUCTS BY CATEGORY */
 
-
 /* PLAYSTATION GAMES */
 .products-right-playstation {
   margin: -37.5rem 0 5rem 60rem;  
@@ -219,6 +218,74 @@ footer {
 
 .products-left-xbox h3 {
   margin-left: 4.7rem; 
+  margin-bottom: -2.5rem;
+}
+
+/* NINTENDO GAMES */
+.products-right-nintendo {
+  margin: -44rem 0 5rem 60rem;  
+  padding-bottom: 2rem; 
+  width: 15.8rem; 
+  height: 39rem;
+}
+
+.products-right-nintendo h3 {
+  margin-left: 4.3rem;
+}
+
+.products-center-nintendo {
+  margin: -39rem 0 5rem 33.5rem; 
+  padding-bottom: 2rem; 
+  width: 15.8rem; 
+  height: 39rem;
+}
+
+.products-center-nintendo h3 {
+  margin-left: 4rem;
+}
+
+.products-left-nintendo {
+  margin-left: 7rem; 
+  width: 15.8rem;
+  height: 39rem;
+}
+
+.products-left-nintendo h3 {
+  margin-left: 4rem; 
+  margin-bottom: -2.5rem;
+}
+
+/* PC GAMES */
+.products-right-pc {
+  margin: -49.5rem 0 5rem 60rem;  
+  padding-bottom: 2rem; 
+  width: 15.8rem; 
+  height: 34.5rem;
+}
+
+.products-right-pc h3 {
+  margin-left: 4.3rem;
+}
+
+.products-center-pc {
+  margin: 0 0 -20rem 33.5rem; 
+  padding-bottom: 2rem; 
+  width: 15.8rem; 
+  height: 34.5rem;
+}
+
+.products-center-pc h3 {
+  margin-left: 4rem;
+}
+
+.products-left-pc {
+  margin: -34.5rem 0 15rem 7rem; 
+  width: 15.8rem;
+  height: 34.5rem;
+}
+
+.products-left-pc h3 {
+  margin-left: 4rem; 
   margin-bottom: -2.5rem;
 }
 

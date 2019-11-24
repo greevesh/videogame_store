@@ -1,7 +1,6 @@
 @extends('layouts.products')
 
 @section('title', '- Xbox Games')
-@section('category', 'Xbox')
 
 @section('content')
     <h1 class="d-flex justify-content-center" style="padding-bottom: 3rem;">Xbox Games</h1>
