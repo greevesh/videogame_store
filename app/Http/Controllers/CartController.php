@@ -36,7 +36,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::add($request->game_id, $request->name, 1, $request->price, ['platform' => $request->platform])
+        Cart::add($request->game_id, $request->name, 1, $request->price, ['platform' => $request->platform, 'image' => $request->image])
             ->associate('App\Game');
 
         $cartSuccessMessage = 'Item has been added to cart.';
@@ -86,6 +86,6 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::destroy();
     }
 }

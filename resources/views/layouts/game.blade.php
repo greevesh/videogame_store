@@ -20,6 +20,7 @@
             <input name="name" type="hidden" value="{{ $game->name }}"> 
             <input name="price" type="hidden" value="{{ $game->price }}"> 
             <input name="platform" type="hidden" value="{{ $game->platform }}">
+            <input name="image" type="hidden" value="{{ $game->image }}">
         @endif
     </form>
 @endsection

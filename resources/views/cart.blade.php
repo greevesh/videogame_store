@@ -26,6 +26,15 @@
                 @endif
 
                 <h4>{{ Cart::count() }} products(s) in the cart.</h4>
+                
+                <br>
+
+                <form action="{{ route('cart.destroy') }}" method="POST">
+                    @csrf 
+                    <a><button type="submit">Empty Cart</button></a>
+                </form>
+
+                <br>
       
                 <!-- Shopping cart table -->
                 <div class="table-responsive">
@@ -51,13 +60,13 @@
                         <tr>
                           <th scope="row" class="border-0">
                             <div class="p-2">
-                              <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+                              <img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm">
                               <div class="ml-3 d-inline-block align-middle">
                                 <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
                               </div>
                             </div>
                           </th>
-                          <td class="border-0 align-middle"><strong>{{ $product->price }}</strong></td>
+                          <td class="border-0 align-middle"><strong>£{{ $product->price }}</strong></td>
                           <td class="border-0 align-middle"><strong>{{ $product->qty }}</strong></td>
                           <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
                         </tr>
