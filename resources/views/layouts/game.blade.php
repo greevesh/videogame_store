@@ -12,20 +12,13 @@
         @endif
     </div>
 
-    <form action="{{ route('added-to-cart') }}" method="POST">
+    <form action="{{ route('cart-store') }}" method="POST">
         @csrf
         <button type="submit" class="btn btn-secondary btn-lg">Add to Cart</button>
-        @isset($game)
+        @if(isset($game))
             <input name="game_id" type="hidden" value="{{ $game->game_id }}"> 
             <input name="name" type="hidden" value="{{ $game->name }}"> 
             <input name="price" type="hidden" value="{{ $game->price }}"> 
-            @if(isset($cartSuccessMessage))
-                <p>{{ $cartSuccessMessage }}</p>
-            @endif
-        @else
-            @if(isset($cartErrorMessage))
-                <p>{{ $cartErrorMessage }}</p>
-            @endif
         @endif
     </form>
 @endsection

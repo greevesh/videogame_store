@@ -34,15 +34,14 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Game $game)
+    public function store(Request $request)
     {
         Cart::add($request->game_id, $request->name, 1, $request->price)
-            ->associate('App\Product');
+            ->associate('App\Game');
 
-        $cartSuccessMessage = 'Item was added to cart successfully.';
-        $cartErrorMessage = 'Oops! The cart does not seem to be working right now. Sorry!';
+        $cartSuccessMessage = 'Item has been added to cart.';
 
-        return view('addedtocart', compact('cartSuccessMessage', 'cartErrorMessage', 'game')); 
+        return redirect()->route('cart')->with(compact('cartSuccessMessage'));  
     }
 
     /**

@@ -24,7 +24,8 @@ Route::get('/xbox/{game}', 'XboxController@show');
 Route::get('/nintendo/{game}', 'NintendoController@show');
 Route::get('/pc/{game}', 'PCController@show');
 
-Route::post('/added-to-cart', 'CartController@store')->name('added-to-cart');
+// redirects user to cart page once product is added to cart
+Route::post('/cart', 'CartController@store')->name('cart-store');
 
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');

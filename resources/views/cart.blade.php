@@ -18,6 +18,14 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+
+                @if(session()->has('cartSuccessMessage'))
+                  <h3 class="alert alert-success">
+                      {{ session()->get('cartSuccessMessage') }}
+                  </h3>
+                @endif
+
+                <h4>{{ Cart::count() }} item(s) in the cart.</h4>
       
                 <!-- Shopping cart table -->
                 <div class="table-responsive">
