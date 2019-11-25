@@ -36,7 +36,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::add($request->game_id, $request->name, 1, $request->price)
+        Cart::add($request->game_id, $request->name, 1, $request->price, ['platform' => $request->platform])
             ->associate('App\Game');
 
         $cartSuccessMessage = 'Item has been added to cart.';
