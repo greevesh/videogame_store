@@ -39,9 +39,9 @@ class CartController extends Controller
         Cart::add($request->game_id, $request->name, 1, $request->price, ['platform' => $request->platform, 'image' => $request->image])
             ->associate('App\Game');
 
-        $cartSuccessMessage = 'Item has been added to cart.';
+        $productAddedSuccessMessage = 'has been added to cart.';
 
-        return redirect()->route('cart')->with(compact('cartSuccessMessage'));  
+        return redirect()->route('cart')->with(compact('productAddedSuccessMessage'));  
     }
 
     /**
@@ -84,8 +84,10 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
         Cart::destroy();
+
+        return back()->with('emptySuccessMessage', 'Cart has been emptied.');
     }
 }

@@ -19,18 +19,27 @@
             <div class="row">
               <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
 
-                @if(session()->has('cartSuccessMessage'))
-                  <h3 class="alert alert-success">
-                      {{ session()->get('cartSuccessMessage') }}
-                  </h3>
-                @endif
+                  @if(session()->has('productAddedSuccessMessage') && Cart::count() < 4)
+                    @foreach(Cart::content() as $product)
+                      <h3 class="alert alert-success">
+                        {{ $product->name }} {{ session()->get('productAddedSuccessMessage') }}
+                      </h3>
+                    @endforeach
+                  @endif
 
                 <h4>{{ Cart::count() }} products(s) in the cart.</h4>
                 
                 <br>
 
+                @if(session()->has('emptySuccessMessage'))
+                  <h3 class="alert alert-success">
+                    {{ session()->get('emptySuccessMessage') }}
+                  </h3>
+                @endif 
+
                 <form action="{{ route('cart.destroy') }}" method="POST">
                     @csrf 
+                    {{ method_field('DELETE') }}
                     <a><button type="submit">Empty Cart</button></a>
                 </form>
 
@@ -68,7 +77,7 @@
                           </th>
                           <td class="border-0 align-middle"><strong>£{{ $product->price }}</strong></td>
                           <td class="border-0 align-middle"><strong>{{ $product->qty }}</strong></td>
-                          <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                          {{-- <td class="border-0 align-middle"><a href="{{ route('CartController@destroy') }}" class="text-dark"><i class="fa fa-trash"></i></a></td> --}}
                         </tr>
                       @endforeach
                     </tbody>

@@ -155,6 +155,11 @@ footer {
   outline: 0 !important;
 }
 
+/* ALERTS */
+.alert {
+  width: 50%;    
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
