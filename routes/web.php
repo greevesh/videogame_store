@@ -26,7 +26,12 @@ Route::get('/pc/{game}', 'PCController@show');
 
 // redirects user to cart page once product is added to cart
 Route::post('/cart', 'CartController@store')->name('cart-store');
+
+// removes all cart products
 Route::delete('/cart', 'CartController@destroy')->name('cart.destroy');
+
+// removes a specific product item
+Route::delete('/cart/{rowId}', 'CartController@removeSingleProduct')->name('cart.removeSingleProduct');
 
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');

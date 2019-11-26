@@ -88,6 +88,13 @@ class CartController extends Controller
     {
         Cart::destroy();
 
-        return back()->with('emptySuccessMessage', 'Cart has been emptied.');
+        return back()->with('emptyCartSuccessMessage', 'Cart has been emptied.', 'cartAlreadyEmptiedMessage', 'Cart is already empty!');
+    }
+
+    public function removeSingleProduct($rowId)
+    {
+        Cart::remove($rowId);
+
+        return back()->with('removeSingleProductSuccessMessage', 'Product has been removed from cart.');
     }
 }

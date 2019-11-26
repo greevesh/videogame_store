@@ -31,9 +31,9 @@
                 
                 <br>
 
-                @if(session()->has('emptySuccessMessage'))
+                @if(session()->has('emptyCartSuccessMessage'))
                   <h3 class="alert alert-success">
-                    {{ session()->get('emptySuccessMessage') }}
+                    {{ session()->get('emptyCartSuccessMessage') }}
                   </h3>
                 @endif 
 
@@ -77,7 +77,13 @@
                           </th>
                           <td class="border-0 align-middle"><strong>£{{ $product->price }}</strong></td>
                           <td class="border-0 align-middle"><strong>{{ $product->qty }}</strong></td>
-                          {{-- <td class="border-0 align-middle"><a href="{{ route('CartController@destroy') }}" class="text-dark"><i class="fa fa-trash"></i></a></td> --}}
+                          <td class="border-0 align-middle">
+                          <form action="{{ route('cart.removeSingleProduct', $product->rowId) }}" method="POST" class="text-dark">
+                            @csrf
+                            {{ method_field('DELETE') }}
+                            <button><i class="fa fa-trash"></i></button>
+                          </form>
+                          </td>
                         </tr>
                       @endforeach
                     </tbody>
