@@ -17,6 +17,7 @@
         <button type="submit" class="btn btn-secondary btn-lg">Add to Cart</button>
         @if(isset($game))
             <input name="game_id" type="hidden" value="{{ $game->game_id }}"> 
+            <input name="slug" type="hidden" value="{{ $game->slug }}">
             <input name="name" type="hidden" value="{{ $game->name }}"> 
             <input name="price" type="hidden" value="{{ $game->price }}"> 
             <input name="platform" type="hidden" value="{{ $game->platform }}">

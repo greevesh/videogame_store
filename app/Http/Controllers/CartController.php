@@ -36,7 +36,8 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::add($request->game_id, $request->name, 1, $request->price, ['platform' => $request->platform, 'image' => $request->image])
+        Cart::add($request->game_id, $request->name, 1, $request->price, 
+                ['platform' => $request->platform, 'image' => $request->image, 'slug' => $request->slug])
             ->associate('App\Game');
 
         $productAddedSuccessMessage = 'has been added to cart.';
@@ -88,7 +89,8 @@ class CartController extends Controller
     {
         Cart::destroy();
 
-        return back()->with('emptyCartSuccessMessage', 'Cart has been emptied.', 'cartAlreadyEmptiedMessage', 'Cart is already empty!');
+        return back()->with('emptyCartSuccessMessage', 'Cart has been emptied.', 
+                            'cartAlreadyEmptiedMessage', 'Cart is already empty!');
     }
 
     public function removeSingleProduct($rowId)
@@ -97,4 +99,29 @@ class CartController extends Controller
 
         return back()->with('removeSingleProductSuccessMessage', 'Product has been removed from cart.');
     }
+
+    // public function calculateShippingAndTotal()
+    // {
+    //     $shipping = 0;
+    //     $total = Cart::total() += $shipping;
+
+    //     if (Cart::total() > 0 && Cart::total() < 10)
+    //     {
+    //         $shipping = 10;
+    //     }
+    //     elseif (Cart::total() > 10 && Cart::total < 30)
+    //     {
+    //         $shipping = 15;
+    //     }
+    //     elseif (Cart::total() > 30)
+    //     {
+    //         $shipping = 20;
+    //     }
+    //     else 
+    //     {
+    //         $shipping = 0;
+    //     }
+
+    //     return $total;
+    // }
 }

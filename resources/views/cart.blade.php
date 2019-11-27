@@ -31,7 +31,7 @@
                 
                 <br>
 
-                @if(session()->has('emptyCartSuccessMessage'))
+                @if(session()->has('emptyCartSuccessMessage') && Cart::count() > 0)
                   <h3 class="alert alert-success">
                     {{ session()->get('emptyCartSuccessMessage') }}
                   </h3>
@@ -40,7 +40,7 @@
                 <form action="{{ route('cart.destroy') }}" method="POST">
                     @csrf 
                     {{ method_field('DELETE') }}
-                    <a><button type="submit">Empty Cart</button></a>
+                    <a><button id="empty-cart" type="submit">Empty Cart</button></a>
                 </form>
 
                 <br>
@@ -69,7 +69,7 @@
                         <tr>
                           <th scope="row" class="border-0">
                             <div class="p-2">
-                              <img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm">
+                              <a href=""></a><img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm">
                               <div class="ml-3 d-inline-block align-middle">
                                 <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
                               </div>
@@ -97,11 +97,11 @@
               <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
               <div class="p-4">
                 <ul class="list-unstyled mb-4">
-                  <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
-                  <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
-                  <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
+                  <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>£{{ Cart::subtotal() }}</strong></li>
+                  <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>Free!</strong></li>
+                  <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>£{{ Cart::tax() }}</strong></li>
                   <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                    <h5 class="font-weight-bold">$400.00</h5>
+                    <h5 class="font-weight-bold">£{{ Cart::total() }}</h5>
                   </li>
                 </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
               </div>
@@ -111,3 +111,11 @@
       </div>
     </div>
 @endsection 
+
+{{-- <script>
+  window.onload=function() {
+    document.getElementById('empty-cart').addEventListener("click", function() {
+      document.getElementById("cart-already-empty").innerHTML = "Cart is already Empty!"; 
+  })
+}
+</script> --}}
