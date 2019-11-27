@@ -12,7 +12,7 @@
         @endif
     </div>
 
-    <form action="{{ route('cart-store') }}" method="POST">
+    <form action="{{ route('cart.store') }}" method="POST">
         @csrf
         <button type="submit" class="btn btn-secondary btn-lg">Add to Cart</button>
         @if(isset($game))
