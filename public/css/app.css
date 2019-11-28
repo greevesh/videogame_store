@@ -98,7 +98,7 @@ body {
 
 /* social media icons in the footer */
 .fab {
-  color: rgb(49, 38, 38);
+  color: rgb(99, 99, 182);
   font-size: 1.688rem;
 }
 
@@ -142,7 +142,8 @@ footer {
   color: white;
   z-index: 99;
   margin-left: 30rem;
-  background-color: black;
+  background-color: rgb(99, 99, 182);
+  border: solid black 0.05rem;
 }
 
 @media (max-width: 1200px) {
@@ -150,6 +151,28 @@ footer {
     
   }
 } 
+
+.cart-count-bg {
+  background-color: rgb(99, 99, 182);
+  color: #fff;
+  font-size: 1.2rem;
+  height: 1.74rem;
+  width: 1.74rem;
+  border: 0.3rem;
+  border-radius: 2rem;
+  margin-left: -0.7rem;
+}
+
+.cart-count {
+  margin-left: 0.51rem;
+}
+
+/* CART VIEW */
+
+#checkout-btn {
+  background-color: rgb(99, 99, 182);
+  border: solid black 0.05rem;
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important;

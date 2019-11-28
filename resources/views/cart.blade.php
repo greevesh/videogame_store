@@ -37,7 +37,9 @@
                   </h3>
                 @endif 
 
-                <p id="cart-already-empty"></p>
+                {{-- @if(Cart::count() === 0)
+                  <p id="cart-already-empty"></p>
+                @endif --}}
 
                 <form action="{{ route('cart.destroy') }}" method="POST">
                     @csrf 
@@ -47,7 +49,7 @@
 
                 <br>
       
-                <!-- Shopping cart table -->
+                <!-- shopping cart table -->
                 <div class="table-responsive">
                   <table class="table">
                     <thead>
@@ -108,7 +110,7 @@
                     </tbody>
                   </table>
                 </div>
-                <!-- End -->
+                <!-- end -->
               </div>
             </div>
       
@@ -122,7 +124,7 @@
                   <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                     <h5 class="font-weight-bold">£{{ Cart::total() }}</h5>
                   </li>
-                </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                </ul><a id="checkout-btn" href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
               </div>
             </div>
           </div>
@@ -131,10 +133,10 @@
     </div>
 @endsection 
 
-<script>
+{{-- <script>
   window.onload=function() {
     document.getElementById('empty-cart').addEventListener("click", function() {
       document.getElementById("cart-already-empty").innerHTML = "Cart is already empty!"; 
   })
 }
-</script>
+</script> --}}
