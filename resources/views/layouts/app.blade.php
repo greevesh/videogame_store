@@ -62,7 +62,7 @@
                             @endif
                             <li><a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a></li>
                             @if(Cart::count() > 0)
-                                <span class="cart-count-bg"><span class="cart-count"><b>{{ Cart::count() }}</b></span></span>
+                                <div class="cart-count-bg"><span class="cart-count"><b>{{ Cart::count() }}</b></span></div>
                             @endif
                         @else
                             <li class="{{ Request::is('playstation') ? 'page-item active' : '' }} nav-item">

@@ -86,11 +86,17 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy()
-    {
-        Cart::destroy();
-
-        return back()->with('emptyCartSuccessMessage', 'Cart has been emptied.', 
-                            'cartAlreadyEmptiedMessage', 'Cart is already empty!');
+    {   
+        if (Cart::count() > 0)
+        {
+            Cart::destroy();
+            return back()->with('emptyCartSuccessMessage', 'Cart has been emptied.');
+        }
+        else
+        {
+            Cart::destroy();
+            return back()->with('emptyCartErrorMessage', 'Cart is already empty!');
+        }
     }
 
     public function removeSingleProduct($rowId)

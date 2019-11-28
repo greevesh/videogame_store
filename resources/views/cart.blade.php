@@ -31,15 +31,15 @@
                 
                 <br>
 
-                @if(session()->has('emptyCartSuccessMessage') && Cart::count() > 0)
+                @if(session()->has('emptyCartSuccessMessage'))
                   <h3 class="alert alert-success">
                     {{ session()->get('emptyCartSuccessMessage') }}
                   </h3>
+                @elseif(session()->has('emptyCartErrorMessage'))
+                  <h3 class="alert alert-danger">
+                    {{ session()->get('emptyCartErrorMessage') }}
+                  </h3>
                 @endif 
-
-                {{-- @if(Cart::count() === 0)
-                  <p id="cart-already-empty"></p>
-                @endif --}}
 
                 <form action="{{ route('cart.destroy') }}" method="POST">
                     @csrf 
@@ -110,7 +110,7 @@
                     </tbody>
                   </table>
                 </div>
-                <!-- end -->
+                <!-- end shopping cart table -->
               </div>
             </div>
       
@@ -132,11 +132,3 @@
       </div>
     </div>
 @endsection 
-
-{{-- <script>
-  window.onload=function() {
-    document.getElementById('empty-cart').addEventListener("click", function() {
-      document.getElementById("cart-already-empty").innerHTML = "Cart is already empty!"; 
-  })
-}
-</script> --}}
