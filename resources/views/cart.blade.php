@@ -21,7 +21,7 @@
 
                   @if(session()->has('productAddedSuccessMessage') && Cart::count() < 4)
                     @foreach(Cart::content() as $product)
-                      <h3 class="alert alert-success">
+                      <h3 class="product-added-message alert alert-success">
                         {{ $product->name }} {{ session()->get('productAddedSuccessMessage') }}
                       </h3>
                     @endforeach
@@ -30,13 +30,13 @@
                 <h4>{{ Cart::count() }} products(s) in the cart.</h4>
                 
                 <br>
-
+                
                 @if(session()->has('emptyCartSuccessMessage'))
-                  <h3 class="alert alert-success">
+                  <h3 class="empty-cart-messages alert alert-success">
                     {{ session()->get('emptyCartSuccessMessage') }}
                   </h3>
                 @elseif(session()->has('emptyCartErrorMessage'))
-                  <h3 class="alert alert-danger">
+                  <h3 class="empty-cart-messages alert alert-danger">
                     {{ session()->get('emptyCartErrorMessage') }}
                   </h3>
                 @endif 

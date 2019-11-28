@@ -168,20 +168,26 @@ footer {
 }
 
 /* CART VIEW */
-
 #checkout-btn {
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
 }
 
+/* alerts */
+.empty-cart-messages {
+  width: 30%;
+}
+
+.product-added-message {
+  width: 50%;
+}
+/* END CART VIEW */
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
 
-/* ALERTS */
-.alert {
-  width: 50%;    
-}
+
 
 hr {
   box-sizing: content-box;
