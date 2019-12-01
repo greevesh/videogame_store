@@ -98,7 +98,7 @@ body {
 
 /* social media icons in the footer */
 .fab {
-  color: rgb(49, 38, 38);
+  color: rgb(99, 99, 182);
   font-size: 1.688rem;
 }
 
@@ -142,7 +142,8 @@ footer {
   color: white;
   z-index: 99;
   margin-left: 30rem;
-  background-color: black;
+  background-color: rgb(99, 99, 182);
+  border: solid black 0.05rem;
 }
 
 @media (max-width: 1200px) {
@@ -151,143 +152,46 @@ footer {
   }
 } 
 
-/* GAMES/PRODUCTS BY CATEGORY */
-
-/* PLAYSTATION GAMES */
-.products-right-playstation {
-  margin: -37.5rem 0 5rem 60rem;  
-  padding-bottom: 2rem; 
-  width: 18rem; 
-  height: 32.5rem;
+.cart-count-bg {
+  background-color: rgb(99, 99, 182);
+  color: #fff;
+  font-size: 1.2rem;
+  height: 1.74rem;
+  width: 1.74rem;
+  border: 0.3rem;
+  border-radius: 2rem;
+  margin-left: -0.7rem;
 }
 
-.products-right-playstation h3 {
-  margin-left: 5.3rem;
+.cart-count {
+  margin-left: 0.51rem;
 }
 
-.products-center-playstation {
-  margin: -32.5rem 0 5rem 33.5rem; 
-  padding-bottom: 2rem; 
-  width: 18rem; 
-  height: 32.5rem;
+/* CART VIEW */
+#checkout-btn {
+  background-color: rgb(99, 99, 182);
+  border: solid black 0.05rem;
 }
 
-.products-center-playstation h3 {
-  margin-left: 5rem;
+#bin-btn {
+  background-color: #fff;
+  border: none;
 }
 
-.products-left-playstation {
-  margin-left: 7rem; 
-  width: 17.6rem;
-  height: 32.5rem;
+/* bin icon */
+.fa {
+  margin-top: 0.6rem;
 }
 
-.products-left-playstation h3 {
-  margin-left: 4.7rem; 
-  margin-bottom: -2.5rem;
+/* alerts */
+.empty-cart-messages {
+  width: 30%;
 }
 
-/* XBOX GAMES */
-.products-right-xbox {
-  margin: -40rem 0 5rem 60rem;  
-  padding-bottom: 2rem; 
-  width: 18rem; 
-  height: 35rem;
+.product-added-message {
+  width: 50%;
 }
-
-.products-right-xbox h3 {
-  margin-left: 5.3rem;
-}
-
-.products-center-xbox {
-  margin: -35rem 0 5rem 33.5rem; 
-  padding-bottom: 2rem; 
-  width: 18rem; 
-  height: 35rem;
-}
-
-.products-center-xbox h3 {
-  margin-left: 5rem;
-}
-
-.products-left-xbox {
-  margin-left: 7rem; 
-  width: 17.6rem;
-  height: 35rem;
-}
-
-.products-left-xbox h3 {
-  margin-left: 4.7rem; 
-  margin-bottom: -2.5rem;
-}
-
-/* NINTENDO GAMES */
-.products-right-nintendo {
-  margin: -44rem 0 5rem 60rem;  
-  padding-bottom: 2rem; 
-  width: 15.8rem; 
-  height: 39rem;
-}
-
-.products-right-nintendo h3 {
-  margin-left: 4.3rem;
-}
-
-.products-center-nintendo {
-  margin: -39rem 0 5rem 33.5rem; 
-  padding-bottom: 2rem; 
-  width: 15.8rem; 
-  height: 39rem;
-}
-
-.products-center-nintendo h3 {
-  margin-left: 4rem;
-}
-
-.products-left-nintendo {
-  margin-left: 7rem; 
-  width: 15.8rem;
-  height: 39rem;
-}
-
-.products-left-nintendo h3 {
-  margin-left: 4rem; 
-  margin-bottom: -2.5rem;
-}
-
-/* PC GAMES */
-.products-right-pc {
-  margin: -49.5rem 0 5rem 60rem;  
-  padding-bottom: 2rem; 
-  width: 15.8rem; 
-  height: 34.5rem;
-}
-
-.products-right-pc h3 {
-  margin-left: 4.3rem;
-}
-
-.products-center-pc {
-  margin: 0 0 -20rem 33.5rem; 
-  padding-bottom: 2rem; 
-  width: 15.8rem; 
-  height: 34.5rem;
-}
-
-.products-center-pc h3 {
-  margin-left: 4rem;
-}
-
-.products-left-pc {
-  margin: -34.5rem 0 15rem 7rem; 
-  width: 15.8rem;
-  height: 34.5rem;
-}
-
-.products-left-pc h3 {
-  margin-left: 4rem; 
-  margin-bottom: -2.5rem;
-}
+/* END CART VIEW */
 
 [tabindex="-1"]:focus {
   outline: 0 !important;

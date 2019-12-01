@@ -16,6 +16,7 @@ class PCController extends Controller
     {
         $pcGames = Game::find([37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]);
 
+        // returns all the games from one category
         return view('products.pc', compact('pcGames'));
     }
 

@@ -16,6 +16,7 @@ class XboxController extends Controller
     {
         $xboxGames = Game::find([13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]);
 
+        // returns all the games from one category
         return view('products.xbox', compact('xboxGames'));
     }
 

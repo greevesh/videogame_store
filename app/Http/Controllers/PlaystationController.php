@@ -17,6 +17,7 @@ class PlaystationController extends Controller
     {   
         $playstationGames = Game::find([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 
+        // returns all the games from one category
         return view('products.playstation', compact('playstationGames'));
     }   
 

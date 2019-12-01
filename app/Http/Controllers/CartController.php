@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Treestoneit\ShoppingCart\Facades\Cart;
-use App\Cart as ShoppingCart;
 use App\Game;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartController extends Controller
 {
@@ -37,16 +36,13 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        $game = Game::create(['name' => $request->name, 'price' => $request->price])
+        Cart::add($request->game_id, $request->name, 1, $request->price, 
+                ['platform' => $request->platform, 'image' => $request->image, 'slug' => $request->slug])
             ->associate('App\Game');
 
-        $quantity = 1;
+        $productAddedSuccessMessage = 'has been added to cart.';
 
-        Cart::add($game, $quantity);
-
-        $successMessage = 'Game has been added to cart.';
-
-        return view('game')->with($successMessage);
+        return redirect()->route('cart')->with(compact('productAddedSuccessMessage'));  
     }
 
     /**
@@ -78,9 +74,11 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $rowId)
     {
-        //
+        Cart::update($rowId, 2);
+        
+        return back()->with('quantityIncreasedMessage', 'Product quantity has been increased.');
     }
 
     /**
@@ -89,8 +87,49 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy()
+    {   
+        if (Cart::count() > 0)
+        {
+            Cart::destroy();
+            return back()->with('emptyCartSuccessMessage', 'Cart has been emptied.');
+        }
+        else
+        {
+            Cart::destroy();
+            return back()->with('emptyCartErrorMessage', 'Cart is already empty!');
+        }
     }
+
+    public function removeSingleProduct($rowId)
+    {
+        Cart::remove($rowId);
+
+        return back()->with('removeSingleProductSuccessMessage', 'Product has been removed from cart.');
+    }
+
+    // public function calculateShippingAndTotal()
+    // {
+    //     $shipping = 0;
+    //     $total = Cart::total() += $shipping;
+
+    //     if (Cart::total() > 0 && Cart::total() < 10)
+    //     {
+    //         $shipping = 10;
+    //     }
+    //     elseif (Cart::total() > 10 && Cart::total < 30)
+    //     {
+    //         $shipping = 15;
+    //     }
+    //     elseif (Cart::total() > 30)
+    //     {
+    //         $shipping = 20;
+    //     }
+    //     else 
+    //     {
+    //         $shipping = 0;
+    //     }
+
+    //     return $total;
+    // }
 }
