@@ -76,9 +76,18 @@ class CartController extends Controller
      */
     public function update(Request $request, $rowId)
     {
-        Cart::update($rowId, 2);
+        $product = Cart::get($rowId);
+        Cart::update($rowId, $product->qty + 1);
         
         return back()->with('quantityIncreasedMessage', 'Product quantity has been increased.');
+    }
+
+    public function decreaseQuantity(Request $request, $rowId)
+    {
+        $product = Cart::get($rowId);
+        Cart::remove($rowId, $product->qty - 1);
+        
+        return back()->with('quantityDecreasedMessage', 'Product quantity has been increased.');
     }
 
     /**
