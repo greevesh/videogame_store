@@ -41,6 +41,12 @@
                   </h3>
                 @endif 
 
+                @if(session()->has('quantityIncreasedMessage'))
+                  <h3 class="alert alert-success">
+                    {{ session()->get('quantityIncreasedMessage') }}
+                  </h3>
+                @endif 
+
                 <form action="{{ route('cart.destroy') }}" method="POST">
                     @csrf 
                     {{ method_field('DELETE') }}
@@ -97,12 +103,19 @@
                             </div>
                           </th>
                           <td class="border-0 align-middle"><strong>£{{ $product->price }}</strong></td>
-                          <td class="border-0 align-middle"><strong>{{ $product->qty }}</strong></td>
                           <td class="border-0 align-middle">
-                          <form action="{{ route('cart.removeSingleProduct', $product->rowId) }}" method="POST" class="text-dark">
+                            <form action="{{ route('cart.update', $product->rowId) }}" method="POST">
+                              @csrf
+                              {{ method_field('PATCH') }}
+                              <button>+</button>
+                            </form>
+                            </div>
+                          </td>
+                          <td class="border-0 align-middle">
+                          <form action="{{ route('cart.removeSingleProduct', $product->rowId) }}" method="POST">
                             @csrf
                             {{ method_field('DELETE') }}
-                            <button><i class="fa fa-trash"></i></button>
+                            <button id="bin-btn"><i class="fa fa-trash"></i></button>
                           </form>
                           </td>
                         </tr>

@@ -173,6 +173,16 @@ footer {
   border: solid black 0.05rem;
 }
 
+#bin-btn {
+  background-color: #fff;
+  border: none;
+}
+
+/* bin icon */
+.fa {
+  margin-top: 0.6rem;
+}
+
 /* alerts */
 .empty-cart-messages {
   width: 30%;
@@ -186,8 +196,6 @@ footer {
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
-
-
 
 hr {
   box-sizing: content-box;
