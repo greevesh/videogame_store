@@ -152,6 +152,146 @@ footer {
   }
 } 
 
+/* PRODUCTS BY CATEGORY */
+
+/* h4 refers to the price divs */
+
+/* PLAYSTATION GAMES */
+.products-right-playstation {
+  margin: -36rem 0 5rem 60rem;  
+  padding-bottom: 2rem; 
+  width: 18rem; 
+  height: 31rem;
+}
+
+.products-right-playstation .price {
+  margin-right: 5.2rem;
+}
+
+.products-center-playstation {
+  margin: -31rem 0 5rem 33.5rem; 
+  padding-bottom: 2rem; 
+  width: 18rem; 
+  height: 31rem;
+}
+
+.products-center-playstation .price {
+  margin-right: 5.5rem;
+}
+
+.products-left-playstation {
+  margin-left: 7rem; 
+  width: 17.6rem;
+  height: 31rem;
+}
+
+.products-left-playstation .price {
+  margin-left: 5.2rem; 
+  margin-bottom: -2.5rem;
+}
+
+/* XBOX GAMES */
+.products-right-xbox {
+  margin: -35rem 0 5rem 62rem;  
+  padding-bottom: 2rem; 
+  width: 15.7rem; 
+  height: 30rem;
+}
+
+.products-right-xbox .price {
+  margin-right: 4.3rem;
+}
+
+.products-center-xbox {
+  margin: -30rem 0 5rem 34.5rem; 
+  padding-bottom: 2rem; 
+  width: 15.7rem; 
+  height: 30rem;
+}
+
+.products-center-xbox .price {
+  margin-right: 4.2rem;
+}
+
+.products-left-xbox {
+  margin-left: 7rem; 
+  width: 15.7rem;
+  height: 30rem;
+}
+
+.products-left-xbox .price {
+  margin-left: 4.2rem; 
+  margin-bottom: -2.5rem;
+}
+
+/* NINTENDO GAMES */
+.products-right-nintendo {
+  margin: -39rem 0 5rem 63rem;  
+  padding-bottom: 2rem; 
+  width: 15.5rem; 
+  height: 34rem;
+}
+
+.products-right-nintendo .price {
+  margin-right: 3.9rem;
+}
+
+.products-center-nintendo {
+  margin: -34rem 0 5rem 35.5rem; 
+  padding-bottom: 2rem; 
+  width: 15.5rem; 
+  height: 34rem;
+}
+
+.products-center-nintendo .price {
+  margin-right: 4.2rem;
+}
+
+.products-left-nintendo {
+  margin-left: 7rem; 
+  width: 15.5rem;
+  height: 34rem;
+}
+
+.products-left-nintendo .price {
+  margin-left: 4rem; 
+  margin-bottom: -2.5rem;
+}
+
+/* PC GAMES */
+.products-right-pc {
+  margin: -30.5rem 0 5rem 62rem;  
+  padding-bottom: 2rem; 
+  width: 15.8rem; 
+  height: 30rem;
+}
+
+.products-right-pc .price {
+  margin-right: 3.9rem;
+}
+
+.products-center-pc {
+  margin: -45rem 0 -20rem 35rem; 
+  padding-bottom: 2rem; 
+  width: 15.8rem; 
+  height: 30rem;
+}
+
+.products-center-pc .price {
+  margin-right: 4.1rem;
+}
+
+.products-left-pc {
+  margin: 0 0 15rem 7rem; 
+  width: 15.8rem;
+  height: 30rem;
+}
+
+.products-left-pc .price {
+  margin-left: 4.3rem; 
+  margin-bottom: -2.5rem;
+}
+
 .cart-count-bg {
   background-color: rgb(99, 99, 182);
   color: #fff;
