@@ -14,7 +14,7 @@
 
     <form action="{{ route('cart.store') }}" method="POST">
         @csrf
-        <button type="submit" class="btn btn-secondary btn-lg">Add to Cart</button>
+        <button type="submit" class="add-to-cart btn-lg">Add to Cart</button>
         @if(isset($game))
             <input name="game_id" type="hidden" value="{{ $game->game_id }}"> 
             <input name="slug" type="hidden" value="{{ $game->slug }}">

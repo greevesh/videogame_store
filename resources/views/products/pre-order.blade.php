@@ -11,6 +11,6 @@
             <h4>{{ $preOrderGame->price }}</h4>
         @endif
     @endforeach
-    <button type="button" class="btn btn-secondary btn-lg">Pre-order</button>
-    <button type="button" class="btn btn-secondary btn-lg">Pre-order</button>
+    <button type="button" class="pre-order-small btn-lg">Pre-order</button>
+    <button type="button" class="pre-order-small btn-lg">Pre-order</button>
 @endsection

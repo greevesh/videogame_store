@@ -84,6 +84,10 @@ body {
   margin-top: 0.65rem;
 }
 
+.fas:hover {
+  opacity: 0.9;
+}
+
 @media (max-width: 1200px) {
   .fas {
     margin-top: 0.6rem;
@@ -139,11 +143,21 @@ footer {
 
 #pre-order-button {
   font-size: 3.5rem;
-  color: white;
+  color: #fff;
   z-index: 99;
-  margin-left: 30rem;
+  margin-left: 30.5rem;
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
+}
+
+#pre-order-button:hover {
+  opacity: 0.9;
+}
+
+.pre-order-small {
+  background-color: rgb(99, 99, 182);
+  border: solid black 0.03rem;
+  color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -151,6 +165,12 @@ footer {
     
   }
 } 
+
+.add-to-cart {
+  background-color: rgb(99, 99, 182);
+  border: solid black 0.03rem;
+  color: #fff;
+}
 
 /* PRODUCTS BY CATEGORY */
 
@@ -308,9 +328,16 @@ footer {
 }
 
 /* CART VIEW */
+.empty-cart {
+  background-color: rgb(99, 99, 182);
+  border: solid black 0.03rem;
+  color: #fff;
+}
+
 #checkout-btn {
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
+  color: #fff;
 }
 
 #bin-btn {

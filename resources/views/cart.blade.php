@@ -27,7 +27,7 @@
                     @endforeach
                   @endif
 
-                <h4>{{ Cart::count() }} products(s) in the cart.</h4>
+                <h4>{{ Cart::count() }} product(s) in the cart.</h4>
                 
                 <br>
                 
@@ -50,7 +50,7 @@
                 <form action="{{ route('cart.destroy') }}" method="POST">
                     @csrf 
                     {{ method_field('DELETE') }}
-                    <a><button id="empty-cart" type="submit">Empty Cart</button></a>
+                    <a><button class="empty-cart btn-lg" type="submit">Empty Cart</button></a>
                 </form>
 
                 <br>
@@ -137,7 +137,7 @@
                   <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                     <h5 class="font-weight-bold">£{{ Cart::total() }}</h5>
                   </li>
-                </ul><a id="checkout-btn" href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                </ul><a id="checkout-btn" href="{{ route('checkout') }}" class="checkout-btn btn rounded-pill py-2 btn-block"><b>Proceed to checkout</b></a>
               </div>
             </div>
           </div>
