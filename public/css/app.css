@@ -106,6 +106,10 @@ body {
   font-size: 1.688rem;
 }
 
+.fab:hover {
+  opacity: 0.9;
+}
+
 footer {
   margin-top: 21.375rem;
   margin-bottom: 

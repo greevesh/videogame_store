@@ -82,22 +82,26 @@
                               @if($product->options->platform === 'Playstation')
                                 <a href="/playstation/{{ $product->options->slug }}"><img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm"></a>
                                 <div class="ml-3 d-inline-block align-middle">
-                                    <h5 class="mb-0"> <a href="/playstation/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
+                                    <h5 class="mb-0"> <a href="/playstation/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5>
+                                    <span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
                                 </div>
                               @elseif($product->options->platform === 'Xbox')
                                 <a href="/xbox/{{ $product->options->slug }}"><img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm"></a>
                                 <div class="ml-3 d-inline-block align-middle">
-                                    <h5 class="mb-0"> <a href="/xbox/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
+                                    <h5 class="mb-0"> <a href="/xbox/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5>
+                                    <span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
                                 </div>
                               @elseif($product->options->platform === 'Nintendo')
                                 <a href="/nintendo/{{ $product->options->slug }}"><img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm"></a>
                                 <div class="ml-3 d-inline-block align-middle">
-                                    <h5 class="mb-0"> <a href="/nintendo/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
+                                    <h5 class="mb-0"> <a href="/nintendo/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5>
+                                    <span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
                                 </div>
                               @elseif($product->options->platform === 'PC')
                                 <a href="/pc/{{ $product->options->slug }}"><img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm"></a>
                                 <div class="ml-3 d-inline-block align-middle">
-                                    <h5 class="mb-0"> <a href="/pc/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
+                                    <h5 class="mb-0"> <a href="/pc/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5>
+                                    <span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
                                 </div>
                               @endif
                             </div>
