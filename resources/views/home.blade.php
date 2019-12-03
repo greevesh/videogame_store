@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div id="dashboard-header" class="card-header"><b>Dashboard</b></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    You are logged in!&nbsp;&nbsp;<a style="color: black;" href="{{ route('landingpage') }}"><b>Return home</b></a>
                 </div>
             </div>
         </div>

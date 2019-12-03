@@ -129,18 +129,6 @@ footer {
   margin-top: -2rem;
 }
 
-@media (max-width: 1200px) {
-  #pre-order {
-    
-  }
-} 
-
-@media (max-width: 992px) {
-  #pre-order {
-    
-  }
-} 
-
 #banner {
   padding: 1rem;
 }
@@ -158,22 +146,25 @@ footer {
   opacity: 0.9;
 }
 
+/* refers to the pre-order buttons on the pre-order page */
 .pre-order-small {
   background-color: rgb(99, 99, 182);
   border: solid black 0.03rem;
   color: #fff;
 }
 
-@media (max-width: 1200px) {
-  #pre-order button {
-    
-  }
-} 
+.pre-order-small:hover {
+  opacity: 0.9;
+}
 
 .add-to-cart {
   background-color: rgb(99, 99, 182);
   border: solid black 0.03rem;
   color: #fff;
+}
+
+.add-to-cart:hover {
+  opacity: 0.9;
 }
 
 /* PRODUCTS BY CATEGORY */
@@ -192,6 +183,10 @@ footer {
   margin-right: 5.2rem;
 }
 
+.products-right-playstation:hover {
+  opacity: 0.9;
+}
+
 .products-center-playstation {
   margin: -31rem 0 5rem 33.5rem; 
   padding-bottom: 2rem; 
@@ -203,6 +198,10 @@ footer {
   margin-right: 5.5rem;
 }
 
+.products-center-playstation:hover {
+  opacity: 0.9;
+}
+
 .products-left-playstation {
   margin-left: 7rem; 
   width: 17.6rem;
@@ -212,6 +211,10 @@ footer {
 .products-left-playstation .price {
   margin-left: 5.2rem; 
   margin-bottom: -2.5rem;
+}
+
+.products-left-playstation:hover {
+  opacity: 0.9;
 }
 
 /* XBOX GAMES */
@@ -226,6 +229,10 @@ footer {
   margin-right: 4.3rem;
 }
 
+.products-right-xbox:hover {
+  opacity: 0.9;
+}
+
 .products-center-xbox {
   margin: -30rem 0 5rem 34.5rem; 
   padding-bottom: 2rem; 
@@ -237,6 +244,10 @@ footer {
   margin-right: 4.2rem;
 }
 
+.products-center-xbox:hover {
+  opacity: 0.9;
+}
+
 .products-left-xbox {
   margin-left: 7rem; 
   width: 15.7rem;
@@ -246,6 +257,10 @@ footer {
 .products-left-xbox .price {
   margin-left: 4.2rem; 
   margin-bottom: -2.5rem;
+}
+
+.products-left-xbox:hover {
+  opacity: 0.9;
 }
 
 /* NINTENDO GAMES */
@@ -260,6 +275,10 @@ footer {
   margin-right: 3.9rem;
 }
 
+.products-right-nintendo:hover {
+  opacity: 0.9;
+}
+
 .products-center-nintendo {
   margin: -34rem 0 5rem 35.5rem; 
   padding-bottom: 2rem; 
@@ -271,6 +290,10 @@ footer {
   margin-right: 4.2rem;
 }
 
+.products-center-nintendo:hover {
+  opacity: 0.9;
+}
+
 .products-left-nintendo {
   margin-left: 7rem; 
   width: 15.5rem;
@@ -280,6 +303,10 @@ footer {
 .products-left-nintendo .price {
   margin-left: 4rem; 
   margin-bottom: -2.5rem;
+}
+
+.products-left-nintendo:hover {
+  opacity: 0.9;
 }
 
 /* PC GAMES */
@@ -294,6 +321,10 @@ footer {
   margin-right: 3.9rem;
 }
 
+.products-right-pc:hover {
+  opacity: 0.9;
+}
+
 .products-center-pc {
   margin: -45rem 0 -20rem 35rem; 
   padding-bottom: 2rem; 
@@ -303,6 +334,10 @@ footer {
 
 .products-center-pc .price {
   margin-right: 4.1rem;
+}
+
+.products-center-pc:hover {
+  opacity: 0.9;
 }
 
 .products-left-pc {
@@ -315,6 +350,11 @@ footer {
   margin-left: 4.3rem; 
   margin-bottom: -2.5rem;
 }
+
+.products-left-pc:hover {
+  opacity: 0.9;
+}
+/* END PRODUCTS BY CATEGORY */
 
 .cart-count-bg {
   background-color: rgb(99, 99, 182);
@@ -338,10 +378,18 @@ footer {
   color: #fff;
 }
 
+.empty-cart:hover {
+  opacity: 0.9;
+}
+
 #checkout-btn {
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
   color: #fff;
+}
+
+#checkout-btn:hover {
+  opacity: 0.9;
 }
 
 #bin-btn {
@@ -363,6 +411,65 @@ footer {
   width: 50%;
 }
 /* END CART VIEW */
+
+/* CHECKOUT VIEW */
+#checkout-continue {
+  background-color: rgb(99, 99, 182);
+  border: solid black 0.05rem;
+  color: #fff;
+}
+
+#checkout-continue:hover {
+  opacity: 0.9;
+}
+
+.list-inline-item a {
+  color: black;
+}
+
+.list-inline-item a:hover {
+  color: black;
+}
+/* END CHECKOUT VIEW */
+
+/* REGISTER VIEW */
+#register-header {
+  background-color: rgb(99, 99, 182); 
+  color: #fff;
+}
+
+#register-btn {
+  background-color: rgb(99, 99, 182); 
+  color: #fff; 
+  border: solid black 0.03rem;
+}
+
+#register-btn:hover {
+  opacity: 0.9;
+}
+
+/* LOGIN VIEW */
+#login-header {
+  background-color: rgb(99, 99, 182); 
+  color: #fff;
+}
+
+#login-btn {
+  background-color: rgb(99, 99, 182); 
+  color: #fff; 
+  border: solid black 0.03rem;
+}
+
+#login-btn:hover {
+  opacity: 0.9;
+}
+/* END LOGIN VIEW */
+
+/* HOME VIEW */
+#dashboard-header {
+  background-color: rgb(99, 99, 182);
+  color: #fff;
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important;

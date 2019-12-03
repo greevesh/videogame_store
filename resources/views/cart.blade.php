@@ -50,7 +50,7 @@
                 <form action="{{ route('cart.destroy') }}" method="POST">
                     @csrf 
                     {{ method_field('DELETE') }}
-                    <a><button class="empty-cart btn-lg" type="submit">Empty Cart</button></a>
+                    <a><button class="empty-cart btn-lg" type="submit"><b>Empty Cart</b></button></a>
                 </form>
 
                 <br>

@@ -35,7 +35,7 @@ Route::delete('/cart', 'CartController@destroy')->name('cart.destroy');
 Route::delete('/cart/{rowId}', 'CartController@removeSingleProduct')->name('cart.removeSingleProduct');
 
 // simply returns the pages for these views
-Route::view('/', 'landingpage');
+Route::view('/', 'landingpage')->name('landingpage');
 Route::view('/cart', 'cart')->name('cart');
 Route::view('/checkout', 'checkout')->name('checkout');
 
