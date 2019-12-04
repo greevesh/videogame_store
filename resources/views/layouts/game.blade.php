@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<script src="https://js.stripe.com/v3/"></script>
+
 @section('content')
     <div class="container product-details">
         @if(isset($game))

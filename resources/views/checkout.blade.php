@@ -2,6 +2,9 @@
 
 @section('title', '- Checkout')
 
+<!-- Stripe integration -->
+<script src="https://js.stripe.com/v3/"></script>
+
 @section('content')
     <title>Checkout</title>
 
@@ -80,7 +83,7 @@
 
         </div>
         <div class="col-md-8 order-md-1">
-        <h4 class="mb-3">Billing address</h4>
+        <h4 class="mb-3">Billing Information</h4>
         <form class="needs-validation" novalidate>
             <div class="row">
             <div class="col-md-6 mb-3">
@@ -156,46 +159,33 @@
 
             <h4 class="mb-3">Payment</h4>
 
-            <div class="d-block my-3">
-            <div class="custom-control custom-radio">
-                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                <label class="custom-control-label" for="credit">Credit card</label>
-            </div>
-            <div class="custom-control custom-radio">
-                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="debit">Debit card</label>
-            </div>
-            </div>
             <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="cc-name">Name on card</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                <small class="text-muted">Full name as displayed on card</small>
-                <div class="invalid-feedback">
-                Name on card is required
+                <div class="col-md-6 mb-3">
+                    <label for="cc-name">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">Name on card is required</div>
                 </div>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="cc-number">Credit card number</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                <div class="invalid-feedback">
-                Credit card number is required
+
+            <!-- Stripe elements -->
+            <form action="/charge" method="post" id="payment-form">
+                <div class="form-row">
+                  <label for="card-element">
+                    Credit or debit card
+                  </label>
+                  <div id="card-element">
+                    <!-- A Stripe Element will be inserted here. -->
+                  </div>
+              
+                  <!-- Used to display form errors. -->
+                  <div id="card-errors" role="alert"></div>
                 </div>
-            </div>
-            </div>
-            <div class="row">
-            <div class="col-md-3 mb-3">
-                <label for="cc-expiration">Expiration</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                <div class="invalid-feedback">Expiration date required</div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="cc-cvv">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                <div class="invalid-feedback">Security code required
-                </div>
-            </div>
-            </div>
+              
+                <button>Submit Payment</button>
+            </form>
+            <!-- end Stripe elements -->
+
             <hr class="mb-4">
             <button id="checkout-continue" class="btn btn-lg btn-block" type="submit"><b>Continue</b></button>
         </form>
@@ -205,13 +195,91 @@
     <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; 2019 Gamer</p>
         <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Privacy</a></li>
-        <li class="list-inline-item"><a href="#">Terms</a></li>
-        <li class="list-inline-item"><a href="#">Support</a></li>
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
         </ul>
     </footer>
     </div>
 
+@section('stripe')
+    <script>
+        (function(){
+        // Create a Stripe client.
+        var stripe = Stripe('pk_test_9dn1vt3i0j0Q5GZdwAXn9iUs00iMziQDyD');
+
+        // Create an instance of Elements.
+        var elements = stripe.elements();
+
+        // Custom styling can be passed to options when creating an Element.
+        // (Note that this demo uses a wider set of styles than the guide below.)
+        var style = {
+        base: {
+            color: '#32325d',
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            fontSmoothing: 'antialiased',
+            fontSize: '16px',
+            '::placeholder': {
+            color: '#aab7c4'
+            }
+        },
+        invalid: {
+            color: '#fa755a',
+            iconColor: '#fa755a'
+        }
+        };
+
+        // Create an instance of the card Element.
+        var card = elements.create('card', {style: style});
+
+        // Add an instance of the card Element into the `card-element` <div>.
+        card.mount('#card-element');
+
+        // Handle real-time validation errors from the card Element.
+        card.addEventListener('change', function(event) {
+        var displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+        });
+
+        // Handle form submission.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        stripe.createToken(card).then(function(result) {
+            if (result.error) {
+            // Inform the user if there was an error.
+            var errorElement = document.getElementById('card-errors');
+            errorElement.textContent = result.error.message;
+            } else {
+            // Send the token to your server.
+            stripeTokenHandler(result.token);
+            }
+        });
+        });
+
+        // Submit the form with the token ID.
+        function stripeTokenHandler(token) {
+        // Insert the token ID into the form so it gets submitted to the server
+        var form = document.getElementById('payment-form');
+        var hiddenInput = document.createElement('input');
+        hiddenInput.setAttribute('type', 'hidden');
+        hiddenInput.setAttribute('name', 'stripeToken');
+        hiddenInput.setAttribute('value', token.id);
+        form.appendChild(hiddenInput);
+
+        // Submit the form
+        form.submit();
+        }
+                })();
+    </script>
+@endsection
+
+@section('extraJS')
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -242,6 +310,8 @@
         }, false);
     })();
     </script>
+@endsection 
+    
     </body>
     </html>
 @endsection

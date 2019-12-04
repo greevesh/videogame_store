@@ -19,7 +19,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <!-- loads fa with javascript before the rest of the page has loaded to prevent slow loading times -->
+    <!-- Stripe integration -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- loads font awesome with javascript before the rest of the page has loaded to prevent slow loading times -->
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 </head>
 <body>
@@ -127,6 +130,10 @@
                 </div>
             </footer>
         @show
+
+        @yield('stripe')
+        
+        @yield('extraJS')
     </div>
 </body>
 </html>
