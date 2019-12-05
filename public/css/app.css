@@ -80,16 +80,12 @@ body {
   opacity: 0.9;
 }
 
-/* SHOPPING CART ICON */
+/* cart icon */
 .fas {
   color: rgb(49, 38, 38);
   font-size: 1.75rem;
   padding-left: 0.375rem;
   margin-top: 0.65rem;
-}
-
-.fas:hover {
-  opacity: 0.9;
 }
 
 @media (max-width: 1200px) {
@@ -271,7 +267,7 @@ footer {
 .products-right-nintendo {
   margin: -39rem 0 5rem 63rem;  
   padding-bottom: 2rem; 
-  width: 15.5rem; 
+  width: 15.7rem; 
   height: 34rem;
 }
 
@@ -286,7 +282,7 @@ footer {
 .products-center-nintendo {
   margin: -34rem 0 5rem 35.5rem; 
   padding-bottom: 2rem; 
-  width: 15.5rem; 
+  width: 15.7rem; 
   height: 34rem;
 }
 
@@ -300,7 +296,7 @@ footer {
 
 .products-left-nintendo {
   margin-left: 7rem; 
-  width: 15.5rem;
+  width: 15.7rem;
   height: 34rem;
 }
 
@@ -315,7 +311,7 @@ footer {
 
 /* PC GAMES */
 .products-right-pc {
-  margin: -30.5rem 0 5rem 62rem;  
+  margin: -29.9rem 0 5rem 62rem;  
   padding-bottom: 2rem; 
   width: 15.8rem; 
   height: 30rem;
@@ -366,6 +362,41 @@ footer {
   width: 50%; 
   margin-top: -26rem;
 }
+#separator-ps {
+  border-right: 0.05rem solid; 
+  height: 30.5rem; 
+  width: 1px; 
+  margin-top: -28.8rem; 
+  margin-right: 50rem;
+  color: #c2c7ca;
+}
+
+#separator-xbox {
+  border-right: 0.05rem solid; 
+  height: 30.5rem; 
+  width: 1px; 
+  margin-top: -28.5rem; 
+  margin-right: 50rem;
+  color: #c2c7ca;
+}
+
+#separator-nin {
+  border-right: 0.05rem solid; 
+  height: 30.5rem; 
+  width: 1px; 
+  margin-top: -29rem; 
+  margin-right: 50rem;
+  color: #c2c7ca;
+}
+
+#separator-pc {
+  border-right: 0.05rem solid; 
+  height: 30.5rem; 
+  width: 1px; 
+  margin-top: -29.5rem; 
+  margin-right: 50rem;
+  color: #c2c7ca;
+}
 
 #add-to-cart {
   width: 10rem;
@@ -373,7 +404,7 @@ footer {
   background-color: rgb(99, 99, 182);
   color: #fff;
   font-size: 1.5rem;
-  margin: -3.5rem 0 0 15rem;
+  margin: -6.5rem 0 0 15rem;
 }
 
 #add-to-cart:hover {
@@ -459,15 +490,12 @@ footer {
 /* Stripe */
 .StripeElement {
   box-sizing: border-box;
-
   height: 40px;
-
   padding: 10px 12px;
-
   border: 1px solid transparent;
   border-radius: 4px;
-  background-color: white;
-
+  background-color: gray;
+  width: 200px;
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;

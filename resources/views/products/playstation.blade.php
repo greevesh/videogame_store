@@ -17,9 +17,9 @@
                         <h4 class="price card-text">£{{ $playstationGame->price }}</h4>
                     </div>
                 </div>
-            @elseif($playstationGame->game_id === 2 || 
-                    $playstationGame->game_id === 5 ||
-                    $playstationGame->game_id === 8 ||
+            @elseif($playstationGame->game_id === 2 or 
+                    $playstationGame->game_id === 5 or
+                    $playstationGame->game_id === 8 or
                     $playstationGame->game_id === 11)
                 <div class="products-center-playstation text-right card">
                     <a href="/playstation/{{ $playstationGame->slug }}"><img src="{{ asset($playstationGame->image) }}" class="card-img-top" alt="playstationgame"></a>
