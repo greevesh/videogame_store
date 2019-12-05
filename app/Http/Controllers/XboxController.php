@@ -49,7 +49,7 @@ class XboxController extends Controller
      */
     public function show(Game $game)
     {   
-        return view('layouts.game', compact('game'));
+        return view('product.game', compact('game'));
     }
 
     /**

@@ -49,7 +49,7 @@ class PCController extends Controller
      */
     public function show(Game $game)
     {   
-        return view('layouts.game', compact('game'));
+        return view('layouts.product', compact('game'));
     }
 
     /**

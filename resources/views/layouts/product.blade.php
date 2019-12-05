@@ -5,18 +5,20 @@
 @section('content')
     <div class="container product-details">
         @if(isset($game))
-            <h2>{{ $game->name }}</h2>
+            <h1>{{ $game->name }}</h1>
             <img src="{{ asset($game->image) }}" alt="game">
-            <h4>£{{ $game->price }}</h4>
-            <p>{{ $game->description }}</p>
+            <h2>£{{ $game->price }}</h2>
+            <div id="description" class="d-flex justify-content-end"><p>{{ $game->description }}</p></div>
         @else 
             <h1 class="text-center">Whoops! We couldn't find any games.</h1>
         @endif
     </div>
 
+    <hr style="border-right: 0.05rem solid; height: 30.5rem; width: 1px; margin-top: -28.5rem; margin-right: 50rem;">
+
     <form action="{{ route('cart.store') }}" method="POST">
         @csrf
-        <button type="submit" class="add-to-cart btn-lg"><b>Add to Cart</b></button>
+        <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
         @if(isset($game))
             <input name="game_id" type="hidden" value="{{ $game->game_id }}"> 
             <input name="slug" type="hidden" value="{{ $game->slug }}">

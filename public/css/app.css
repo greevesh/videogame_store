@@ -171,7 +171,7 @@ footer {
   opacity: 0.9;
 }
 
-/* PRODUCTS BY CATEGORY */
+/* PRODUCTS VIEW */
 
 /* h4 refers to the price divs */
 
@@ -358,7 +358,28 @@ footer {
 .products-left-pc:hover {
   opacity: 0.9;
 }
-/* END PRODUCTS BY CATEGORY */
+/* END PRODUCTS VIEW */
+
+/* PRODUCT VIEW */
+#description p {
+  font-size: 1.1rem;
+  width: 50%; 
+  margin-top: -26rem;
+}
+
+#add-to-cart {
+  width: 10rem;
+  height: 4rem;
+  background-color: rgb(99, 99, 182);
+  color: #fff;
+  font-size: 1.5rem;
+  margin: -3.5rem 0 0 15rem;
+}
+
+#add-to-cart:hover {
+  opacity: 0.9;
+}
+/* END PRODUCT VIEW */
 
 .cart-count-bg {
   background-color: rgb(99, 99, 182);
