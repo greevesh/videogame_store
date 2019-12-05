@@ -19,10 +19,9 @@
 
     <body class="bg-light">
 
+    <hr style="width: 90%;" class="mt-4 mb-5">
+
     <div class="container">
-    <div class="py-5 text-center">
-       
-    </div>
 
     <div class="row">
         <div class="col-md-4 order-md-2 mb-4">
@@ -96,23 +95,6 @@
                 <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                 <div class="invalid-feedback">Valid last name is required.</div>
             </div>
-            </div>
-
-            <div class="mb-3">
-            <label for="username">Username</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">@</span>
-                    </div>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                    <div class="invalid-feedback" style="width: 100%;">Your username is required.</div>
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
             </div>
 
             <div class="mb-3">

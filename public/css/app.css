@@ -76,6 +76,10 @@ body {
   background-color: #f8fafc;
 }
 
+#gamer-logo:hover {
+  opacity: 0.9;
+}
+
 /* SHOPPING CART ICON */
 .fas {
   color: rgb(49, 38, 38);

@@ -6,7 +6,7 @@
 
 @section('content')
     <h1 class="d-flex justify-content-center" style="padding-bottom: 3rem;">Playstation Games</h1>
-    <hr style="width: 90%; margin-top: -1rem;" class="mb-4">
+    <hr style="width: 90%;" class="mt-1 mb-5">
     @if(isset($playstationGames))
         @foreach($playstationGames as $playstationGame)
             @if($playstationGame->game_id % 3 === 0)
