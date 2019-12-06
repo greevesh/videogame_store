@@ -76,10 +76,6 @@ body {
   background-color: #f8fafc;
 }
 
-#gamer-logo:hover {
-  opacity: 0.9;
-}
-
 /* cart icon */
 .fas {
   color: rgb(49, 38, 38);
@@ -469,13 +465,13 @@ footer {
 /* END CART VIEW */
 
 /* CHECKOUT VIEW */
-#checkout-continue {
+#submit-payment {
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
   color: #fff;
 }
 
-#checkout-continue:hover {
+#submit-payment:hover {
   opacity: 0.9;
 }
 
@@ -492,13 +488,14 @@ footer {
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
-  border: 1px solid transparent;
+  border: 1px solid rgb(214, 208, 208);
   border-radius: 4px;
-  background-color: gray;
-  width: 200px;
+  width: 400px;
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
+  margin-top: 1.8rem;
+  margin-left: -7.6rem;
 }
 
 .StripeElement--focus {

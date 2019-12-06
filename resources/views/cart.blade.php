@@ -31,8 +31,6 @@
 
                 <h4>{{ Cart::count() }} product(s) in the cart.</h4>
                 
-                <br>
-                
                 @if(session()->has('emptyCartSuccessMessage'))
                   <h3 class="empty-cart-messages alert alert-success">
                     {{ session()->get('emptyCartSuccessMessage') }}
@@ -82,7 +80,17 @@
                           <th scope="row" class="border-0">
                             <div class="p-2">
                               @if($product->options->platform === 'Playstation')
-                                <a href="/playstation/{{ $product->options->slug }}"><img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm"></a>
+                              <div class="col-lg-6">
+                                  <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+                                  <div class="p-4">
+                                    <ul class="list-unstyled mb-4">
+                                      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>£{{ Cart::subtotal() }}</strong></li>
+                                      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>Free!</strong></li>
+                                      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>£{{ Cart::tax() }}</strong></li>
+                                      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
+                                        <h5 class="font-weight-bold">£{{ Cart::total() }}</h5>
+                                      </li>
+                                    </ul>                    <a href="/playstation/{{ $product->options->slug }}"><img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm"></a>
                                 <div class="ml-3 d-inline-block align-middle">
                                     <h5 class="mb-0"> <a href="/playstation/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a></h5>
                                     <span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
@@ -132,7 +140,10 @@
                 <!-- end shopping cart table -->
               </div>
             </div>
-      
+            
+            {{-- <form action="{{ route('cart.index') }}" method="GET">
+              @csrf
+              {{ method_field('GET') }} --}}
             <div class="col-lg-6">
               <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
               <div class="p-4">
@@ -143,7 +154,9 @@
                   <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                     <h5 class="font-weight-bold">£{{ Cart::total() }}</h5>
                   </li>
-                </ul><a id="checkout-btn" href="{{ route('checkout') }}" class="checkout-btn btn rounded-pill py-2 btn-block"><b>Proceed to checkout</b></a>
+                </ul>
+            {{-- </form> --}}
+                <a id="checkout-btn" href="{{ route('checkout') }}" class="checkout-btn btn rounded-pill py-2 btn-block"><b>Proceed to checkout</b></a>
               </div>
             </div>
           </div>

@@ -34,6 +34,8 @@ Route::delete('/cart', 'CartController@destroy')->name('cart.destroy');
 // removes a specific product item
 Route::delete('/cart/{rowId}', 'CartController@removeSingleProduct')->name('cart.removeSingleProduct');
 
+// Route::get('/cart', 'CartController@addShippingToTotal')->name('cart.addShippingToTotal');
+
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');
 Route::view('/cart', 'cart')->name('cart');

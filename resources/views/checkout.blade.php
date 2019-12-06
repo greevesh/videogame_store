@@ -153,7 +153,7 @@
             <!-- Stripe elements -->
             <form action="/charge" method="post" id="payment-form">
                 <div class="form-row">
-                  <label for="card-element">
+                  <label class="ml-1" for="card-element">
                     Credit or debit card
                   </label>
                   <div id="card-element">
@@ -163,13 +163,14 @@
                   <!-- Used to display form errors. -->
                   <div id="card-errors" role="alert"></div>
                 </div>
-              
-                <button>Submit Payment</button>
+                <br>
+                <hr class="mb-4">
+                <button id="submit-payment" class="btn btn-lg btn-block" type="submit"><b>Submit Payment</b></button>
             </form>
             <!-- end Stripe elements -->
 
-            <hr class="mb-4">
-            <button id="checkout-continue" class="btn btn-lg btn-block" type="submit"><b>Continue</b></button>
+            {{-- <hr class="mb-4">
+            <button id="checkout-continue" class="btn btn-lg btn-block" type="submit"><b>Continue</b></button> --}}
         </form>
         </div>
     </div>

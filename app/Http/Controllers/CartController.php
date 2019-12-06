@@ -82,13 +82,13 @@ class CartController extends Controller
         return back()->with('quantityIncreasedMessage', 'Product quantity has been increased.');
     }
 
-    public function decreaseQuantity(Request $request, $rowId)
-    {
-        $product = Cart::get($rowId);
-        Cart::remove($rowId, $product->qty - 1);
+    // public function decreaseQuantity(Request $request, $rowId)
+    // {
+    //     $product = Cart::get($rowId);
+    //     Cart::remove($rowId, $product->qty - 1);
         
-        return back()->with('quantityDecreasedMessage', 'Product quantity has been increased.');
-    }
+    //     return back()->with('quantityDecreasedMessage', 'Product quantity has been increased.');
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -110,17 +110,17 @@ class CartController extends Controller
         }
     }
 
-    public function removeSingleProduct($rowId)
-    {
-        Cart::remove($rowId);
+    // public function removeSingleProduct($rowId)
+    // {
+    //     Cart::remove($rowId);
 
-        return back()->with('removeSingleProductSuccessMessage', 'Product has been removed from cart.');
-    }
+    //     return back()->with('removeSingleProductSuccessMessage', 'Product has been removed from cart.');
+    // }
 
-    // public function calculateShippingAndTotal()
+    // public function addShippingToTotal()
     // {
     //     $shipping = 0;
-    //     $total = Cart::total() += $shipping;
+    //     $completeTotal = Cart::total() + $shipping;
 
     //     if (Cart::total() > 0 && Cart::total() < 10)
     //     {
@@ -139,6 +139,6 @@ class CartController extends Controller
     //         $shipping = 0;
     //     }
 
-    //     return $total;
+    //     return $completeTotal;
     // }
 }
