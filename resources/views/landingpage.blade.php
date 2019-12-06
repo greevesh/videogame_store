@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-<script src="https://js.stripe.com/v3/"></script>
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

@@ -26,5 +26,5 @@
             These are the Legendary Pokémon that are featured on the packages of Pokémon Sword and Pokémon Shield: 
             Zacian attacks so gracefully that its movements can even captivate its opponents. It holds what appears to be a sword in its mouth.
             Zamazenta’s regal and majestic movements overwhelm any opponents that dare face it. Its body is covered in what seems to be a shield. 
-            They are shrouded in mystery and are even unknown to those who live in the Galar region. Don’t miss out and buy Pokémon Sword today at GAME.</p>
+            They are shrouded in mystery and are even unknown to those who live in the Galar region. Don’t miss out and buy Pokémon Sword today at Gamer.</p>
 @endsection

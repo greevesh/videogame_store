@@ -491,11 +491,13 @@ footer {
   border: 1px solid rgb(214, 208, 208);
   border-radius: 4px;
   width: 400px;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
-  margin-top: 1.8rem;
-  margin-left: -7.6rem;
+  margin: 1.8rem 0 0 -7.6rem;
+}
+
+#card-errors {
+  color: red;
+  margin: 4.5rem 0 0 -25rem;
 }
 
 .StripeElement--focus {
@@ -503,7 +505,7 @@ footer {
 }
 
 .StripeElement--invalid {
-  border-color: #fa755a;
+  border-color: red;
 }
 
 .StripeElement--webkit-autofill {

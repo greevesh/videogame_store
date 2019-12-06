@@ -8,15 +8,6 @@
 @section('content')
     <title>Checkout</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/checkout/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
-    </head>
-
     <body class="bg-light">
 
     <hr style="width: 90%;" class="mt-4 mb-5">
@@ -65,7 +56,113 @@
                 @elseif($product->options->platform === 'PC')
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <a href="/pc/{{ $product->options->slug }}"><img src="{{ asset($product->options->image) }}" alt="" width="70" class="img-fluid rounded shadow-sm"></a>
-                        <div class="ml-3 d-inline-block align-middle">
+                        <script>
+                                (function(){
+                                // Create a Stripe client.
+                                var stripe = Stripe('pk_test_9dn1vt3i0j0Q5GZdwAXn9iUs00iMziQDyD');
+                        
+                                // Create an instance of Elements.
+                                var elements = stripe.elements();
+                        
+                                // Custom styling can be passed to options when creating an Element.
+                                // (Note that this demo uses a wider set of styles than the guide below.)
+                                var style = {
+                                base: {
+                                    color: '#32325d',
+                                    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                                    fontSmoothing: 'antialiased',
+                                    fontSize: '16px',
+                                    '::placeholder': {
+                                    color: '#aab7c4'
+                                    }
+                                },
+                                invalid: {
+                                    color: 'red',
+                                    iconColor: 'red'
+                                }
+                                };
+                        
+                                // Create an instance of the card Element.
+                                var card = elements.create('card', { style: style, hidePostalCode: true });
+                        
+                                // Add an instance of the card Element into the `card-element` <div>.
+                                card.mount('#card-element');
+                        
+                                // Handle real-time validation errors from the card Element.
+                                card.addEventListener('change', function(event) {
+                                var displayError = document.getElementById('card-errors');
+                                if (event.error) {
+                                    displayError.textContent = event.error.message;
+                                } else {
+                                    displayError.textContent = '';
+                                }
+                                });
+                        
+                                // Handle form submission.
+                                var form = document.getElementById('payment-form');
+                                form.addEventListener('submit', function(event) {
+                                event.preventDefault();
+                        
+                                stripe.createToken(card).then(function(result) {
+                                    if (result.error) {
+                                    // Inform the user if there was an error.
+                                    var errorElement = document.getElementById('card-errors');
+                                    errorElement.textContent = result.error.message;
+                                    } else {
+                                    // Send the token to your server.
+                                    stripeTokenHandler(result.token);
+                                    }
+                                });
+                                });
+                        
+                                // Submit the form with the token ID.
+                                function stripeTokenHandler(token) {
+                                // Insert the token ID into the form so it gets submitted to the server
+                                var form = document.getElementById('payment-form');
+                                var hiddenInput = document.createElement('input');
+                                hiddenInput.setAttribute('type', 'hidden');
+                                hiddenInput.setAttribute('name', 'stripeToken');
+                                hiddenInput.setAttribute('value', token.id);
+                                form.appendChild(hiddenInput);
+                        
+                                // Submit the form
+                                form.submit();
+                                }
+                                        })();
+                            </script>
+                        @endsection
+                        
+                        @section('extraJS')
+                            <!-- Bootstrap core JavaScript
+                            ================================================== -->
+                            <!-- Placed at the end of the document so the pages load faster -->
+                            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                            <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+                            <script src="../../assets/js/vendor/popper.min.js"></script>
+                            <script src="../../dist/js/bootstrap.min.js"></script>
+                            <script src="../../assets/js/vendor/holder.min.js"></script>
+                            <script>
+                            // Example starter JavaScript for disabling form submissions if there are invalid fields
+                            (function() {
+                                'use strict';
+                        
+                                window.addEventListener('load', function() {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                        
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function(form) {
+                                    form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                    }, false);
+                                });
+                                }, false);
+                            })();
+                            </script>    <div class="ml-3 d-inline-block align-middle">
                             <a href="/pc/{{ $product->options->slug }}" class="text-dark d-inline-block align-middle">{{ $product->name }}</a>
                             <span class="text-muted font-weight-normal font-italic d-block">Platform: {{ $product->options->platform }}</span>
                             <span class="text-muted font-weight-normal font-italic d-block">Price: £{{ $product->price }}</span>
@@ -75,7 +172,7 @@
                 @endif
             @endforeach
             <li class="list-group-item d-flex justify-content-between">
-                <span>Your paying:</span>
+                <span>You're paying:</span>
                 <strong>£{{ Cart::total() }}</strong>
             </li>
         </ul>
@@ -83,7 +180,7 @@
         </div>
         <div class="col-md-8 order-md-1">
         <h4 class="mb-3">Billing Information</h4>
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" id="payment-form" novalidate>
             <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -130,10 +227,10 @@
                 </div>
             </div>
             <div class="col-md-3 mb-3">
-                <label for="zip">Zip</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <label for="postcode">Postcode</label>
+                <input type="text" class="form-control" id="postcode" placeholder="" required>
                 <div class="invalid-feedback">
-                Zip code required.
+                    Postcode required.
                 </div>
             </div>
             </div>
@@ -169,9 +266,8 @@
             </form>
             <!-- end Stripe elements -->
 
-            {{-- <hr class="mb-4">
-            <button id="checkout-continue" class="btn btn-lg btn-block" type="submit"><b>Continue</b></button> --}}
-        </form>
+        </form> 
+        <!-- end entire checkout form -->
         </div>
     </div>
 
@@ -207,13 +303,13 @@
             }
         },
         invalid: {
-            color: '#fa755a',
-            iconColor: '#fa755a'
+            color: 'red',
+            iconColor: 'red'
         }
         };
 
         // Create an instance of the card Element.
-        var card = elements.create('card', {style: style});
+        var card = elements.create('card', { style: style, hidePostalCode: true });
 
         // Add an instance of the card Element into the `card-element` <div>.
         card.mount('#card-element');
@@ -268,9 +364,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
+    
     <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function() {

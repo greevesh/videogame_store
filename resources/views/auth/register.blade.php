@@ -2,8 +2,6 @@
 
 @section('title', '- Register')
 
-<script src="https://js.stripe.com/v3/"></script>
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

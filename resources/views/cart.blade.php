@@ -2,8 +2,6 @@
 
 @section('title', '- Cart')
 
-<script src="https://js.stripe.com/v3/"></script>
-
 @section('content')
 <div style="margin-top: -250px;" class="px-4 px-lg-0">
         <!-- For demo purpose -->

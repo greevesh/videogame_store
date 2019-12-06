@@ -2,8 +2,6 @@
 
 @section('title', '- Xbox Games')
 
-<script src="https://js.stripe.com/v3/"></script>
-
 @section('content')
     <h1 class="d-flex justify-content-center" style="padding-bottom: 3rem;">Xbox Games</h1>
     <hr style="width: 90%;" class="mt-1 mb-5">
