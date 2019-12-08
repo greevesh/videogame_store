@@ -1,4 +1,4 @@
-@extends('layouts.products')
+@extends('layouts.app')
 
 @section('title', '- PC Games')
 

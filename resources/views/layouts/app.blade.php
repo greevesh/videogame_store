@@ -106,7 +106,6 @@
             @yield('content')
         </main>
 
-        @yield('footer')
             <footer class="border shadow-lg">
                 <div>
                     <ul class="p-3 p-5 m-md-3 text-center">
@@ -126,10 +125,7 @@
                     </ul>
                 </div>
             </footer>
-        @show
-
-        @yield('stripe')
-        @yield('extraJS')
+            
     </div>
 </body>
 </html>

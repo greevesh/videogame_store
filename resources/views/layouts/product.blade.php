@@ -36,7 +36,7 @@
         @csrf
         @if(isset($game))
             @if($game->platform === 'Nintendo')
-                <button style="margin-top: -2.7rem;" type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                <button style="margin-top: -4.7rem;" type="submit" id="add-to-cart"><b>Add to Cart</b></button>
             @elseif($game->platform === 'PC')
                 <button style="margin-top: -4.5rem;" type="submit" id="add-to-cart"><b>Add to Cart</b></button>
             @else 

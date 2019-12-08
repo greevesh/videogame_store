@@ -36,6 +36,8 @@ Route::delete('/cart/{rowId}', 'CartController@removeSingleProduct')->name('cart
 
 // Route::get('/cart', 'CartController@addShippingToTotal')->name('cart.addShippingToTotal');
 
+Route::post('checkout', 'CheckoutController@store')->name('checkout.store');
+
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');
 Route::view('/cart', 'cart')->name('cart');
