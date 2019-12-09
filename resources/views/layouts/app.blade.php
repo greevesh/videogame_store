@@ -107,6 +107,15 @@
         </main>
 
             <footer class="border shadow-lg">
+                    {{-- <div>
+                        <ul id="footer-info-left">
+                            <li class="d-block text-left"><a class="text-dark" href="#">Careers at Gamer</a></li>
+                            <li class="d-block text-left"><a class="text-dark" href="#">Terms and Conditions</a></li>
+                            <li class="d-block text-left"><a class="text-dark" href="#">Privacy Policy</a></li>
+                            <li class="d-block text-left"><a class="text-dark" href="#">Cookies</a></li>
+                            <li class="d-block text-left"><a class="text-dark" href="#">Copyright</a></li>
+                        </ul>
+                    </div> --}}
                 <div>
                     <ul class="p-3 p-5 m-md-3 text-center">
                         <li class="d-inline p-2"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -116,7 +125,7 @@
                     </ul>
                 </div> 
                 <div>
-                    <ul id="footer-corp">
+                    <ul id="footer-info-right">
                         <li class="d-block text-right"><a class="text-dark" href="#">Careers at Gamer</a></li>
                         <li class="d-block text-right"><a class="text-dark" href="#">Terms and Conditions</a></li>
                         <li class="d-block text-right"><a class="text-dark" href="#">Privacy Policy</a></li>

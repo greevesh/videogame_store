@@ -65,6 +65,7 @@ section {
   display: block;
 }
 
+/* APP.BLADE.PHP TEMPLATE VIEW */
 body {
   margin: 0;
   font-family: var(--font-family-sans-serif);
@@ -108,15 +109,15 @@ body {
 
 footer {
   margin-top: 21.375rem;
-  margin-bottom: 
-  height: 7.313rem;
+  height: 25vh;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-#footer-corp {
+#footer-info-right {
   margin-top: -8rem;
   margin-right: 3rem;
 }
+/* END APP.BLADE.PHP TEMPLATE VIEW */
 
 #pre-order-image {
   background-size: cover;
@@ -127,6 +128,13 @@ footer {
 
 #banner {
   padding: 1rem;
+  height: 4rem;
+  background-color: rgb(235, 235, 38);
+}
+
+#banner p {
+  margin-top: -0.5rem;
+  font-size: 2rem;
 }
 
 #pre-order-button {
@@ -165,9 +173,7 @@ footer {
 
 /* PRODUCTS VIEW */
 
-/* h4 refers to the price divs */
-
-/* PLAYSTATION GAMES */
+/* playstation games */
 .products-right-playstation {
   margin: -36rem 0 5rem 60rem;  
   padding-bottom: 2rem; 
@@ -213,7 +219,7 @@ footer {
   opacity: 0.9;
 }
 
-/* XBOX GAMES */
+/* xbox games */
 .products-right-xbox {
   margin: -35rem 0 5rem 62rem;  
   padding-bottom: 2rem; 
@@ -259,7 +265,7 @@ footer {
   opacity: 0.9;
 }
 
-/* NINTENDO GAMES */
+/* nintendo games */
 .products-right-nintendo {
   margin: -39rem 0 5rem 63rem;  
   padding-bottom: 2rem; 
@@ -305,7 +311,7 @@ footer {
   opacity: 0.9;
 }
 
-/* PC GAMES */
+/* pc games */
 .products-right-pc {
   margin: -29.9rem 0 5rem 62rem;  
   padding-bottom: 2rem; 
@@ -1271,12 +1277,7 @@ pre code {
   max-width: 91.6666666667%;
 }
 
-.col-12 {
-}
 
-  -webkit-box-ordinal-group: 0;
-          order: -1;
-}
 
 .order-last {
   -webkit-box-ordinal-group: 14;
