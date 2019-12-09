@@ -106,16 +106,52 @@
             @yield('content')
         </main>
 
-            <footer class="border shadow-lg">
-                    {{-- <div>
-                        <ul id="footer-info-left">
-                            <li class="d-block text-left"><a class="text-dark" href="#">Careers at Gamer</a></li>
-                            <li class="d-block text-left"><a class="text-dark" href="#">Terms and Conditions</a></li>
-                            <li class="d-block text-left"><a class="text-dark" href="#">Privacy Policy</a></li>
-                            <li class="d-block text-left"><a class="text-dark" href="#">Cookies</a></li>
-                            <li class="d-block text-left"><a class="text-dark" href="#">Copyright</a></li>
-                        </ul>
-                    </div> --}}
+        <footer class="container py-5">
+                <div class="row">
+                  <div class="col-12 col-md">
+                    <img class="h-55 w-55" src="{{ asset('storage/images/gamer_logo2.png') }}"><title>Product</title>
+                    <b class="d-block mb-3 text-muted">&copy; 2019-2020</b>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-muted" href="#">Cool stuff</a></li>
+                      <li><a class="text-muted" href="#">Random feature</a></li>
+                      <li><a class="text-muted" href="#">Team feature</a></li>
+                      <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-muted" href="#">Resource</a></li>
+                      <li><a class="text-muted" href="#">Resource name</a></li>
+                      <li><a class="text-muted" href="#">Another resource</a></li>
+                      <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-muted" href="#">Careers at Gamer</a></li>
+                      <li><a class="text-muted" href="#">Cookies</a></li>
+                      <li><a class="text-muted" href="#">Government</a></li>
+                      <li><a class="text-muted" href="#">Gaming</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5>About Gamer</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-muted" href="#">Team</a></li>
+                      <li><a class="text-muted" href="#">Locations</a></li>
+                      <li><a class="text-muted" href="#">Privacy</a></li>
+                      <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </footer>
+
+            {{-- <footer class="border shadow-lg">
                 <div>
                     <ul class="p-3 p-5 m-md-3 text-center">
                         <li class="d-inline p-2"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -133,7 +169,7 @@
                         <li class="d-block text-right"><a class="text-dark" href="#">Copyright</a></li>
                     </ul>
                 </div>
-            </footer>
+            </footer> --}}
             
     </div>
 </body>

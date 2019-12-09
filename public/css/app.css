@@ -108,7 +108,7 @@ body {
 }
 
 footer {
-  margin-top: 21.375rem;
+  margin-top: 5.375rem;
   height: 25vh;
   border-color: rgba(255, 255, 255, 0.1);
 }
@@ -1276,8 +1276,6 @@ pre code {
           flex: 0 0 91.6666666667%;
   max-width: 91.6666666667%;
 }
-
-
 
 .order-last {
   -webkit-box-ordinal-group: 14;
@@ -5598,27 +5596,6 @@ input[type=button].btn-block {
 
 .card-deck .card {
   margin-bottom: 15px;
-}
-
-@media (min-width: 576px) {
-  .card-deck {
-    flex-flow: row wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    margin-left: -15px;
-  }
-
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-flex: 1;
-            flex: 1 0 0%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    margin-right: 15px;
-    margin-bottom: 0;
-    margin-left: 15px;
-  }
 }
 
 .card-group {
