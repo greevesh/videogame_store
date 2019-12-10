@@ -39,16 +39,18 @@ class CheckoutController extends Controller
         try {
             $charge = Stripe::charges()->create([
                 // 'amount' => getNumbers()->get('newTotal') / 100,
-                'currency' => 'UK',
+                'amount' => Cart::total(),
+                'currency' => 'GBP',
                 'source' => $request->stripeToken,
                 'description' => 'Thank you for your purchase.',
                 'receipt_email' => $request->email,
-                'customer' => 'person',
                 'metadata' => [
                     // 'contents' => $contents,
                     'quantity' => Cart::count(),
                 ],
             ]);
+
+            $customer = $charge->customers()->create([ 'email' => 'john@doe.com']);
 
             Cart::destroy();
 

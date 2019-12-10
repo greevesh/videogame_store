@@ -109,7 +109,7 @@
         <footer class="container py-5">
                 <div class="row">
                   <div class="col-12 col-md">
-                    <img class="h-55 w-55" src="{{ asset('storage/images/gamer_logo2.png') }}"><title>Product</title>
+                    <img src="{{ asset('storage/images/gamer_logo2.png') }}"><title>Product</title>
                     <b class="d-block mb-3 text-muted">&copy; 2019-2020</b>
                   </div>
                   <div class="col-6 col-md">
@@ -150,26 +150,6 @@
                   </div>
                 </div>
               </footer>
-
-            {{-- <footer class="border shadow-lg">
-                <div>
-                    <ul class="p-3 p-5 m-md-3 text-center">
-                        <li class="d-inline p-2"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="d-inline p-2"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li class="d-inline p-2"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li class="d-inline p-2"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div> 
-                <div>
-                    <ul id="footer-info-right">
-                        <li class="d-block text-right"><a class="text-dark" href="#">Careers at Gamer</a></li>
-                        <li class="d-block text-right"><a class="text-dark" href="#">Terms and Conditions</a></li>
-                        <li class="d-block text-right"><a class="text-dark" href="#">Privacy Policy</a></li>
-                        <li class="d-block text-right"><a class="text-dark" href="#">Cookies</a></li>
-                        <li class="d-block text-right"><a class="text-dark" href="#">Copyright</a></li>
-                    </ul>
-                </div>
-            </footer> --}}
             
     </div>
 </body>
