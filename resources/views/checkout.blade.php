@@ -159,6 +159,7 @@
                 </div>
                 <br>
                 <hr class="mb-4">
+                <p id="no-products"></p>
                 <button id="submit-payment" class="btn btn-lg btn-block" type="submit"><b>Submit Payment</b></button>
             </form>
             <!-- END STRIPE ELEMENTS -->
@@ -169,6 +170,16 @@
         </div>
     </div>
     </div>
+
+    {{-- ALERT: CART IS EMPTY --}}
+    @if(Cart::count() == 0)
+        <script>
+            document.getElementById('submit-payment').disabled = true;
+            document.getElementById('no-products').innerHTML = 'Your cart is empty!';
+            document.getElementById('no-products').className = 'w-25 alert alert-danger';
+        </script>
+    @endif
+    {{-- END ALERT: CART IS EMPTY --}}
 
     <script type="text/javascript">
         (function(){

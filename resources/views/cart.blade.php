@@ -54,7 +54,7 @@
             {{-- EMPTY THE ENTIRE CART --}}
             <form action="{{ route('cart.destroy') }}" method="POST">
                 @csrf 
-                {{ method_field('DELETE') }}
+                @method('DELETE')
                 <a><button class="empty-cart btn-lg" type="submit"><b>Empty Cart</b></button></a>
             </form>
             {{-- END EMPTY THE ENTIRE CART --}}
@@ -120,7 +120,7 @@
                       <td class="border-0 align-middle">
                         <form action="{{ route('cart.update', $product->rowId) }}" method="POST">
                           @csrf
-                          {{ method_field('PATCH') }}
+                          @method('PATCH')
                           <button>+</button>
                         </form>
                         </div>
@@ -131,7 +131,7 @@
                       <td class="border-0 align-middle">
                       <form action="{{ route('cart.removeSingleProduct', $product->rowId) }}" method="POST">
                         @csrf
-                        {{ method_field('DELETE') }}
+                        @method('DELETE')
                         <button id="bin-btn"><i class="fa fa-trash"></i></button>
                       </form>
                       </td>
@@ -161,10 +161,11 @@
               </li>
             </ul>
         {{-- </form> --}}
-            <a id="checkout-btn" href="{{ route('checkout') }}" class="checkout-btn btn rounded-pill py-2 btn-block"><b>Proceed to checkout</b></a>
+            <a id="checkout-btn" class="checkout-btn btn rounded-pill py-2 btn-block" href="{{ route('checkout') }}"><b>Proceed to checkout</b></a>
           </div>
         </div>
         {{-- END PRICING DETAILS --}}
+        
       </div>
     </div>
   </div>
