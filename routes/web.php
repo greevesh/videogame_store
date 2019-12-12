@@ -42,6 +42,7 @@ Route::post('checkout', 'CheckoutController@store')->name('checkout.store');
 Route::view('/', 'landingpage')->name('landingpage');
 Route::view('/cart', 'cart')->name('cart');
 Route::view('/checkout', 'checkout')->name('checkout');
+Route::view('/confirmation', 'confirmation')->name('confirmation');
 
 // login and register
 Auth::routes();

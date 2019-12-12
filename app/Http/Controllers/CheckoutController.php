@@ -36,6 +36,9 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
+        $stripe = new Stripe();
+        $stripe = Stripe::make('sk_test_IkkC8sO6532nzHtuCLayswle00ny0pBcZ4');
+
         try {
             $charge = Stripe::charges()->create([
                 // 'amount' => getNumbers()->get('newTotal') / 100,
@@ -50,12 +53,15 @@ class CheckoutController extends Controller
                 ],
             ]);
 
-            $customer = $charge->customers()->create([ 'email' => 'john@doe.com']);
+            $customer = $stripe->customers()->create([ 'email' => 'john@doe.com']);
 
             Cart::destroy();
 
-            return redirect()->route('confirmation.index')->with('success_message', 'Thank you! Your payment has been successfully accepted!');
-        } catch (CardErrorException $e) {
+            return redirect()->route('confirmation')
+            ->with('successMessage', 'Thank you! Your payment has been accepted.');
+
+        } 
+            catch (CardErrorException $e) {
             return back()->withErrors('Error! ' . $e->getMessage());
         }
     }
