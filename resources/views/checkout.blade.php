@@ -182,7 +182,7 @@
     {{-- END ALERT: CART IS EMPTY --}}
 
     <script type="text/javascript">
-        (function(){
+        (function() {
         // Create a Stripe client.
         var stripe = Stripe('pk_test_9dn1vt3i0j0Q5GZdwAXn9iUs00iMziQDyD');
 

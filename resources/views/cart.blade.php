@@ -146,25 +146,36 @@
         </div>
         
         {{-- GET PRICING DETAILS --}}
-        {{-- <form action="{{ route('cart.index') }}" method="GET">
-          @csrf
-          {{ method_field('GET') }} --}}
         <div class="col-lg-6">
           <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary</div>
           <div class="p-4">
             <ul class="list-unstyled mb-4">
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>£{{ Cart::subtotal() }}</strong></li>
-              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>Free!</strong></li>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping</strong><strong id="shipping">£0.00</strong></li>
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>£{{ Cart::tax() }}</strong></li>
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                <h5 class="font-weight-bold">£{{ Cart::total() }}</h5>
+                <h5 id="total" class="font-weight-bold">£{{ Cart::total() }}</h5>
               </li>
             </ul>
-        {{-- </form> --}}
+
             <a id="checkout-btn" class="checkout-btn btn rounded-pill py-2 btn-block" href="{{ route('checkout') }}"><b>Proceed to checkout</b></a>
           </div>
         </div>
         {{-- END PRICING DETAILS --}}
+
+        @if(Cart::total() > 0 && Cart::total() < 30)
+          <script>
+            document.getElementById('shipping').textContent = '£5.00';
+          </script>
+        @elseif(Cart::total() > 30 && Cart::total() < 80)
+          <script>
+              document.getElementById('shipping').textContent = '£10.00';
+          </script>
+        @elseif(Cart::total() != 0)
+          <script>
+              document.getElementById('shipping').textContent = '£15.00';
+          </script>
+        @endif 
         
       </div>
     </div>

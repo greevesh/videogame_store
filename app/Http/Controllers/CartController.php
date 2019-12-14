@@ -37,7 +37,11 @@ class CartController extends Controller
     public function store(Request $request)
     {
         Cart::add($request->game_id, $request->name, 1, $request->price, 
-                ['platform' => $request->platform, 'image' => $request->image, 'slug' => $request->slug])
+                [
+                    'platform' => $request->platform, 
+                    'image' => $request->image, 
+                    'slug' => $request->slug
+                ])
             ->associate('App\Game');
 
         $productAddedSuccessMessage = 'has been added to cart.';
@@ -110,16 +114,16 @@ class CartController extends Controller
         }
     }
 
-    // public function removeSingleProduct($rowId)
-    // {
-    //     Cart::remove($rowId);
+    public function removeSingleProduct($rowId)
+    {
+        Cart::remove($rowId);
 
-    //     return back()->with('removeSingleProductSuccessMessage', 'Product has been removed from cart.');
-    // }
+        return back()->with('removeSingleProductSuccessMessage', 'Product has been removed from cart.');
+    }
 
     // public function addShippingToTotal()
     // {
-    //     $shipping = 0;
+    //     $shipping = Cart::total();
     //     $completeTotal = Cart::total() + $shipping;
 
     //     if (Cart::total() > 0 && Cart::total() < 10)
@@ -139,6 +143,6 @@ class CartController extends Controller
     //         $shipping = 0;
     //     }
 
-    //     return $completeTotal;
+    //     return view('cart')->with(compact('shipping'));
     // }
 }

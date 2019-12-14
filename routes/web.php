@@ -33,8 +33,8 @@ Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::delete('/cart', 'CartController@destroy')->name('cart.destroy');
 // removes a specific product item
 Route::delete('/cart/{rowId}', 'CartController@removeSingleProduct')->name('cart.removeSingleProduct');
-
-// Route::get('/cart', 'CartController@addShippingToTotal')->name('cart.addShippingToTotal');
+// add shipping price to total price
+Route::get('/cart', 'CartController@addShippingToTotal')->name('cart.addShippingToTotal');
 
 Route::post('checkout', 'CheckoutController@store')->name('checkout.store');
 
