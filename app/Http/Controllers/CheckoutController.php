@@ -58,7 +58,7 @@ class CheckoutController extends Controller
             Cart::destroy();
 
             return redirect()->route('confirmation')
-            ->with('successMessage', 'Thank you! Your payment has been accepted.');
+            ->with('paymentSuccessMessage', 'Thank you! Your payment has been accepted.');
 
         } 
             catch (CardErrorException $e) {

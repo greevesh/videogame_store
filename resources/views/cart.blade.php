@@ -158,7 +158,7 @@
               </li>
             </ul>
 
-            <a id="checkout-btn" class="checkout-btn btn rounded-pill py-2 btn-block" href="{{ route('checkout') }}"><b>Proceed to checkout</b></a>
+            <a id="checkout" class="checkout-btn btn rounded-pill py-2 btn-block" href="{{ route('checkout') }}"><b>Proceed to checkout</b></a>
           </div>
         </div>
         {{-- END PRICING DETAILS --}}

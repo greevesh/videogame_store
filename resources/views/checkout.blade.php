@@ -175,7 +175,7 @@
     @if(Cart::count() == 0)
         <script>
             document.getElementById('submit-payment').disabled = true;
-            document.getElementById('no-products').innerHTML = 'Your cart is empty!';
+            document.getElementById('no-products').textContent = 'Your cart is empty!';
             document.getElementById('no-products').className = 'w-25 alert alert-danger';
         </script>
     @endif

@@ -440,13 +440,13 @@ footer {
   opacity: 0.9;
 }
 
-#checkout-btn {
+#checkout {
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
   color: #fff;
 }
 
-#checkout-btn:hover {
+#checkout:hover {
   opacity: 0.9;
 }
 
