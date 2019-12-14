@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Game;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class PreOrderController extends Controller
 {
@@ -39,7 +40,21 @@ class PreOrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Cart::add(
+                $request->game_id, 
+                $request->name,
+                1,
+                $request->price, 
+                [
+                    'platform' => $request->platform, 
+                    'image' => $request->image, 
+                    'slug' => $request->slug
+                ])
+            ->associate('App\Game');
+
+        $productAddedSuccessMessage = 'has been added to cart.';
+
+        return redirect()->route('cart')->with(compact('productAddedSuccessMessage'));  
     }
 
     /**

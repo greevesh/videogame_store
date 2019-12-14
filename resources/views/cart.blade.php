@@ -121,6 +121,8 @@
                         <form action="{{ route('cart.update', $product->rowId) }}" method="POST">
                           @csrf
                           @method('PATCH')
+                          <strong>{{ $product->qty }}</strong>
+                          &nbsp;&nbsp;
                           <button>+</button>
                         </form>
                         </div>
