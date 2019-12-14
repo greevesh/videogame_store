@@ -125,7 +125,7 @@
             </div>
             <div class="col-md-3 mb-3">
                 <label for="postcode">Postcode</label>
-                <input type="text" class="form-control" id="postcode" placeholder="" required>
+                <input type="text" class="form-control" id="postcode" required>
                 <div class="invalid-feedback">
                     Postcode required.
                 </div>
@@ -181,7 +181,13 @@
     @endif
     {{-- END ALERT: CART IS EMPTY --}}
 
-    <script type="text/javascript">
+    {{-- <script>
+        document.getElementById('submit-payment').addEventListener('submit', function() {
+            document.getElementById('submit-payment').disabled = true; 
+        }) 
+    </script> --}}
+
+    <script>
         (function() {
         // Create a Stripe client.
         var stripe = Stripe('pk_test_9dn1vt3i0j0Q5GZdwAXn9iUs00iMziQDyD');
@@ -227,6 +233,9 @@
         var form = document.getElementById('payment-form');
         form.addEventListener('submit', function(event) {
         event.preventDefault();
+
+        // disables the submit button to prevent repeated clicks
+        document.getElementById('submit-payment').disabled = true; 
 
         stripe.createToken(card).then(function(result) {
             if (result.error) {

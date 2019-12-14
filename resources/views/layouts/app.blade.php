@@ -131,7 +131,7 @@
                     </ul>
                   </div>
                   <div class="col-6 col-md">
-                    <h5>Resources</h5>
+                    <h5>Other Stuff</h5>
                     <ul class="list-unstyled text-small">
                       <li><a class="text-muted" href="#">Careers at Gamer</a></li>
                       <li><a class="text-muted" href="#">Cookies</a></li>
