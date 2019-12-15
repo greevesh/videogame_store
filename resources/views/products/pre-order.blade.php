@@ -8,13 +8,13 @@
     @foreach($preOrderGames as $preOrderGame)
         @if(isset($preOrderGame))
             @if($preOrderGame->name === 'Pokemon Sword')
-                <div style="margin-left: 65%;">
+                <div style="margin-left: 61%;">
                     <h2>{{ $preOrderGame->name }}</h2>
-                    <img src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
+                    <img style="height: 27rem; width: 18rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
                     <h4>£{{ $preOrderGame->price }}</h4>
                     <form action="{{ route('cart.store') }}" method="POST">
                         @csrf 
-                        <button type="left" class="pre-order-small btn-lg">Pre-order</button>
+                        <button class="pre-order-small btn-lg">Pre-order</button>
                         <input name="game_id" type="hidden" value="{{ $preOrderGame->game_id }}"> 
                         <input name="slug" type="hidden" value="{{ $preOrderGame->slug }}">
                         <input name="name" type="hidden" value="{{ $preOrderGame->name }}"> 
@@ -24,9 +24,9 @@
                     </form>
                 </div>
             @else 
-                <div style="margin-left: 20%; margin-top: -27rem;">
+                <div style="margin-left: 20%; margin-top: -34.5rem;">
                     <h2>{{ $preOrderGame->name }}</h2>
-                    <img style="height: 20rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
+                    <img style="height: 27rem; width: 18rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
                     <h4>£{{ $preOrderGame->price }}</h4>
                     <form action="{{ route('cart.store') }}" method="POST">
                         @csrf 

@@ -7,7 +7,7 @@
     <hr style="width: 90%;" class="mt-1 mb-5">
     @if(isset($nintendoGames))
         @foreach($nintendoGames as $nintendoGame)
-            @if($nintendoGame->game_id % 3 === 0)
+            @if($nintendoGame->game_id % 3 == 0)
                 <div class="products-right-nintendo text-right card">
                     <a href="/nintendo/{{ $nintendoGame->slug }}"><img src="{{ asset($nintendoGame->image) }}" class="card-img-top" alt="nintendoGame"></a>
                     <div class="card-body">
@@ -15,10 +15,10 @@
                         <h4 class="price card-text">£{{ $nintendoGame->price }}</h4>
                     </div>
                 </div>
-            @elseif($nintendoGame->game_id === 26 or 
-                    $nintendoGame->game_id === 29 or
-                    $nintendoGame->game_id === 32 or
-                    $nintendoGame->game_id === 35)
+            @elseif($nintendoGame->game_id == 26 or 
+                    $nintendoGame->game_id == 29 or
+                    $nintendoGame->game_id == 32 or
+                    $nintendoGame->game_id == 35)
                 <div class="products-center-nintendo text-right card">
                     <a href="/nintendo/{{ $nintendoGame->slug }}"><img src="{{ asset($nintendoGame->image) }}" class="card-img-top" alt="nintendoGame"></a>
                     <div class="card-body">

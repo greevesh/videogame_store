@@ -7,7 +7,7 @@
     <hr style="width: 90%;" class="mt-1 mb-5">
     @if(isset($xboxGames))
         @foreach($xboxGames as $xboxGame)
-            @if($xboxGame->game_id % 3 === 0)
+            @if($xboxGame->game_id % 3 == 0)
                 <div class="products-right-xbox text-right card">
                     <a href="/xbox/{{ $xboxGame->slug }}"><img src="{{ asset($xboxGame->image) }}" class="card-img-top" alt="playstationgame"></a>
                     <div class="card-body">
@@ -15,10 +15,10 @@
                         <h4 class="price card-text">£{{ $xboxGame->price }}</h4>
                     </div>
                 </div>
-            @elseif($xboxGame->game_id === 14 or 
-                    $xboxGame->game_id === 17 or
-                    $xboxGame->game_id === 20 or
-                    $xboxGame->game_id === 23)
+            @elseif($xboxGame->game_id == 14 or 
+                    $xboxGame->game_id == 17 or
+                    $xboxGame->game_id == 20 or
+                    $xboxGame->game_id == 23)
                 <div class="products-center-xbox text-right card">
                     <a href="/xbox/{{ $xboxGame->slug }}"><img src="{{ asset($xboxGame->image) }}" class="card-img-top" alt="playstationgame"></a>
                     <div class="card-body">

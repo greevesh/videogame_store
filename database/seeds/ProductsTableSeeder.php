@@ -113,12 +113,12 @@ class GamesTableSeeder extends Seeder
         ]);
 
         Game::create([
-            'slug' => Str::slug('Ratchet & Clank', '-'),
+            'slug' => Str::slug('Ratchet and Clank', '-'),
             'platform' => 'Playstation',
             'name' => 'Ratchet & Clank', 
             'price' => floatval('24.99'), 
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.',
-            'image' => '/storage/images/playstation/ratchet&clank.jpeg'
+            'image' => '/storage/images/playstation/ratchet_and_clank.jpeg'
         ]);
 
         // XBOX GAMES
