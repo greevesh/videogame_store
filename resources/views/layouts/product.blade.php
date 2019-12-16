@@ -35,12 +35,22 @@
     <form action="{{ route('cart.store') }}" method="POST">
         @csrf
         @if(isset($game))
-            @if($game->platform === 'Nintendo')
-                <button style="margin-top: -4.7rem;" type="submit" id="add-to-cart"><b>Add to Cart</b></button>
-            @elseif($game->platform === 'PC')
-                <button style="margin-top: -4.5rem;" type="submit" id="add-to-cart"><b>Add to Cart</b></button>
-            @else 
-                <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+            @if($game->platform == 'Nintendo')
+                <div style="margin-top: -1.5rem;">
+                    <button  type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                </div>
+            @elseif($game->platform == 'PC')
+                <div style="margin-top: -4rem;">
+                    <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                </div>
+            @elseif($game->platform == 'Playstation')
+                <div style="margin-top: -4.5rem;">
+                    <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                </div>
+            @elseif($game->platform == 'Xbox') 
+                <div style="margin-top: -5rem;">
+                    <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                </div>
             @endif
             <input name="game_id" type="hidden" value="{{ $game->game_id }}"> 
             <input name="slug" type="hidden" value="{{ $game->slug }}">

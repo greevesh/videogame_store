@@ -25,8 +25,10 @@ Route::get('/nintendo/{game}', 'NintendoController@show');
 Route::get('/pc/{game}', 'PCController@show');
 
 // CART ROUTES
-// updates cart quantity
-Route::patch('/cart/{rowId}', 'CartController@update')->name('cart.update');
+// updates product quantity
+Route::patch('/cart/increase/{rowId}', 'CartController@update')->name('cart.update');
+// decreases product quantity
+Route::patch('/cart/decrease/{rowId}', 'CartController@decreaseQuantity')->name('cart.decreaseQuantity');
 // redirects user to cart page once product is added to cart
 Route::post('/cart', 'CartController@store')->name('cart.store');
 // removes all cart products

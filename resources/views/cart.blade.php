@@ -123,9 +123,15 @@
                           @method('PATCH')
                           <strong>{{ $product->qty }}</strong>
                           &nbsp;&nbsp;
-                          <button>+</button>
+                          <button class="mt-4" style="width: 2rem;">+</button>
                         </form>
-                        </div>
+                        {{-- DECREASE PRODUCT QUANTITY --}}
+                        <form action="{{ route('cart.decreaseQuantity', $product->rowId) }}" method="POST">
+                          @csrf
+                          @method('PATCH')
+                          <button style="margin-left: 1.3rem; width: 2rem;">-</button>
+                        </form>
+                      {{-- END DECREASE PRODUCT QUANITITY --}}
                       </td>
                       {{-- END INCREASE PRODUCT QUANITITY --}}
 

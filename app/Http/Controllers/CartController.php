@@ -90,13 +90,13 @@ class CartController extends Controller
         return back()->with('quantityIncreasedMessage', 'Product quantity has been increased.');
     }
 
-    // public function decreaseQuantity(Request $request, $rowId)
-    // {
-    //     $product = Cart::get($rowId);
-    //     Cart::remove($rowId, $product->qty - 1);
+    public function decreaseQuantity(Request $request, $rowId)
+    {
+        $product = Cart::get($rowId);
+        Cart::update($rowId, $product->qty - 1);
         
-    //     return back()->with('quantityDecreasedMessage', 'Product quantity has been increased.');
-    // }
+        return back()->with('quantityDecreasedMessage', 'Product quantity has been increased.');
+    }
 
     /**
      * Remove the specified resource from storage.

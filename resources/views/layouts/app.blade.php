@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a href="/"><img id="gamer-logo" style="margin-bottom: 0.8rem" src="{{ asset('storage/images/gamer_logo2.png') }}" alt="Gamer logo"></a>
+                <a href="/"><img id="navbar-logo" style="margin-bottom: 0.8rem" src="{{ asset('storage/images/gamer_logo2.png') }}" alt="Gamer logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,9 +48,6 @@
                             </li>
                             <li class="{{ Request::is('pc') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('pc') }}">{{ ('PC') }}</a>
-                            </li>
-                            <li>
-                                
                             </li>
                             <li class="{{ Request::is('login') ? 'page-item active' : '' }} nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -109,8 +106,7 @@
         <footer class="container py-5">
                 <div class="row">
                   <div class="col-12 col-md">
-                    <img src="{{ asset('storage/images/gamer_logo2.png') }}"><title>Product</title>
-                    <b class="d-block mb-3 text-muted">&copy; 2019-2020</b>
+                    <img src="{{ asset('storage/images/gamer_logo2.png') }}">
                   </div>
                   <div class="col-6 col-md">
                     <h5>Features</h5>

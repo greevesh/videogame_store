@@ -77,6 +77,18 @@ body {
   background-color: #f8fafc;
 }
 
+@media (max-width: 768px) {
+  #navbar-logo {
+    margin-top: -1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #navbar-logo {
+    margin-top: -1.5rem;
+  }
+}
+
 /* cart icon */
 .fas {
   color: rgb(49, 38, 38);
@@ -137,6 +149,7 @@ footer {
   font-size: 2rem;
 }
 
+
 #pre-order-button {
   font-size: 3.5rem;
   color: #fff;
@@ -144,6 +157,36 @@ footer {
   margin-left: 30.5rem;
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
+}
+
+@media (max-width: 1200px) {
+  #pre-order-button {
+    margin-left: 25rem;
+    width: 25rem;
+  }
+} 
+
+@media (max-width: 992px) {
+  #pre-order-button {
+    margin-left: 18rem;
+    width: 25rem;
+  }
+} 
+
+@media (max-width: 768px) {
+  #pre-order-button {
+    margin-left: 11rem;
+    width: 25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #pre-order-button {
+    margin-left: 8rem;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
 }
 
 #pre-order-button:hover {
