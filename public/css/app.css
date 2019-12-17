@@ -119,6 +119,18 @@ body {
   opacity: 0.9;
 }
 
+@media (max-width: 768px) {
+  #footer-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  #footer-logo {
+    display: none;
+  }
+}
+
 footer {
   margin-top: 5.375rem;
   height: 25vh;
@@ -149,44 +161,33 @@ footer {
   font-size: 2rem;
 }
 
+@media (max-width: 992px) {
+  #banner p {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 776px) {
+  #banner p {
+    font-size: 1.5rem;
+    margin-top: 0.025rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #banner p {
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+  }
+}
 
 #pre-order-button {
   font-size: 3.5rem;
   color: #fff;
   z-index: 99;
-  margin-left: 30.5rem;
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
-}
-
-@media (max-width: 1200px) {
-  #pre-order-button {
-    margin-left: 25rem;
-    width: 25rem;
-  }
-} 
-
-@media (max-width: 992px) {
-  #pre-order-button {
-    margin-left: 18rem;
-    width: 25rem;
-  }
-} 
-
-@media (max-width: 768px) {
-  #pre-order-button {
-    margin-left: 11rem;
-    width: 25rem;
-  }
-}
-
-@media (max-width: 576px) {
-  #pre-order-button {
-    margin-left: 8rem;
-    width: 15rem;
-    height: 3rem;
-    font-size: 1.2rem;
-  }
 }
 
 #pre-order-button:hover {

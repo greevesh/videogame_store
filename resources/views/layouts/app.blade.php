@@ -106,7 +106,7 @@
         <footer class="container py-5">
                 <div class="row">
                   <div class="col-12 col-md">
-                    <img src="{{ asset('storage/images/gamer_logo2.png') }}">
+                    <img id="footer-logo" src="{{ asset('storage/images/gamer_logo2.png') }}">
                   </div>
                   <div class="col-6 col-md">
                     <h5>Features</h5>
