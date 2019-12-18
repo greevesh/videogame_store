@@ -57,7 +57,9 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
-                            <li><a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="nav-item">
+                                <a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a>
+                            </li>
                             @if(Cart::count() > 0 && Cart::count() < 10)
                                 <div class="cart-count-bg"><span style="margin-left: 0.51rem;"><b>{{ Cart::count() }}</b></span></div>
                             @elseif(Cart::count() > 9)
@@ -110,8 +112,8 @@
                   <div class="col-12 col-md">
                     <img id="footer-logo" src="{{ asset('storage/images/gamer_logo2.png') }}">
                   </div>
-                  <div class="col-6 col-md">
-                    <h5>Features</h5>
+                  <div class="footer-list col-6 col-md">
+                    <h5 class="footer-heading">Features</h5>
                     <ul class="list-unstyled text-small">
                       <li><a class="text-muted" href="#">Cool stuff</a></li>
                       <li><a class="text-muted" href="#">Random feature</a></li>
@@ -119,8 +121,8 @@
                       <li><a class="text-muted" href="#">Stuff for developers</a></li>
                     </ul>
                   </div>
-                  <div class="col-6 col-md">
-                    <h5>Resources</h5>
+                  <div class="footer-list col-6 col-md">
+                    <h5 class="footer-heading">Resources</h5>
                     <ul class="list-unstyled text-small">
                       <li><a class="text-muted" href="#">Resource</a></li>
                       <li><a class="text-muted" href="#">Resource name</a></li>
@@ -128,8 +130,8 @@
                       <li><a class="text-muted" href="#">Final resource</a></li>
                     </ul>
                   </div>
-                  <div class="col-6 col-md">
-                    <h5>Other Stuff</h5>
+                  <div class="footer-list col-6 col-md">
+                    <h5 class="footer-heading">Other Stuff</h5>
                     <ul class="list-unstyled text-small">
                       <li><a class="text-muted" href="#">Careers at Gamer</a></li>
                       <li><a class="text-muted" href="#">Cookies</a></li>
@@ -137,8 +139,8 @@
                       <li><a class="text-muted" href="#">Gaming</a></li>
                     </ul>
                   </div>
-                  <div class="col-6 col-md">
-                    <h5>About Gamer</h5>
+                  <div class="footer-list col-6 col-md">
+                    <h5 class="footer-heading">About Gamer</h5>
                     <ul class="list-unstyled text-small">
                       <li><a class="text-muted" href="#">Team</a></li>
                       <li><a class="text-muted" href="#">Locations</a></li>

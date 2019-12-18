@@ -120,6 +120,18 @@ body {
   margin-left: -0.7rem;
 }
 
+@media (max-width: 768px) {
+  .cart-count-bg {
+    display: none;
+  }
+} 
+
+@media (max-width: 576px) {
+  .cart-count-bg {
+    display: none;
+  }
+} 
+
 /* social media icons in the footer */
 .fab {
   color: rgb(99, 99, 182);
@@ -142,15 +154,65 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .nav-item {
+    background-color: #fff;
+    width: 75%;
+    margin-left: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-item {
+    background-color: #fff;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-item a {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-item a {
+    font-size: 2.4rem; 
+  }
+}
+
 footer {
   margin-top: 5.375rem;
   height: 25vh;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-#footer-info-right {
-  margin-top: -8rem;
-  margin-right: 3rem;
+@media (max-width: 768px) {
+  .footer-heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-heading {
+    font-size: 2.1rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-list {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-list {
+    font-size: 1rem; 
+  }
 }
 /* END APP.BLADE.PHP TEMPLATE VIEW */
 
