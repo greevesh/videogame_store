@@ -45,11 +45,25 @@
 
             {{-- ALERT: QUANTITY INCREASED --}}
             @if(session()->has('quantityIncreasedMessage'))
-              <h3 class="alert alert-success">
+              <h3 class="w-50 alert alert-success">
                 {{ session()->get('quantityIncreasedMessage') }}
               </h3>
             @endif 
             {{-- ALERT: END QUANTITY INCREASED --}}
+
+            {{-- ALERT: QUANTITY DECREASED --}}
+            @if(session()->has('quantityDecreasedMessage'))
+              <h3 class="w-50 alert alert-success">
+                {{ session()->get('quantityDecreasedMessage') }}
+              </h3>
+            @endif 
+            {{-- ALERT: END QUANTITY  --}}
+
+            @if(session()->has('removedSingleProductSuccessMessage'))
+              <h3 class="w-50 alert alert-success">
+                {{ session()->get('removedSingleProductSuccessMessage') }}
+              </h3>
+            @endif 
 
             {{-- EMPTY THE ENTIRE CART --}}
             <form action="{{ route('cart.destroy') }}" method="POST">
@@ -121,19 +135,20 @@
                         <form action="{{ route('cart.update', $product->rowId) }}" method="POST">
                           @csrf
                           @method('PATCH')
-                          <strong>{{ $product->qty }}</strong>
-                          &nbsp;&nbsp;
-                          <button class="mt-4" style="width: 2rem;">+</button>
+                          <div style="margin-top: -1rem;">
+                            <button class="bg-success text-white mt-1" style="margin-left: 1.35rem; width: 2rem;"><strong>+</strong></button>
+                          </div>
                         </form>
                         {{-- DECREASE PRODUCT QUANTITY --}}
                         <form action="{{ route('cart.decreaseQuantity', $product->rowId) }}" method="POST">
                           @csrf
                           @method('PATCH')
-                          <button style="margin-left: 1.3rem; width: 2rem;">-</button>
+                          <button class="bg-danger text-white" style="margin-left: 1.35rem; width: 2rem;"><strong>-</strong></button>
                         </form>
-                      {{-- END DECREASE PRODUCT QUANITITY --}}
+                      {{-- END DECREASE PRODUCT QUANTITY --}}
+                        <div style="margin-top: -2.5rem;"><strong>{{ $product->qty }}</strong></div>
                       </td>
-                      {{-- END INCREASE PRODUCT QUANITITY --}}
+                      {{-- END INCREASE PRODUCT QUANTITY --}}
 
                       {{-- REMOVE INDIVIDUAL PRODUCT FROM CART --}}
                       <td class="border-0 align-middle">

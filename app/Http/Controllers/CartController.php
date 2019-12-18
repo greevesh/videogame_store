@@ -95,7 +95,7 @@ class CartController extends Controller
         $product = Cart::get($rowId);
         Cart::update($rowId, $product->qty - 1);
         
-        return back()->with('quantityDecreasedMessage', 'Product quantity has been increased.');
+        return back()->with('quantityDecreasedMessage', 'Product quantity has been decreased.');
     }
 
     /**
@@ -122,7 +122,7 @@ class CartController extends Controller
     {
         Cart::remove($rowId);
 
-        return back()->with('removeSingleProductSuccessMessage', 'Product has been removed from cart.');
+        return back()->with('removedSingleProductSuccessMessage', 'Product has been removed from cart.');
     }
 
 }
