@@ -328,8 +328,7 @@ footer {
 }
 
 .products-left-playstation .price {
-  margin-left: 5.2rem; 
-  margin-bottom: -2.5rem;
+  margin: 0 0 -2.5rem 5.2rem; 
 }
 
 .products-left-playstation:hover {
@@ -374,8 +373,7 @@ footer {
 }
 
 .products-left-xbox .price {
-  margin-left: 4.2rem; 
-  margin-bottom: -2.5rem;
+  margin: 0 0 -2.5rem 4.2rem; 
 }
 
 .products-left-xbox:hover {
@@ -420,8 +418,7 @@ footer {
 }
 
 .products-left-nintendo .price {
-  margin-left: 4rem; 
-  margin-bottom: -2.5rem;
+  margin: 0 0 -2.5rem 4rem; 
 }
 
 .products-left-nintendo:hover {
@@ -466,8 +463,7 @@ footer {
 }
 
 .products-left-pc .price {
-  margin-left: 4.3rem; 
-  margin-bottom: -2.5rem;
+  margin: 0 0 -2.5rem 4.3rem; 
 }
 
 .products-left-pc:hover {

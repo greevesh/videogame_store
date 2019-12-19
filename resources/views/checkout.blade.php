@@ -79,16 +79,27 @@
         <form action="{{ route('checkout.store') }}" method="POST" class="needs-validation" id="payment-form" novalidate>
             @csrf 
             <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">Valid first name is required.</div>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">Valid last name is required.</div>
-            </div>
+                @if(auth()->user())
+                    <div class="col-md-6 mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="" value="{{ auth()->user()->name }}" readonly>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="{{ auth()->user()->email }}" readonly>
+                    </div>
+                @else 
+                    <div class="col-md-6 mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="John Appleseed" value="" required>
+                        <div class="invalid-feedback">Valid name is required.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="johnapp@example.com" value="" required>
+                        <div class="invalid-feedback">Valid email is required.</div>
+                    </div>
+                @endif 
             </div>
 
             <div class="mb-3">

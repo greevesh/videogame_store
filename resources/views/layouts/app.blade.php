@@ -94,7 +94,14 @@
                                         @csrf
                                     </form>
 
-                                    <li><a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li>
+                                        <a href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i></a>
+                                    </li>
+                                    @if(Cart::count() > 0 && Cart::count() < 10)
+                                        <div class="cart-count-bg"><span style="margin-left: 0.51rem;"><b>{{ Cart::count() }}</b></span></div>
+                                    @elseif(Cart::count() > 9)
+                                        <div class="cart-count-bg"><span style="margin-left: 0.2rem;"><b>{{ Cart::count() }}</b></span></div>
+                                    @endif
                                 </div>
                             </li>
                         @endguest

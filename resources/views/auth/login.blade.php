@@ -64,6 +64,14 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+                                <a style="color: black;" class="btn btn-link" href="{{ route('register') }}">
+                                    {{ __('New here? Register') }}
+                                </a>
+                      
+                                <a style="margin-left: 4rem; color: black;" class="btn btn-link" href="{{ route('guestCheckout') }}">
+                                    {{ __('Checkout as guest') }}
+                                </a>
                             </div>
                         </div>
                     </form>

@@ -43,7 +43,8 @@ Route::post('checkout', 'CheckoutController@store')->name('checkout.store');
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');
 Route::view('/cart', 'cart')->name('cart');
-Route::view('/checkout', 'checkout')->name('checkout');
+Route::view('/checkout', 'checkout')->name('checkout')->middleware('auth');
+Route::view('/guest-checkout', 'checkout')->name('guestCheckout'); 
 Route::view('/confirmation', 'confirmation')->name('confirmation');
 
 // login and register
