@@ -267,7 +267,63 @@ footer {
   opacity: 0.9;
 }
 
-/* refers to the pre-order buttons on the pre-order page */
+/* PRE-ORDER VIEW */
+#pokemon-sword {
+  margin-left: 61%;
+}
+
+@media (max-width: 992px) {
+  #pokemon-sword {
+    margin: 5rem 0 0 9rem;
+  }
+}
+
+@media (max-width: 776px) {
+  #pokemon-sword {
+    margin: 5rem 0 0 15rem;
+  }
+}
+
+@media (max-width: 670px) {
+  #pokemon-sword {
+    margin: 5rem 0 0 11rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #pokemon-sword {
+    margin-left: 7rem;
+  }
+}
+
+#pokemon-shield {
+  margin: -34.5rem 0 0 20%;
+}
+
+@media (max-width: 992px) {
+  #pokemon-shield {
+    margin: -34.5rem 0 0 34rem;
+  }
+}
+
+@media (max-width: 776px) {
+  #pokemon-shield {
+    margin: 5rem 0 0 15rem;
+  }
+}
+
+@media (max-width: 670px) {
+  #pokemon-shield {
+    margin: 5rem 0 0 11rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #pokemon-shield {
+    margin: 5rem 0 0 7rem;
+  }
+}
+
 .pre-order-small {
   background-color: rgb(99, 99, 182);
   border: solid black 0.03rem;
@@ -287,6 +343,7 @@ footer {
 .add-to-cart:hover {
   opacity: 0.9;
 }
+/* END PRE-ORDER VIEW
 
 /* PRODUCTS VIEW */
 

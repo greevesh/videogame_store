@@ -101,7 +101,7 @@
                                         <div class="cart-count-bg"><span style="margin-left: 0.51rem;"><b>{{ Cart::count() }}</b></span></div>
                                     @elseif(Cart::count() > 9)
                                         <div class="cart-count-bg"><span style="margin-left: 0.2rem;"><b>{{ Cart::count() }}</b></span></div>
-                                    @endif
+                                    @endif  
                                 </div>
                             </li>
                         @endguest

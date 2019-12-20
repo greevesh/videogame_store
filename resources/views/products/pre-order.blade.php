@@ -8,7 +8,7 @@
     @foreach($preOrderGames as $preOrderGame)
         @if(isset($preOrderGame))
             @if($preOrderGame->name === 'Pokemon Sword')
-                <div style="margin-left: 61%;">
+                <div id="pokemon-sword">
                     <h2>{{ $preOrderGame->name }}</h2>
                     <img style="height: 27rem; width: 18rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
                     <h4>£{{ $preOrderGame->price }}</h4>
@@ -24,7 +24,7 @@
                     </form>
                 </div>
             @else 
-                <div style="margin-left: 20%; margin-top: -34.5rem;">
+                <div id="pokemon-shield">
                     <h2>{{ $preOrderGame->name }}</h2>
                     <img style="height: 27rem; width: 18rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
                     <h4>£{{ $preOrderGame->price }}</h4>
