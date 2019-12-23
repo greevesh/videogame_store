@@ -185,20 +185,6 @@
           </div>
         </div>
         {{-- END PRICING DETAILS --}}
-
-        @if(Cart::total() > 0 && Cart::total() < 30)
-          <script>
-            document.getElementById('shipping').textContent = '£5.00';
-          </script>
-        @elseif(Cart::total() > 30 && Cart::total() < 80)
-          <script>
-              document.getElementById('shipping').textContent = '£10.00';
-          </script>
-        @elseif(Cart::total() != 0)
-          <script>
-              document.getElementById('shipping').textContent = '£15.00';
-          </script>
-        @endif 
         
       </div>
     </div>

@@ -22,13 +22,13 @@
 
     @if(isset($game))
         @if($game->platform === 'Playstation')
-            <hr id="separator-ps">
+            <hr class="separator" id="separator-ps">
         @elseif($game->platform === 'Xbox')
-            <hr id="separator-xbox">
+            <hr class="separator" id="separator-xbox">
         @elseif($game->platform === 'Nintendo')
-            <hr id="separator-nin">
+            <hr class="separator" id="separator-nin">
         @elseif($game->platform === 'PC')
-            <hr id="separator-pc">
+            <hr class="separator" id="separator-pc">
         @endif
     @endif
 

@@ -91,12 +91,12 @@
                 @else 
                     <div class="col-md-6 mb-3">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="John Appleseed" value="" required>
+                        <input name="name" type="text" class="form-control" id="name" placeholder="John Appleseed" value="{{ old('name') }}" required>
                         <div class="invalid-feedback">Valid name is required.</div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="johnapp@example.com" value="" required>
+                        <input name="email" type="text" class="form-control" id="email" placeholder="johnapp@example.com" value="{{ old('email') }}" required>
                         <div class="invalid-feedback">Valid email is required.</div>
                     </div>
                 @endif 
@@ -104,19 +104,19 @@
 
             <div class="mb-3">
                 <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                <input name="address" type="text" class="form-control" id="address" placeholder="1234 Main St" value="{{ old('address') }}" required>
                 <div class="invalid-feedback">Please enter your shipping address.</div>
             </div>
 
             <div class="mb-3">
                 <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                <input name="address2" type="text" class="form-control" id="address2" placeholder="Apartment or suite" value="{{ old('address2') }}">
             </div>
 
             <div class="row">
             <div class="col-md-5 mb-3">
                 <label for="country">Country</label>
-                <select class="custom-select d-block w-100" id="country" required>
+                <select name="country" class="custom-select d-block w-100" id="country" value="{{ old('country') }}" required>
                     <option>Choose...</option>
                     <option value="AF">Afghanistan</option>
                     <option value="AL">Albania</option>
@@ -373,7 +373,7 @@
         
             <div class="col-md-3 mb-3">
                 <label for="postcode">Postcode</label>
-                <input type="text" class="form-control" id="postcode" required>
+                <input name="postcode" type="text" class="form-control" id="postcode" value="{{ old('postcode') }}" required>
                 <div class="invalid-feedback">
                     Postcode required.
                 </div>
@@ -386,7 +386,7 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="cc-name">Name on card</label>
-                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <input name="card-name" type="text" class="form-control" id="cc-name" placeholder="John F Appleseed" value="{{ old('card-name') }}" required>
                     <small class="text-muted">Full name as displayed on card</small>
                     <div class="invalid-feedback">Name on card is required</div>
                 </div>

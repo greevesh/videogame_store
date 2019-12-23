@@ -36,6 +36,17 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'name' => 'required|min:5',
+            'email' => 'required|min:10',
+            'address' => 'required|min:10',
+            'address2',
+            'country' => 'required',
+            'postcode' => 'required',
+            'card-name' => 'required'
+        ]);
+
+        // storing Stripe data
         $stripe = new Stripe();
         $stripe = Stripe::make('sk_test_IkkC8sO6532nzHtuCLayswle00ny0pBcZ4');
 
