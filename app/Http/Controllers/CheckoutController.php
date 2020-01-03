@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
 {
@@ -36,15 +37,28 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'name' => 'required|min:5',
-            'email' => 'required|min:10',
-            'address' => 'required|min:10',
-            'address2',
-            'country' => 'required',
-            'postcode' => 'required',
-            'card-name' => 'required'
-        ]);
+        if (Auth::check()) 
+        {
+            request()->validate([
+                'address' => 'required|min:10',
+                'address2',
+                'country' => 'required',
+                'postcode' => 'required',
+                'card-name' => 'required'
+            ]);
+        }
+        else
+        {
+            request()->validate([
+                'name' => 'required|min:5',
+                'email' => 'required|min:10',
+                'address' => 'required|min:10',
+                'address2',
+                'country' => 'required',
+                'postcode' => 'required',
+                'card-name' => 'required'
+            ]);
+        }
 
         // storing Stripe data
         $stripe = new Stripe();
@@ -64,7 +78,7 @@ class CheckoutController extends Controller
                 ],
             ]);
 
-            $customer = $stripe->customers()->create([ 'email' => 'john@doe.com']);
+            $customer = $stripe->customers()->create(['email' => 'john@doe.com']);
 
             Cart::destroy();
 

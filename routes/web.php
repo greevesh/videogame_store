@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 // connects to the controllers for each platform to enable the retrieval of the games for each category
 Route::get('/playstation', 'PlaystationController@index')->name('playstation'); 
 Route::get('/xbox', 'XboxController@index')->name('xbox');
@@ -38,7 +27,7 @@ Route::delete('/cart/{rowId}', 'CartController@removeSingleProduct')->name('cart
 // add shipping price to total price
 Route::get('/cart', 'CartController@addShippingToTotal')->name('cart.addShippingToTotal');
 
-Route::post('checkout', 'CheckoutController@store')->name('checkout.store');
+Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 
 // simply returns the pages for these views
 Route::view('/', 'landingpage')->name('landingpage');
