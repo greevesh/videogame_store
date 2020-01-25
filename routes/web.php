@@ -15,17 +15,17 @@ Route::get('/pc/{game}', 'PCController@show');
 
 // CART ROUTES
 // updates product quantity
-Route::patch('/cart/increase/{rowId}', 'CartController@update')->name('cart.update');
+Route::patch('/cart/increase/{rowId}', 'CartController@increaseProductQuantity')
+->name('cart.increaseProductQuantity');
 // decreases product quantity
-Route::patch('/cart/decrease/{rowId}', 'CartController@decreaseQuantity')->name('cart.decreaseQuantity');
+Route::patch('/cart/decrease/{rowId}', 'CartController@decreaseProductQuantity')
+->name('cart.decreaseProductQuantity');
 // redirects user to cart page once product is added to cart
-Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::post('/cart', 'CartController@addProduct')->name('cart.addProduct');
 // removes all cart products
-Route::delete('/cart', 'CartController@destroy')->name('cart.destroy');
+Route::delete('/cart', 'CartController@empty')->name('cart.empty');
 // removes a specific product item
 Route::delete('/cart/{rowId}', 'CartController@removeSingleProduct')->name('cart.removeSingleProduct');
-// add shipping price to total price
-Route::get('/cart', 'CartController@addShippingToTotal')->name('cart.addShippingToTotal');
 
 Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 

@@ -39,6 +39,8 @@ class CheckoutController extends Controller
     {
         if (Auth::check()) 
         {
+            // the name and the email of the logged in user can not be validated here
+            // as the inputs for those credentials have automatically been filled by the app
             request()->validate([
                 'address' => 'required|min:10',
                 'address2',

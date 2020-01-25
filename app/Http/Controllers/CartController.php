@@ -8,33 +8,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function addProduct(Request $request)
     {
         Cart::add(
                 $request->game_id, 
@@ -48,41 +22,10 @@ class CartController extends Controller
                 ])
             ->associate('App\Game');
 
-        $productAddedSuccessMessage = 'has been added to cart.';
-
-        return redirect()->route('cart')->with(compact('productAddedSuccessMessage'));  
+        return view('cart')->with('productAddedSuccessMessage', 'has been added to cart.');  
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $rowId)
+    public function increaseProductQuantity(Request $request, $rowId)
     {
         $product = Cart::get($rowId);
         Cart::update($rowId, $product->qty + 1);
@@ -90,7 +33,7 @@ class CartController extends Controller
         return back()->with('quantityIncreasedMessage', 'Product quantity has been increased.');
     }
 
-    public function decreaseQuantity(Request $request, $rowId)
+    public function decreaseProductQuantity(Request $request, $rowId)
     {
         $product = Cart::get($rowId);
         Cart::update($rowId, $product->qty - 1);
@@ -98,24 +41,17 @@ class CartController extends Controller
         return back()->with('quantityDecreasedMessage', 'Product quantity has been decreased.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy()
+    public function empty()
     {   
-        if (Cart::count() > 0)
+        if (Cart::count() == 0)
         {
-            Cart::destroy();
-            return back()->with('emptyCartSuccessMessage', 'Cart has been emptied.');
-        }
-        else
-        {
-            Cart::destroy();
             return back()->with('emptyCartErrorMessage', 'Cart is already empty!');
+    
         }
+
+        Cart::destroy();
+
+        return back()->with('emptyCartSuccessMessage', 'Cart has been emptied.');
     }
 
     public function removeSingleProduct($rowId)

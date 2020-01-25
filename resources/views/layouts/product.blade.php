@@ -32,7 +32,7 @@
         @endif
     @endif
 
-    <form action="{{ route('cart.store') }}" method="POST">
+    <form action="{{ route('cart.addProduct') }}" method="POST">
         @csrf
         @if(isset($game))
             @if($game->platform == 'Nintendo')

@@ -66,7 +66,7 @@
             @endif 
 
             {{-- EMPTY THE ENTIRE CART --}}
-            <form action="{{ route('cart.destroy') }}" method="POST">
+            <form action="{{ route('cart.empty') }}" method="POST">
                 @csrf 
                 @method('DELETE')
                 <a><button class="empty-cart btn-lg" type="submit"><b>Empty Cart</b></button></a>
@@ -132,7 +132,7 @@
 
                       {{-- INCREASE PRODUCT QUANTITY --}}
                       <td class="border-0 align-middle">
-                        <form action="{{ route('cart.update', $product->rowId) }}" method="POST">
+                        <form action="{{ route('cart.increaseProductQuantity', $product->rowId) }}" method="POST">
                           @csrf
                           @method('PATCH')
                           <div style="margin-top: -1rem;">
@@ -140,7 +140,7 @@
                           </div>
                         </form>
                         {{-- DECREASE PRODUCT QUANTITY --}}
-                        <form action="{{ route('cart.decreaseQuantity', $product->rowId) }}" method="POST">
+                        <form action="{{ route('cart.decreaseProductQuantity', $product->rowId) }}" method="POST">
                           @csrf
                           @method('PATCH')
                           <button class="bg-danger text-white" style="margin-left: 1.35rem; width: 2rem;"><strong>-</strong></button>
