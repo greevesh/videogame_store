@@ -12,7 +12,7 @@
                     <h2>{{ $preOrderGame->name }}</h2>
                     <img style="height: 27rem; width: 18rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
                     <h4>£{{ $preOrderGame->price }}</h4>
-                    <form action="{{ route('cart.store') }}" method="POST">
+                    <form action="{{ route('cart.addProduct') }}" method="POST">
                         @csrf 
                         <button class="pre-order-small btn-lg">Pre-order</button>
                         <input name="game_id" type="hidden" value="{{ $preOrderGame->game_id }}"> 
@@ -28,7 +28,7 @@
                     <h2>{{ $preOrderGame->name }}</h2>
                     <img style="height: 27rem; width: 18rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
                     <h4>£{{ $preOrderGame->price }}</h4>
-                    <form action="{{ route('cart.store') }}" method="POST">
+                    <form action="{{ route('cart.addProduct') }}" method="POST">
                         @csrf 
                         <button class="pre-order-small btn-lg text-right">Pre-order</button>
                         <input name="game_id" type="hidden" value="{{ $preOrderGame->game_id }}"> 
