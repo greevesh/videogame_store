@@ -393,7 +393,6 @@
             </div>
 
             <!-- STRIPE ELEMENTS -->
-            <form action="/charge" method="post" id="payment-form">
                 <div class="form-row">
                   <label class="ml-1" for="card-element">
                     Credit or debit card
@@ -409,10 +408,7 @@
                 <hr class="mb-4">
                 <p id="no-products"></p>
                 <button id="submit-payment" class="btn btn-lg btn-block" type="submit"><b>Submit Payment</b></button>
-            </form>
             <!-- END STRIPE ELEMENTS -->
-            {{-- END BILLING INFO --}}
-
         </form> 
         </div>
     </div>
@@ -431,7 +427,7 @@
     <script>
         (function() {
         // creates a Stripe client
-        var stripe = Stripe('pk_test_9dn1vt3i0j0Q5GZdwAXn9iUs00iMziQDyD');
+        var stripe = Stripe("{{ config('services.stripe.public') }}");
 
         // creates an instance of Elements
         var elements = stripe.elements();
