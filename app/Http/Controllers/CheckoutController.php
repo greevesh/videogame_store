@@ -35,10 +35,8 @@ class CheckoutController extends Controller
                 'card-name' => 'required'
             ]);
             
-
         // storing Stripe data
-        $stripe = new Stripe();
-        $stripe = Stripe::make('sk_test_IkkC8sO6532nzHtuCLayswle00ny0pBcZ4');
+        $stripe = Stripe::make(config('services.stripe.secret'));
 
         try {
             $charge = Stripe::charges()->create([
