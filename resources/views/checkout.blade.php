@@ -379,6 +379,17 @@
                 </div>
             </div>
             </div>
+
+            @if ($errors->any())
+                <div class="alert alert-danger w-50">
+                    <ul style="list-style: none;">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <hr class="mb-4">
 
             <h4 class="mb-3">Payment</h4>

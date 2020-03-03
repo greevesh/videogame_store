@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\MessageBag;
 
 class CheckoutController extends Controller
 {
@@ -15,13 +16,12 @@ class CheckoutController extends Controller
         if (!Auth::check()) 
         {
             request()->validate([
-                'name' => 'required|min:5',
-                'email' => 'required|min:10',
-                'address' => 'required|min:10',
-                'address2',
-                'country' => 'required',
-                'postcode' => 'required',
-                'card-name' => 'required'
+                'name' => 'bail|required|min:5',
+                'email' => 'bail|required|unique:users|min:10',
+                'address' => 'bail|required|min:10',
+                'country' => 'bail|required',
+                'postcode' => 'bail|required',
+                'card-name' => 'bail|required'
             ]);
         }
             // the name and the email of the logged in user can not be validated here
