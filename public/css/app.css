@@ -224,10 +224,28 @@ footer {
   margin-top: -2rem;
 }
 
+@media (max-width: 400px) {
+  #pre-order-image {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 300px) {
+  #pre-order-image {
+    height: 50vh;
+  }
+}
+
 #banner {
   padding: 1rem;
   height: 4rem;
   background-color: rgb(235, 235, 38);
+}
+
+@media (max-width: 280px) {
+  #banner {
+    height: 5rem;
+  }
 }
 
 #banner p {
@@ -256,12 +274,34 @@ footer {
   }
 }
 
+@media (max-width: 482px) {
+  #banner p {
+    font-size: 1rem;
+    width: 75%;
+    margin-top: -0.5rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #banner p {
+    font-size: 0.9rem;
+    width: 75%;
+    margin-top: -0.6rem;
+  }
+}
+
 #pre-order-button {
   font-size: 3.5rem;
   color: #fff;
   z-index: 99;
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
+}
+
+@media (max-width: 384px) {
+  #pre-order-button {
+    font-size: 1.8rem;
+  }
 }
 
 #pre-order-button:hover {
