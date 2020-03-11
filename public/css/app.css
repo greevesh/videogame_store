@@ -250,12 +250,14 @@ footer {
 
 #banner p {
   margin-top: -0.5rem;
+  text-align: center;
   font-size: 2rem;
 }
 
 @media (max-width: 992px) {
   #banner p {
     font-size: 1.8rem;
+    text-align: center;
     margin-bottom: 0.5rem;
   }
 }
@@ -263,6 +265,7 @@ footer {
 @media (max-width: 776px) {
   #banner p {
     font-size: 1.5rem;
+    text-align: center;
     margin-top: 0.025rem;
   }
 }
@@ -270,6 +273,7 @@ footer {
 @media (max-width: 600px) {
   #banner p {
     font-size: 1.2rem;
+    text-align: center;
     margin-top: 0.1rem;
   }
 }
@@ -278,6 +282,7 @@ footer {
   #banner p {
     font-size: 1rem;
     width: 75%;
+    text-align: center;
     margin-top: -0.5rem;
   }
 }
@@ -286,6 +291,7 @@ footer {
   #banner p {
     font-size: 0.9rem;
     width: 75%;
+    text-align: center;
     margin-top: -0.6rem;
   }
 }
