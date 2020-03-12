@@ -60,16 +60,16 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a style="color: black;" class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a style="color: black; text-align: left; margin-left: -0.8rem;" class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
 
-                                <a style="color: black;" class="btn btn-link" href="{{ route('register') }}">
+                                <a style="color: black; text-align: left; margin-left: -0.8rem;" class="btn btn-link" href="{{ route('register') }}">
                                     {{ __('New here? Register') }}
                                 </a>
                       
-                                <a style="margin-left: 4rem; color: black;" class="btn btn-link" href="{{ route('guestCheckout') }}">
+                                <a style="color: black; text-align: left; margin-left: -0.8rem;" class="btn btn-link" href="{{ route('guestCheckout') }}">
                                     {{ __('Checkout as guest') }}
                                 </a>
                             </div>
