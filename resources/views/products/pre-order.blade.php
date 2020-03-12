@@ -8,9 +8,9 @@
     @foreach($preOrderGames as $preOrderGame)
         @if(isset($preOrderGame))
             @if($preOrderGame->name === 'Pokemon Sword')
-                <div id="pokemon-sword">
+                <div class="mt-5" id="pokemon-sword">
                     <h2>{{ $preOrderGame->name }}</h2>
-                    <img style="height: 27rem; width: 18rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
+                    <img src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
                     <h4>£{{ $preOrderGame->price }}</h4>
                     <form action="{{ route('cart.addProduct') }}" method="POST">
                         @csrf 
@@ -26,7 +26,7 @@
             @else 
                 <div id="pokemon-shield">
                     <h2>{{ $preOrderGame->name }}</h2>
-                    <img style="height: 27rem; width: 18rem;" src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
+                    <img src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
                     <h4>£{{ $preOrderGame->price }}</h4>
                     <form action="{{ route('cart.addProduct') }}" method="POST">
                         @csrf 
@@ -43,7 +43,7 @@
         @endif
     @endforeach
 
-    <p class="text-center mt-4 pl-5 pr-5" style="font-size: 1rem;">
+    <p id="pre-order-description" class="text-center mt-4 pl-5 pr-5" style="font-size: 1rem;">
         A whole new Pokémon RPG adventure awaits in Pokémon Sword and Pokémon Shield on Nintendo Switch! Get ready to discover Galar, an expansive region with diverse environments. 
         The people and Pokémon who live here work together closely to develop the industries within it.
         Start your adventure in the new region inspired by the English countryside: Galar. With one of the 3 new starter Pokémon: Grookey the Grass type, Scorbunny the fire type, or Sobble the water type. 

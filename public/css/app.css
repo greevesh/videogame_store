@@ -89,6 +89,13 @@ body {
   }
 }
 
+@media (max-width: 576px) {
+  #navbar-logo {
+    height: 7rem;
+    margin-top: -0.9rem;
+  }
+}
+
 /* cart icon */
 .fas {
   color: rgb(49, 38, 38);
@@ -203,6 +210,18 @@ footer {
   }
 }
 
+@media (max-width: 400px) {
+  .footer-heading {
+    font-size: 1.7rem; 
+  }
+}
+
+@media (max-width: 300px) {
+  .footer-heading {
+    font-size: 1.2rem; 
+  }
+}
+
 @media (max-width: 768px) {
   .footer-list {
     font-size: 1.2rem;
@@ -249,6 +268,7 @@ footer {
 }
 
 #banner p {
+  color: black;
   margin-top: -0.5rem;
   text-align: center;
   font-size: 2rem;
@@ -256,6 +276,7 @@ footer {
 
 @media (max-width: 992px) {
   #banner p {
+    color: black;
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -264,6 +285,7 @@ footer {
 
 @media (max-width: 776px) {
   #banner p {
+    color: black;
     font-size: 1.5rem;
     text-align: center;
     margin-top: 0.025rem;
@@ -272,6 +294,7 @@ footer {
 
 @media (max-width: 600px) {
   #banner p {
+    color: black;
     font-size: 1.2rem;
     text-align: center;
     margin-top: 0.1rem;
@@ -280,6 +303,7 @@ footer {
 
 @media (max-width: 482px) {
   #banner p {
+    color: black;
     font-size: 1rem;
     width: 75%;
     text-align: center;
@@ -289,6 +313,7 @@ footer {
 
 @media (max-width: 300px) {
   #banner p {
+    color: black;
     font-size: 0.9rem;
     width: 75%;
     text-align: center;
@@ -344,6 +369,34 @@ footer {
   }
 }
 
+@media (max-width: 500px) {
+  #pokemon-sword {
+    margin-left: 4.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #pokemon-sword img {
+    height: 21rem;
+    width: 12rem;
+    margin-left: -0.3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #pokemon-sword img {
+    height: 18rem;
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 250px) {
+  #pokemon-sword img {
+    height: 18rem;
+    margin-left: -3.2rem;
+  }
+}
+
 #pokemon-shield {
   margin: -34.5rem 0 0 20%;
 }
@@ -372,6 +425,28 @@ footer {
   }
 }
 
+@media (max-width: 400px) {
+  #pokemon-shield img {
+    height: 21rem;
+    width: 10rem;
+    margin-left: -0.3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #pokemon-shield img {
+    height: 18rem;
+    margin-left: -3.5rem;
+  }
+}
+
+@media (max-width: 250px) {
+  #pokemon-shield img {
+    height: 18rem;
+    margin-left: -5rem;
+  }
+}
+
 .pre-order-small {
   background-color: rgb(99, 99, 182);
   border: solid black 0.03rem;
@@ -390,6 +465,13 @@ footer {
 
 .add-to-cart:hover {
   opacity: 0.9;
+}
+
+@media (max-width: 300px) {
+  #pre-order-description {
+    width: 130%;
+    margin-left: -2.5rem;
+  }
 }
 /* END PRE-ORDER VIEW
 
