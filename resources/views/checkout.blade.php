@@ -408,7 +408,7 @@
                   <label class="ml-1" for="card-element">
                     Credit or debit card
                   </label>
-                  <div id="card-element">
+                  <div style="width: 95%;" id="card-element">
                     <!-- a Stripe Element will be inserted here. -->
                   </div>
               
@@ -430,7 +430,7 @@
         <script>
             document.getElementById('submit-payment').disabled = true;
             document.getElementById('no-products').textContent = 'Your cart is empty!';
-            document.getElementById('no-products').className = 'w-25 alert alert-danger';
+            document.getElementById('no-products').className = 'alert alert-danger';
         </script>
     @endif
     {{-- END ALERT: CART IS EMPTY --}}
