@@ -103,12 +103,14 @@ body {
 
 @media (max-width: 300px) {
   #navbarSupportedContent {
+    margin-top: 1rem;
     margin-left: -3.8rem;
   }
 }
 
 @media (max-width: 250px) {
   #navbarSupportedContent {
+    margin-top: 1rem;
     margin-left: -4.2rem;
   }
 }
