@@ -77,6 +77,42 @@ body {
   background-color: #f8fafc;
 }
 
+@media (max-width: 500px) {
+  #navbarSupportedContent {
+    margin-left: -1.3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #navbarSupportedContent {
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #navbarSupportedContent {
+    margin-left: -2.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #navbarSupportedContent {
+    margin-left: -3.2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #navbarSupportedContent {
+    margin-left: -3.8rem;
+  }
+}
+
+@media (max-width: 250px) {
+  #navbarSupportedContent {
+    margin-left: -4.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   #navbar-logo {
     margin-top: -1.1rem;
