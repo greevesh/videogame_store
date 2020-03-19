@@ -399,7 +399,7 @@
                     <label for="cc-name">Name on card</label>
                     <input name="card-name" type="text" class="form-control" id="cc-name" placeholder="John F Appleseed" value="{{ old('card-name') }}" required>
                     <small class="text-muted">Full name as displayed on card</small>
-                    <div class="invalid-feedback">Name on card is required</div>
+                    <div class="invalid-feedback">Name on card is required.</div>
                 </div>
             </div>
 
