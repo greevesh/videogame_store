@@ -385,7 +385,8 @@ footer {
 
 @media (max-width: 992px) {
   #pokemon-sword {
-    margin: 5rem 0 0 9rem;
+    margin-top: 3rem;
+    margin-left: 9rem;
   }
 }
 
@@ -417,7 +418,7 @@ footer {
   #pokemon-sword img {
     height: 21rem;
     width: 12rem;
-    margin-left: -0.3rem;
+    margin-left: 1rem;
   }
 }
 
@@ -436,12 +437,17 @@ footer {
 }
 
 #pokemon-shield {
-  margin: -34.5rem 0 0 20%;
+  margin: -38rem 0 0 20%;
+}
+
+#pokemon-shield img {
+  height: 31rem;
+  width: 18rem;
 }
 
 @media (max-width: 992px) {
   #pokemon-shield {
-    margin: -34.5rem 0 0 34rem;
+    margin: -37rem 0 0 34rem;
   }
 }
 
@@ -466,15 +472,24 @@ footer {
 @media (max-width: 400px) {
   #pokemon-shield img {
     height: 21rem;
-    width: 10rem;
-    margin-left: -0.3rem;
+    width: 12rem;
+    margin-left: -1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #pokemon-shield img {
+    height: 21rem;
+    width: 12rem;
+    margin-left: -3rem;
   }
 }
 
 @media (max-width: 300px) {
   #pokemon-shield img {
     height: 18rem;
-    margin-left: -3.5rem;
+    width: 11rem;
+    margin-left: -4.5rem;
   }
 }
 
