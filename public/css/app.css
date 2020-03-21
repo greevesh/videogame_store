@@ -1014,6 +1014,30 @@ footer {
 /* END PRODUCT VIEW */
 
 /* CART VIEW */
+@media (max-width: 400px) {
+  #cart-container {
+    margin-top: -10rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #cart-container {
+    margin-top: -15rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #cart-container {
+    margin-top: -18rem;
+  }
+}
+
+@media (max-width: 250px) {
+  #cart-container {
+    margin-top: -21rem;
+  }
+}
+
 .empty-cart {
   background-color: rgb(99, 99, 182);
   border: solid black 0.03rem;
@@ -1028,6 +1052,20 @@ footer {
   background-color: rgb(99, 99, 182);
   border: solid black 0.05rem;
   color: #fff;
+}
+
+@media (max-width: 300px) {
+  #checkout-btn {
+    width: 150%;
+    margin-left: -20%;
+  }
+}
+
+@media (max-width: 250px) {
+  #checkout-btn {
+    width: 300%;
+    margin-left: -95%;
+  }
 }
 
 #checkout:hover {
