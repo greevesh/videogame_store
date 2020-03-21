@@ -469,6 +469,14 @@ footer {
   }
 }
 
+@media (max-width: 450px) {
+  #pokemon-shield img {
+    height: 26rem;
+    width: 19rem;
+    margin-left: -2rem;
+  }
+}
+
 @media (max-width: 400px) {
   #pokemon-shield img {
     height: 21rem;
@@ -518,6 +526,132 @@ footer {
 
 .add-to-cart:hover {
   opacity: 0.9;
+}
+
+@media (max-width: 400px) {
+  #price-sword {
+    margin-left: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #price-sword {
+    margin-left: 0.7rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #price-sword {
+    margin-left: -2.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #btn-sword {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #btn-sword {
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #btn-sword {
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #name-sword {
+    margin-left: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #name-sword {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #name-sword {
+    margin-left: -2.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #price-shield {
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #btn-shield {
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #name-shield {
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #price-shield {
+    margin-left: -1.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #price-shield {
+    margin-left: -3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #price-shield {
+    margin-left: -4.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #btn-shield {
+    margin-left: -1.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #btn-shield {
+    margin-left: -3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #btn-shield {
+    margin-left: -4.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #name-shield {
+    margin-left: -1.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #name-shield {
+    margin-left: -3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #name-shield {
+    margin-left: -4.5rem;
+  }
 }
 
 @media (max-width: 300px) {

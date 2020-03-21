@@ -9,12 +9,12 @@
         @if(isset($preOrderGame))
             @if($preOrderGame->name === 'Pokemon Sword')
                 <div id="pokemon-sword">
-                    <h2>{{ $preOrderGame->name }}</h2>
+                    <h2 id="name-sword" class="name">{{ $preOrderGame->name }}</h2>
                     <img src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
-                    <h4>£{{ $preOrderGame->price }}</h4>
+                    <h4 id="price-sword" class="price">£{{ $preOrderGame->price }}</h4>
                     <form action="{{ route('cart.addProduct') }}" method="POST">
                         @csrf 
-                        <button class="pre-order-small btn-lg">Pre-order</button>
+                        <button id="btn-sword" class="pre-order-small btn-lg">Pre-order</button>
                         <input name="game_id" type="hidden" value="{{ $preOrderGame->game_id }}"> 
                         <input name="slug" type="hidden" value="{{ $preOrderGame->slug }}">
                         <input name="name" type="hidden" value="{{ $preOrderGame->name }}"> 
@@ -25,12 +25,12 @@
                 </div>
             @else 
                 <div id="pokemon-shield">
-                    <h2>{{ $preOrderGame->name }}</h2>
+                    <h2 id="name-shield" class="name">{{ $preOrderGame->name }}</h2>
                     <img src="{{ asset($preOrderGame->image) }}" alt="pre-ordergame">
-                    <h4>£{{ $preOrderGame->price }}</h4>
+                    <h4 id="price-shield">£{{ $preOrderGame->price }}</h4>
                     <form action="{{ route('cart.addProduct') }}" method="POST">
                         @csrf 
-                        <button class="pre-order-small btn-lg text-right">Pre-order</button>
+                        <button id="btn-shield" class="pre-order-small btn-lg text-right">Pre-order</button>
                         <input name="game_id" type="hidden" value="{{ $preOrderGame->game_id }}"> 
                         <input name="slug" type="hidden" value="{{ $preOrderGame->slug }}">
                         <input name="name" type="hidden" value="{{ $preOrderGame->name }}"> 
