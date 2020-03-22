@@ -422,6 +422,14 @@ footer {
   }
 }
 
+@media (max-width: 350px) {
+  #pokemon-sword img {
+    height: 21rem;
+    width: 12rem;
+    margin-left: -1rem;
+  }
+}
+
 @media (max-width: 300px) {
   #pokemon-sword img {
     height: 18rem;
@@ -489,7 +497,7 @@ footer {
   #pokemon-shield img {
     height: 21rem;
     width: 12rem;
-    margin-left: -3rem;
+    margin-left: -3.5rem;
   }
 }
 
@@ -536,13 +544,19 @@ footer {
 
 @media (max-width: 350px) {
   #price-sword {
-    margin-left: 0.7rem;
+    margin-left: -1rem;
   }
 }
 
 @media (max-width: 300px) {
   #price-sword {
     margin-left: -2.1rem;
+  }
+}
+
+@media (max-width: 250px) {
+  #price-sword {
+    margin-left: -3.2rem;
   }
 }
 
@@ -554,13 +568,19 @@ footer {
 
 @media (max-width: 350px) {
   #btn-sword {
-    margin-left: 0.8rem;
+    margin-left: -1rem;
   }
 }
 
 @media (max-width: 300px) {
   #btn-sword {
     margin-left: -2rem;
+  }
+}
+
+@media (max-width: 250px) {
+  #btn-sword {
+    margin-left: -3.2rem;
   }
 }
 
@@ -572,7 +592,7 @@ footer {
 
 @media (max-width: 350px) {
   #name-sword {
-    margin-left: 1rem;
+    margin-left: -1.2rem;
   }
 }
 
@@ -582,6 +602,12 @@ footer {
   }
 }
 
+@media (max-width: 250px) {
+  #name-sword {
+    margin-left: -3.1rem;
+  }
+}
+
 @media (max-width: 450px) {
   #price-shield {
     margin-left: -2rem;
@@ -608,7 +634,7 @@ footer {
 
 @media (max-width: 350px) {
   #price-shield {
-    margin-left: -3rem;
+    margin-left: -3.6rem;
   }
 }
 
@@ -618,6 +644,12 @@ footer {
   }
 }
 
+@media (max-width: 250px) {
+  #price-shield {
+    margin-left: -5.1rem;
+  }
+}
+
 @media (max-width: 400px) {
   #btn-shield {
     margin-left: -1.8rem;
@@ -626,7 +658,7 @@ footer {
 
 @media (max-width: 350px) {
   #btn-shield {
-    margin-left: -3rem;
+    margin-left: -3.5rem;
   }
 }
 
@@ -636,6 +668,12 @@ footer {
   }
 }
 
+@media (max-width: 250px) {
+  #btn-shield {
+    margin-left: -5rem;
+  }
+}
+
 @media (max-width: 400px) {
   #name-shield {
     margin-left: -1.8rem;
@@ -644,13 +682,19 @@ footer {
 
 @media (max-width: 350px) {
   #name-shield {
-    margin-left: -3rem;
+    margin-left: -3.7rem;
   }
 }
 
 @media (max-width: 300px) {
   #name-shield {
     margin-left: -4.5rem;
+  }
+}
+
+@media (max-width: 250px) {
+  #name-shield {
+    margin-left: -5rem;
   }
 }
 
@@ -1042,6 +1086,12 @@ footer {
   background-color: rgb(99, 99, 182);
   border: solid black 0.03rem;
   color: #fff;
+}
+
+@media (max-width: 300px) {
+  .empty-cart {
+    width: 150%;
+  }
 }
 
 .empty-cart:hover {
