@@ -3,10 +3,10 @@
 @section('content')
     <div class="container product-details">
         @if(isset($game))
-            <h1 style="{{ strlen($game->name) > 20 ? 'font-size: 1.8rem;' : 'font-size: 2.5rem' }}">
+            <h1 id="game-name" style="{{ strlen($game->name) > 20 ? 'font-size: 1.8rem;' : 'font-size: 2.5rem' }}">
                 {{ $game->name }}
             </h1>
-            <img src="{{ asset($game->image) }}" alt="game">
+            <img id="game-img" src="{{ asset($game->image) }}" alt="game">
             <h2>£{{ $game->price }}</h2>
             <div style="{{ $game->platform === 'Nintendo' ? 'margin-top: -3rem;' : '' }}" id="description" class="d-flex justify-content-end">
                 <p>{{ $game->description }}</p>
@@ -36,8 +36,8 @@
         @csrf
         @if(isset($game))
             @if($game->platform == 'Nintendo')
-                <div style="margin-top: -1.5rem;">
-                    <button  type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                <div>
+                    <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
                 </div>
             @elseif($game->platform == 'PC')
                 <div style="margin-top: -4rem;">

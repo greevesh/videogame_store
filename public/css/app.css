@@ -956,6 +956,12 @@ footer {
   }
 }
 
+@media (max-width: 500px) {
+  #description p {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   #description {
     margin: 2rem 0 0 -3rem;
@@ -980,6 +986,19 @@ footer {
 @media (max-width: 1350px) {
   .separator {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #game-name {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #game-img {
+    height: 16rem;
+    width: 11rem;
   }
 }
 
