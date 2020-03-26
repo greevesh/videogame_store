@@ -958,7 +958,15 @@ footer {
 
 @media (max-width: 800px) {
   #description p {
-    margin-top: -29rem;
+    margin: -52rem 10rem 0 0;
+    width: 28%;
+  }
+}
+
+@media (max-width: 768px) {
+  #description p {
+    margin: -52rem -6rem 0 0;
+    width: 25%;
   }
 }
 
