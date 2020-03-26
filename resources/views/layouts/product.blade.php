@@ -37,19 +37,19 @@
         @if(isset($game))
             @if($game->platform == 'Nintendo')
                 <div class="btn-container">
-                    <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                    <button type="submit" class="add-to-cart"><b>Add to Cart</b></button>
                 </div>
             @elseif($game->platform == 'PC')
                 <div class="btn-container">
-                    <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                    <button type="submit" class="add-to-cart"><b>Add to Cart</b></button>
                 </div>
             @elseif($game->platform == 'Playstation')
                 <div class="btn-container">
-                    <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                    <button type="submit" class="add-to-cart"><b>Add to Cart</b></button>
                 </div>
             @elseif($game->platform == 'Xbox') 
                 <div class="btn-container">
-                    <button type="submit" id="add-to-cart"><b>Add to Cart</b></button>
+                    <button type="submit" class="add-to-cart"><b>Add to Cart</b></button>
                 </div>
             @endif
             <input name="game_id" type="hidden" value="{{ $game->game_id }}"> 
