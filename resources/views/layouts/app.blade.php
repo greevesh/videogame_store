@@ -115,48 +115,48 @@
         </main>
 
         <footer class="container py-5">
-                <div class="row">
-                  <div class="col-12 col-md">
+            <div class="row">
+                <div class="col-12 col-md">
                     <img id="footer-logo" src="{{ asset('storage/images/gamer_logo2.png') }}">
-                  </div>
-                  <div class="footer-list col-6 col-md">
+                </div>
+                <div class="footer-list col-6 col-md">
                     <h5 class="footer-heading">Features</h5>
                     <ul class="list-unstyled text-small">
-                      <li><a class="text-muted" href="#">Cool stuff</a></li>
-                      <li><a class="text-muted" href="#">Random feature</a></li>
-                      <li><a class="text-muted" href="#">Team feature</a></li>
-                      <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
                     </ul>
-                  </div>
-                  <div class="footer-list col-6 col-md">
+                </div>
+                <div class="footer-list col-6 col-md">
                     <h5 class="footer-heading">Resources</h5>
                     <ul class="list-unstyled text-small">
-                      <li><a class="text-muted" href="#">Resource</a></li>
-                      <li><a class="text-muted" href="#">Resource name</a></li>
-                      <li><a class="text-muted" href="#">Another resource</a></li>
-                      <li><a class="text-muted" href="#">Final resource</a></li>
+                        <li><a class="text-muted" href="#">Resource</a></li>
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
                     </ul>
-                  </div>
-                  <div class="footer-list col-6 col-md">
+                </div>
+                <div class="footer-list col-6 col-md">
                     <h5 class="footer-heading">Other Stuff</h5>
                     <ul class="list-unstyled text-small">
-                      <li><a class="text-muted" href="#">Careers at Gamer</a></li>
-                      <li><a class="text-muted" href="#">Cookies</a></li>
-                      <li><a class="text-muted" href="#">Government</a></li>
-                      <li><a class="text-muted" href="#">Gaming</a></li>
+                        <li><a class="text-muted" href="#">Careers at Gamer</a></li>
+                        <li><a class="text-muted" href="#">Cookies</a></li>
+                        <li><a class="text-muted" href="#">Government</a></li>
+                        <li><a class="text-muted" href="#">Gaming</a></li>
                     </ul>
-                  </div>
-                  <div class="footer-list col-6 col-md">
+                </div>
+                <div class="footer-list col-6 col-md">
                     <h5 class="footer-heading">About Gamer</h5>
                     <ul class="list-unstyled text-small">
-                      <li><a class="text-muted" href="#">Team</a></li>
-                      <li><a class="text-muted" href="#">Locations</a></li>
-                      <li><a class="text-muted" href="#">Privacy</a></li>
-                      <li><a class="text-muted" href="#">Terms</a></li>
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
                     </ul>
-                  </div>
                 </div>
-              </footer>
+            </div>
+        </footer>
                
     </div>
 </body>
