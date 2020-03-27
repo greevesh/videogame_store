@@ -944,61 +944,28 @@ footer {
 /* END PRODUCTS VIEW */
 
 /* PRODUCT VIEW */
-#description p {
+#description {
+  margin: -23rem 0 0 30rem;
+  width: 60%;
   font-size: 1.1rem;
-  width: 50%; 
-  margin-top: -26rem;
 }
 
-@media (max-width: 992px) {
-  #description p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 800px) {
-  #description p {
-    margin: -52rem 10rem 0 0;
-    width: 28%;
-  }
-}
-
-@media (max-width: 768px) {
-  #description p {
-    margin: -52rem -6rem 0 0;
-    width: 25%;
-  }
-}
-
-@media (max-width: 700px) {
-  #description p {
-    display: none;
+@media (max-width: 1200px) {
+  #description {
+    margin: -26rem 0 0 27rem;
+    width: 50%;
   }
 }
 
 @media (max-width: 992px) {
   #description {
-    margin: 2rem 0 0 -3rem;
+    margin: 2rem 0 0 -2rem;
     width: 110%;
   }
 }
 
 @media (max-width: 776px) {
-  #description {
-    margin: 28rem 0 0 -32rem;
-    width: 200%;
-  }
-}
-
-@media (max-width: 576px) {
-  #description {
-    margin: 27rem 0 0 -27.5rem;
-    width: 200%;
-  }
-}
-
-@media (max-width: 1350px) {
-  .separator {
+  #description p {
     display: none;
   }
 }
@@ -1016,12 +983,36 @@ footer {
   }
 }
 
+@media (max-width: 1250px) {
+  #separator-ps {
+    display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  #separator-xbox {
+    display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  #separator-nin {
+    display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  #separator-pc {
+    display: none;
+  }
+}
+
 #separator-ps {
   border-right: 0.05rem solid; 
   height: 30.5rem; 
   width: 1px; 
-  margin-top: -28.8rem; 
-  margin-right: 50rem;
+  margin-top: -26.8rem; 
+  margin-right: 52rem;
   color: #c2c7ca;
 }
 
@@ -1029,8 +1020,8 @@ footer {
   border-right: 0.05rem solid; 
   height: 30.5rem; 
   width: 1px; 
-  margin-top: -28.5rem; 
-  margin-right: 50rem;
+  margin-top: -25.5rem; 
+  margin-right: 52rem;
   color: #c2c7ca;
 }
 
@@ -1047,8 +1038,8 @@ footer {
   border-right: 0.05rem solid; 
   height: 30.5rem; 
   width: 1px; 
-  margin-top: -29.5rem; 
-  margin-right: 50rem;
+  margin-top: -27.5rem; 
+  margin-right: 52rem;
   color: #c2c7ca;
 }
 
@@ -1060,21 +1051,31 @@ footer {
   font-size: 1.5rem;
 }
 
-@media (max-width: 900px) {
+.btn-container {
+  margin: -2rem 0 0 9%;
+}
+
+@media (max-width: 1200px) {
   .btn-container {
-    margin: -29rem 0 1rem 20%;
+    margin: -6rem 0 0 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  .btn-container {
+    margin: 0 0 0 8%;
   }
 }
 
 @media (max-width: 700px) {
   .btn-container {
-    margin: -26rem 0 0 7%;
+    margin: -1rem 0 0 9%;
   }
 }
 
 @media (max-width: 600px) {
   .btn-container {
-    margin: -26rem 0 0 4%;
+    margin: -1rem 0 0 4%;
   }
 }
 
