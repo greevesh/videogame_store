@@ -1051,6 +1051,16 @@ footer {
   font-size: 1.5rem;
 }
 
+@media (max-width: 400px) {
+.add-to-cart {
+  width: 10rem;
+  height: 6rem;
+  background-color: rgb(99, 99, 182);
+  color: #fff;
+  font-size: 1.5rem;
+  }
+}
+
 .btn-container {
   margin: -2rem 0 0 9%;
 }
