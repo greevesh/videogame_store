@@ -7,7 +7,7 @@
                 {{ $game->name }}
             </h1>
             <img id="game-img" src="{{ asset($game->image) }}" alt="game">
-            <h2>£{{ $game->price }}</h2>
+            <h2 id="game-price">£{{ $game->price }}</h2>
             <div style="{{ $game->platform === 'Nintendo' ? 'margin-top: -3rem;' : '' }}" id="description" class="d-flex justify-content-end">
                 <p>{{ $game->description }}</p>
             </div>

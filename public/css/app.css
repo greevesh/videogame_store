@@ -977,9 +977,23 @@ footer {
 }
 
 @media (max-width: 350px) {
+  #game-name {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  #game-price {
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 350px) {
   #game-img {
     height: 16rem;
     width: 11rem;
+    margin-left: 20%;
   }
 }
 
@@ -1054,12 +1068,17 @@ footer {
 @media (max-width: 400px) {
 .add-to-cart {
   width: 10rem;
-  height: 6rem;
-  background-color: rgb(99, 99, 182);
-  color: #fff;
-  font-size: 1.5rem;
+  height: 4.5rem;
   }
 }
+
+@media (max-width: 350px) {
+  .add-to-cart {
+    width: 10rem;
+    height: 4.5rem;
+    margin-left: 20%;
+    }
+  }
 
 .btn-container {
   margin: -2rem 0 0 9%;
