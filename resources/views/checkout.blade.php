@@ -437,10 +437,9 @@
 
     <script>
         (function() {
-        // creates a Stripe client
+        
         var stripe = Stripe("{{ config('services.stripe.public') }}");
 
-        // creates an instance of Elements
         var elements = stripe.elements();
 
         var style = {
@@ -459,13 +458,10 @@
         }
         };
 
-        // creates an instance of the card Element
         var card = elements.create('card', { style: style, hidePostalCode: true });
 
-        // Add an instance of the card Element into the `card-element` <div>.
         card.mount('#card-element');
 
-        // handles real-time validation errors from the card Element
         card.addEventListener('change', function(event) {
         var displayError = document.getElementById('card-errors');
         if (event.error) {
@@ -473,39 +469,32 @@
         }
         });
 
-        // handles form submission.
         var form = document.getElementById('payment-form');
         form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // disables the submit button to prevent repeated clicks
         document.getElementById('submit-payment').disabled = true; 
 
         stripe.createToken(card).then(function(result) {
             if (result.error) {
-            // informs the user if there was an error
-            // enables the submit button if validation fails
+
             document.getElementById('submit-payment').disabled = false;
             var errorElement = document.getElementById('card-errors');
             errorElement.textContent = result.error.message;
             } else {
-            // sends the token to the server
             stripeTokenHandler(result.token);
             }
         });
         });
 
-        // submits the form with the token ID
         function stripeTokenHandler(token) {
-        // inserts the token ID into the form so it gets submitted to the server
         var form = document.getElementById('payment-form');
         var hiddenInput = document.createElement('input');
         hiddenInput.setAttribute('type', 'hidden');
         hiddenInput.setAttribute('name', 'stripeToken');
         hiddenInput.setAttribute('value', token.id);
         form.appendChild(hiddenInput);
-
-        // submits the form
+        
         form.submit();
         }
         })();
