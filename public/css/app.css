@@ -708,6 +708,12 @@ footer {
 
 /* PRODUCTS VIEW */
 
+@media (max-width: 350px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
 /* playstation games */
 .products-right-playstation {
   margin: -36rem 0 5rem 60rem;  
@@ -734,8 +740,22 @@ footer {
   }
 }
 
+@media (max-width: 350px) {
+  .products-right-playstation {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 27rem;
+  }
+}
+
 .products-right-playstation .price {
   margin-right: 5.2rem;
+}
+
+@media (max-width: 350px) {
+  .products-right-playstation .price {
+    margin-right: 2.5rem;
+  }
 }
 
 .products-right-playstation:hover {
@@ -767,8 +787,22 @@ footer {
   }
 }
 
+@media (max-width: 350px) {
+  .products-center-playstation {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 25rem;
+  }
+}
+
 .products-center-playstation .price {
   margin-right: 5.5rem;
+}
+
+@media (max-width: 350px) {
+  .products-center-playstation .price {
+    margin-right: 2.5rem;
+  }
 }
 
 .products-center-playstation:hover {
@@ -796,6 +830,14 @@ footer {
 @media (max-width: 576px) {
   .products-left-playstation {
     margin: 5rem 0 0 6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .products-left-playstation {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 27rem;
   }
 }
 
@@ -1075,7 +1117,7 @@ footer {
 @media (max-width: 350px) {
   .add-to-cart {
     width: 10rem;
-    height: 4.5rem;
+    height: 5rem;
     margin-left: 20%;
     }
   }

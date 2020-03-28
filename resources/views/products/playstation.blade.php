@@ -3,7 +3,7 @@
 @section('title', '- Playstation Games')
 
 @section('content')
-    <h1 class="d-flex justify-content-center" style="padding-bottom: 3rem;">Playstation Games</h1>
+    <h1 class="title d-flex justify-content-center" style="padding-bottom: 3rem;">Playstation Games</h1>
     <hr style="width: 90%;" class="mt-1 mb-5">
     @if(isset($playstationGames))
         @foreach($playstationGames as $playstationGame)
