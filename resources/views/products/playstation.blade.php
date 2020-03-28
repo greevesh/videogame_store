@@ -28,7 +28,7 @@
                 </div>
             @else
                 <div class="products-left-playstation text-left card">
-                    <a href="/playstation/{{ $playstationGame->slug }}"><img src="{{ asset($playstationGame->image) }}" alt="playstationgame"></a>
+                    <a href="/playstation/{{ $playstationGame->slug }}"><img class="products-left-playstation img" src="{{ asset($playstationGame->image) }}" alt="playstationgame"></a>
                     <div class="card-body">
                         <h2 class="card-text text-center">{{ $playstationGame->name }}</h2>
                         <h4 class="price card-text">£{{ $playstationGame->price }}</h4>

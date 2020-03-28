@@ -841,8 +841,28 @@ footer {
   }
 }
 
+.products-left-playstation img {
+  margin: 0 0 0 0;
+  width: 17.5rem; 
+  height: 23rem;
+}
+
+@media (max-width: 350px) {
+  .products-left-playstation img {
+    margin: 0 0 0 0;
+    width: 12rem; 
+    height: 16rem;
+  }
+}
+
 .products-left-playstation .price {
   margin: 0 0 -2.5rem 5.2rem; 
+}
+
+@media (max-width: 350px) {
+  .products-left-playstation .price {
+    margin-left: 2.5rem;
+  }
 }
 
 .products-left-playstation:hover {
@@ -857,8 +877,22 @@ footer {
   height: 30rem;
 }
 
+@media (max-width: 350px) {
+  .products-right-xbox {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 24rem;
+  }
+}
+
 .products-right-xbox .price {
   margin-right: 4.3rem;
+}
+
+@media (max-width: 350px) {
+  .products-right-xbox .price {
+    margin: 0 2.5rem 0 0;
+  }
 }
 
 .products-right-xbox:hover {
@@ -872,8 +906,22 @@ footer {
   height: 30rem;
 }
 
+@media (max-width: 350px) {
+  .products-center-xbox {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 24rem;
+  }
+}
+
 .products-center-xbox .price {
   margin-right: 4.2rem;
+}
+
+@media (max-width: 350px) {
+  .products-center-xbox .price {
+    margin: 0 2.5rem 0 0;
+  }
 }
 
 .products-center-xbox:hover {
@@ -886,8 +934,29 @@ footer {
   height: 30rem;
 }
 
+@media (max-width: 350px) {
+  .products-left-xbox {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 24rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .products-left-xbox-img {
+    width: 11.9rem; 
+    height: 16rem;
+  }
+}
+
 .products-left-xbox .price {
   margin: 0 0 -2.5rem 4.2rem; 
+}
+
+@media (max-width: 350px) {
+  .products-left-xbox .price {
+    margin: 0 0 0 2.5rem;
+  }
 }
 
 .products-left-xbox:hover {
