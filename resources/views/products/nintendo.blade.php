@@ -28,7 +28,7 @@
                 </div>
             @else
                 <div class="products-left-nintendo text-left card">
-                    <a href="/nintendo/{{ $nintendoGame->slug }}"><img src="{{ asset($nintendoGame->image) }}" alt="nintendoGame"></a>
+                    <a href="/nintendo/{{ $nintendoGame->slug }}"><img class="products-left-nintendo-img" src="{{ asset($nintendoGame->image) }}" alt="nintendoGame"></a>
                     <div class="card-body">
                         <h2 class="card-text text-center">{{ $nintendoGame->name }}</h2>
                         <h4 class="price card-text">£{{ $nintendoGame->price }}</h4>
