@@ -381,7 +381,7 @@
             </div>
 
             @if ($errors->any())
-                <div class="alert alert-danger w-50">
+                <div class="alert alert-danger w-100">
                     <ul style="list-style: none;">
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
