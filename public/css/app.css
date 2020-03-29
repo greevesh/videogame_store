@@ -1184,8 +1184,52 @@ footer {
   height: 30rem;
 }
 
+@media (max-width: 992px) {
+  .products-right-pc {
+    margin: 5rem 0 0 17.5rem;
+  }
+}
+
+@media (max-width: 776px) {
+  .products-right-pc {
+    margin: 5rem 0 0 10rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-right-pc {
+    margin: 5rem 0 0 6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .products-right-pc {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 29rem;
+  }
+}
+
 .products-right-pc .price {
   margin-right: 3.9rem;
+}
+
+@media (max-width: 700px) {
+  .products-right-pc .price {
+    margin-right: 4.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .products-right-pc .price {
+    margin-right: 2.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .pc-name {
+    font-size: 1.4rem;
+  }
 }
 
 .products-right-pc:hover {
@@ -1199,8 +1243,40 @@ footer {
   height: 30rem;
 }
 
+@media (max-width: 992px) {
+  .products-center-pc {
+    margin: 5rem 0 0 17.5rem;
+  }
+}
+
+@media (max-width: 776px) {
+  .products-center-pc {
+    margin: 5rem 0 0 10rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-center-pc {
+    margin: 5rem 0 0 6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .products-center-pc {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 29rem;
+  }
+}
+
 .products-center-pc .price {
   margin-right: 4.1rem;
+}
+
+@media (max-width: 350px) {
+  .products-center-pc .price {
+    margin-right: 2.5rem;
+  }
 }
 
 .products-center-pc:hover {
@@ -1213,8 +1289,47 @@ footer {
   height: 30rem;
 }
 
+@media (max-width: 992px) {
+  .products-left-pc {
+    margin: 5rem 0 0 17.5rem;
+  }
+}
+
+@media (max-width: 776px) {
+  .products-left-pc {
+    margin: 5rem 0 0 10rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-left-pc {
+    margin: 5rem 0 0 6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .products-left-pc {
+    margin: 5rem 0 0 4rem;
+    width: 12rem; 
+    height: 26rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .products-left-pc-img {
+    width: 11.9rem; 
+    height: 16rem;
+  }
+}
+
 .products-left-pc .price {
   margin: 0 0 -2.5rem 4.3rem; 
+}
+
+@media (max-width: 350px) {
+  .products-left-pc .price {
+    margin-left: 2.8rem;
+  }
 }
 
 .products-left-pc:hover {

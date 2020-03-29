@@ -11,7 +11,7 @@
                 <div class="products-right-pc text-right card">
                     <a href="/pc/{{ $pcGame->slug }}"><img src="{{ asset($pcGame->image) }}" class="card-img-top" alt="playstationgame"></a>
                     <div class="card-body">
-                        <h2 class="card-text text-center">{{ $pcGame->name }}</h2>
+                        <h2 class="pc-name card-text text-center">{{ $pcGame->name }}</h2>
                         <h4 class="price card-text">£{{ $pcGame->price }}</h4>
                     </div>
                 </div>
@@ -22,15 +22,15 @@
                 <div class="products-center-pc text-right card" >
                     <a href="/pc/{{ $pcGame->slug }}"><img src="{{ asset($pcGame->image) }}" class="card-img-top" alt="playstationgame"></a>
                     <div class="card-body">
-                        <h2 class="card-text text-center">{{ $pcGame->name }}</h2>
+                        <h2 class="pc-name card-text text-center">{{ $pcGame->name }}</h2>
                         <h4 class="price card-text">£{{ $pcGame->price }}</h4>
                     </div>
                 </div>
             @else
                 <div class="products-left-pc text-left card">
-                    <a href="/pc/{{ $pcGame->slug }}"><img src="{{ asset($pcGame->image) }}" alt="playstationgame"></a>
+                    <a href="/pc/{{ $pcGame->slug }}"><img class="products-left-pc-img" src="{{ asset($pcGame->image) }}" alt="playstationgame"></a>
                     <div class="card-body">
-                        <h2 class="card-text text-center">{{ $pcGame->name }}</h2>
+                        <h2 class="pc-name card-text text-center">{{ $pcGame->name }}</h2>
                         <h4 class="price card-text">£{{ $pcGame->price }}</h4>
                     </div>
                 </div>
