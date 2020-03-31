@@ -6222,7 +6222,7 @@ input[type=button].btn-block {
   -webkit-box-flex: 1;
           flex-grow: 1;
   -webkit-box-align: center;
-          align-items: center;
+          /* align-items: center; */
 }
 
 .navbar-toggler {

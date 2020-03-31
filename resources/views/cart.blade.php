@@ -6,9 +6,7 @@
   <div style="margin-top: -15.625rem;" class="px-4 px-lg-0">
     <!-- BOOTSTRAP SHOPPING CART INTEGRATION -->
     <div style="margin-top: 10rem;" class="container text-white py-5 text-center">
-      <p class="lead">Snippet by <a href="https://bootstrapious.com/snippets" class="text-white font-italic">
-              <u>Bootstrapious</u></a>
-      </p>
+      
     </div>
     <!-- END BOOTSTRAP SHOPPING CART INTEGRATION -->
 
